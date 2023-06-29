@@ -83,20 +83,6 @@ const skills = [
     level: 40,
   },
 ];
-const languages = [
-  {
-    title: "🇫🇷 French",
-    level: 100,
-  },
-  {
-    title: "🇺🇸 English",
-    level: 80,
-  },
-  {
-    title: "🇯🇵 Japanese",
-    level: 20,
-  },
-];
 
 const SkillsSection = () => {
   return (
@@ -115,22 +101,6 @@ const SkillsSection = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div>
-          <h2 className="text-5xl font-bold mt-10">Languages</h2>
-          <div className=" mt-8 space-y-4">
-            {languages.map((lng, index) => (
-              <div className="w-64" key={index}>
-                <h3 className="text-xl font-bold text-gray-800">{lng.title}</h3>
-                <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                  <div
-                    className="h-full bg-indigo-500 rounded-full "
-                    style={{ width: `${lng.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </Section>
