@@ -1,16 +1,15 @@
-import { useEffect, useState, useRef } from "react";
-import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useEffect, useState } from "react";
+import { Scroll, ScrollControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import Interface from "./components/Interface";
 import ScrollManager from "./components/ScrollManager";
 import { Container } from "react-bootstrap";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu";
 import { MotionConfig } from "framer-motion";
-import * as THREE from "three";
 import Experience from "./components/Experience";
 import { Leva } from "leva";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -36,7 +35,7 @@ function App() {
           <ScrollControls pages={4} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
-              <Experience section={section} />
+              <Experience section={section} menuOpened={menuOpened} />
             </Scroll>
             <Scroll className="scroll-container" html>
               <Container>
