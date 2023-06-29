@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Interface from "./components/Interface";
@@ -13,6 +13,10 @@ function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
 
+  useEffect(() => {
+    setMenuOpened(false);
+  }, [section]);
+
   return (
     <>
       <Canvas shadows camera={{ position: [15, 15, 15], fov: 30 }}>
@@ -22,7 +26,7 @@ function App() {
           <Office />
           <Scroll className="scroll-container" html>
             <Container>
-              <Interface />
+              <Interface/>
             </Container>
           </Scroll>
         </ScrollControls>

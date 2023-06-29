@@ -1,15 +1,16 @@
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 import React from "react";
 
 const Menu = (props) => {
-  const { setSection, menuOpened, setMenuOpened } = props;
+  const { onSectionChange, menuOpened, setMenuOpened } = props;
 
   return (
     <>
       <button
         style={{ top: "50px", left: "50px", position: "fixed" }}
         onClick={() => setMenuOpened(!menuOpened)}
-      ></button>
+      >
+        Menu
+      </button>
       {menuOpened ? (
         <div
           style={{
@@ -18,10 +19,13 @@ const Menu = (props) => {
             width: "400px",
             bottom: "0px",
             position: "fixed",
-            backgroundColor: "red",
+            backgroundColor: "grey",
           }}
         >
-          <MenuButton lable="About" onClick={() => setSection(0)} />
+          <MenuButton lable="About" onClick={() => onSectionChange(0)} />
+          <MenuButton lable="Skills" onClick={() => onSectionChange(1)} />
+          <MenuButton lable="Projects" onClick={() => onSectionChange(2)} />
+          <MenuButton lable="Contact" onClick={() => onSectionChange(3)} />
         </div>
       ) : (
         ""

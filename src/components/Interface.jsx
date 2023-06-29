@@ -101,7 +101,7 @@ const languages = [
 const SkillsSection = () => {
   return (
     <Section>
-      <div whileInView={"visible"}>
+      <div>
         <h2 className="text-5xl font-bold">Skills</h2>
         <div className=" mt-8 space-y-4">
           {skills.map((skill, index) => (
