@@ -16,8 +16,6 @@ const Experience = (props) => {
 
   const [characterAnimation, setCharacterAnimation] = useState("Typing");
 
-  const charAnimation = () => {};
-
   useEffect(() => {
     setCharacterAnimation("Falling");
     setTimeout(() => {
@@ -43,7 +41,7 @@ const Experience = (props) => {
       curSection = 3;
     }
 
-    if (curSection != section) {
+    if (curSection !== section) {
       setSection(curSection);
     }
 
