@@ -10,6 +10,7 @@ import Menu from "./components/Menu";
 import { MotionConfig } from "framer-motion";
 import * as THREE from "three";
 import Experience from "./components/Experience";
+import { Leva } from "leva";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -50,6 +51,7 @@ function App() {
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
         />
+        <Leva hidden />
       </MotionConfig>
     </>
   );
