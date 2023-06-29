@@ -1,16 +1,18 @@
-import { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Interface from "./components/Interface";
-import ScrollManager from "./components/ScrollManager";
 import { Container } from "react-bootstrap";
-import Menu from "./components/Menu";
 import { MotionConfig } from "framer-motion";
-import Experience from "./components/Experience";
 import { Leva } from "leva";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LoadingScreen from "./components/LoadingScreen";
+
+const Experience = React.lazy(() => import("./components/Experience"));
+const Interface = React.lazy(() => import("./components/Interface"));
+const LoadingScreen = React.lazy(() => import("./components/LoadingScreen"));
+const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
+const ScrollManager = React.lazy(() => import("./components/ScrollManager"));
+// const Menu = React.lazy(() => import("./components/Menu"));
 
 function App() {
   const [section, setSection] = useState(0);
@@ -21,7 +23,10 @@ function App() {
   }, [section]);
 
   return (
-    <>
+    <ThemeProvider
+      breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
+      minBreakpoint="xxs"
+    >
       <Suspense fallback={<LoadingScreen />}>
         <MotionConfig
           transition={{
@@ -41,7 +46,7 @@ function App() {
               </Scroll>
               <Scroll className="scroll-container" html>
                 <Container>
-                  <Interface />
+                  <Interface onSectionChange={setSection} />
                 </Container>
               </Scroll>
             </ScrollControls>
@@ -55,7 +60,7 @@ function App() {
           <Leva hidden />
         </MotionConfig>
       </Suspense>
-    </>
+    </ThemeProvider>
   );
 }
 

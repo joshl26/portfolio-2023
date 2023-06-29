@@ -1,6 +1,20 @@
 import React from "react";
+import Lottie from "lottie-react";
+import signature from "../data/lottie/SignatureDark.json";
+
 import { motion } from "framer-motion";
 import "./Interface.css";
+import { Col, Container, Row } from "react-bootstrap";
+import linkedInIcon from "../data/images/LinkedIn_Icon.svg";
+import webIcon from "../data/images/Web_Icon.svg";
+import gitHubIcon from "../data/images/GitHub_Icon.svg";
+import wordPressIcon from "../data/images/wordpress_Icon.svg";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+const REACT_APP_SITE_KEY = "6LcIowYkAAAAAJAFOPqSUkepQZyQHB7-GFo5bjSb";
+const EMAIL_JS_SERVICEID = "service_45dcwgn";
+const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
 
 const Section = (props) => {
   const { children } = props;
@@ -23,19 +37,25 @@ const Section = (props) => {
   );
 };
 
-const Interface = () => {
+const Interface = (props) => {
+  const { onSectionChange } = props;
+
   return (
     <>
-      <AboutSection />
+      <AboutSection onSectionChange={onSectionChange} />
       <SkillsSection />
+      <PortfolioSection />
       <ContactSection />
     </>
   );
 };
 
-const AboutSection = () => {
+const AboutSection = (props) => {
+  const { onSectionChange } = props;
+
   return (
     <Section>
+      <div className="interface_spacer"></div>
       <h1>
         Hi, I'm
         <br />
@@ -54,6 +74,7 @@ const AboutSection = () => {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 2.5 }}
+        onClick={() => onSectionChange(3)}
       >
         Contact Me
       </motion.button>
@@ -61,95 +82,269 @@ const AboutSection = () => {
   );
 };
 
-const skills = [
-  {
-    title: "Threejs / React Three Fiber",
-    level: 80,
-  },
-  {
-    title: "React / React Native",
-    level: 90,
-  },
-  {
-    title: "Nodejs",
-    level: 90,
-  },
-  {
-    title: "Typescript",
-    level: 60,
-  },
-  {
-    title: "3D Modeling",
-    level: 40,
-  },
-];
-
 const SkillsSection = () => {
   return (
     <Section>
-      <div>
-        <h2 className="text-5xl font-bold">Skills</h2>
-        <div className=" mt-8 space-y-4">
-          {skills.map((skill, index) => (
-            <div className="w-64" key={index}>
-              <h3 className="text-xl font-bold text-gray-800">{skill.title}</h3>
-              <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                <div
-                  className="h-full bg-indigo-500 rounded-full "
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <motion.h2
+        initial={{ opacity: 0, x: -100, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          x: 25,
+          y: 100,
+          transition: { duration: 1, delay: 1.5 },
+        }}
+      >
+        Passionate Programmer
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, x: -100, y: 200 }}
+        whileInView={{
+          opacity: 1,
+          x: 25,
+          y: 200,
+          transition: { duration: 1, delay: 2.5 },
+        }}
+      >
+        Five plus years software engineering
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, x: -100, y: 300 }}
+        whileInView={{
+          opacity: 1,
+          x: 25,
+          y: 300,
+          transition: { duration: 1, delay: 3.5 },
+        }}
+      >
+        Dedicated to Quality
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, x: -100, y: 400 }}
+        whileInView={{
+          opacity: 1,
+          x: 25,
+          y: 400,
+          transition: { duration: 1, delay: 4.5 },
+        }}
+      >
+        Always Learning new Skills
+      </motion.h2>
     </Section>
   );
 };
 
 const ContactSection = () => {
+  const [captcha, setCaptcha] = useState(null);
+  const [emailSent, setEmailSent] = useState(false);
+  const [confirmReceipt, setConfirmReceipt] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+  function onChange(value) {
+    setCaptcha(value);
+    console.log("Captcha value:", value);
+    console.log(value);
+  }
+
+  useEffect(() => {
+    setEmailSent(false);
+    setConfirmReceipt(false);
+  }, []);
+
+  const nameInput = useRef();
+  const emailInput = useRef();
+  const messageInput = useRef();
+
+  const formSubmitHandler = useCallback((event) => {
+    const templateId = EMAIL_JS_TEMPLATEID;
+
+    setEmailSent(true);
+
+    event.preventDefault();
+
+    const data = {
+      name: nameInput.current?.value,
+      email: emailInput.current?.value,
+      message: messageInput.current?.value,
+    };
+
+    sendFeedback(templateId, data);
+
+    // console.log("Form submit handler");
+    // console.log(data);
+  });
+
+  async function sendFeedback(templateId, variables) {
+    window.emailjs
+      .send(EMAIL_JS_SERVICEID, templateId, variables)
+      .then((res) => {
+        setEmailSent(true);
+        setConfirmReceipt(true);
+      })
+      .catch((err) => {
+        setEmailSent(false);
+        setConfirmReceipt(false);
+        setEmailError(emailError);
+        console.error(
+          "Oh well, you failed. Here some thoughts on the error that occured:",
+          err
+        );
+      });
+  }
+
   return (
     <Section>
-      <h2 className="text-5xl font-bold">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
-        <form>
-          <label for="name" className="font-medium text-gray-900 block mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-          />
-          <label
-            for="email"
-            className="font-medium text-gray-900 block mb-1 mt-8"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-          />
-          <label
-            for="email"
-            className="font-medium text-gray-900 block mb-1 mt-8"
-          >
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-          />
-          <button className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
-            Submit
-          </button>
-        </form>
-      </div>
+      <div className="interface_spacer_small"></div>
+      <Container className="contact_container">
+        <Row>
+          <Col xs={6} md={5} sm={5} lg={5}>
+            <Row>
+              <h2 className="interface_label">Contact me</h2>
+            </Row>
+            <form onSubmit={formSubmitHandler}>
+              <Row>
+                <label for="name" className="interface_label">
+                  Name
+                </label>
+                <input
+                  ref={nameInput}
+                  type="text"
+                  name="name"
+                  id="name"
+                  className=""
+                />
+              </Row>
+              <Row>
+                <label for="email" className="interface_label">
+                  Email
+                </label>
+                <input
+                  ref={emailInput}
+                  type="email"
+                  name="email"
+                  id="email"
+                  className=""
+                />
+              </Row>
+              <Row>
+                <label for="email" className="interface_label">
+                  Message
+                </label>
+                <textarea
+                  ref={messageInput}
+                  name="message"
+                  id="message"
+                  className=""
+                />
+              </Row>
+              <div className="interface_spacer_xsmall"></div>
+              {captcha ? (
+                <button
+                  type="submit"
+                  data-sitekey="reCAPTCHA_site_key"
+                  data-callback="onSubmit"
+                  data-action="submit"
+                >
+                  Submit
+                </button>
+              ) : (
+                ""
+              )}
+            </form>
+            <ReCAPTCHA
+              sitekey={REACT_APP_SITE_KEY}
+              onChange={onChange}
+              className="recaptcha"
+            />
+            <div className="interface_spacer_small"></div>
+
+            <Row>
+              <Col className="social_col" xs={6} md={3}>
+                <Container className="text_center">
+                  <div className="spacer"></div>
+                  <a href="https://www.linkedin.com/in/joshrlehman/">
+                    <img
+                      className="socialmedia_icon"
+                      src={linkedInIcon}
+                      alt="Linked In Icon"
+                    />
+                  </a>
+                </Container>
+                <div className="spacer"></div>
+              </Col>
+              <Col className="social_col" xs={6} md={3}>
+                <Container>
+                  <div className="spacer"></div>
+                  <a href="https://github.com/joshl26/">
+                    <img className="socialmedia_icon" src={gitHubIcon} alt="" />
+                  </a>
+                </Container>
+                <div className="spacer"></div>
+              </Col>
+              <Col className="social_col" xs={6} md={3}>
+                <Container className="text_center">
+                  <div className="spacer"></div>
+                  <a href="http://www.blackrock3d.ca/">
+                    <img
+                      className="socialmedia_icon"
+                      src={wordPressIcon}
+                      alt="Web Icon"
+                    />
+                  </a>
+                </Container>
+                <div className="spacer"></div>
+              </Col>
+              <Col className="social_col" xs={6} md={3}>
+                <Container className="text_center">
+                  <div className="spacer"></div>
+                  <a href="mailto:joshlehman.dev@gmail.com">
+                    <img
+                      className="socialmedia_icon"
+                      src={webIcon}
+                      alt="Mail Icon"
+                    />
+                  </a>
+                </Container>
+                <div className="spacer"></div>
+              </Col>
+            </Row>
+            {/* <Lottie
+              className="svg_animate"
+              animationData={signature}
+              loop={true}
+            /> */}
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
+    </Section>
+  );
+};
+
+const PortfolioSection = () => {
+  return (
+    <Section>
+      <motion.h2
+        initial={{ opacity: 0, x: -100, y: 0 }}
+        whileInView={{
+          opacity: 1,
+          x: 25,
+          y: 0,
+          transition: { duration: 1, delay: 1.5 },
+        }}
+      >
+        Portfolio Section
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, x: -100, y: 0 }}
+        whileInView={{
+          opacity: 1,
+          x: 25,
+          y: 0,
+          transition: { duration: 1, delay: 2.5 },
+        }}
+      >
+        Currently In Progress, Coming soon late June 2023!!
+      </motion.h2>
     </Section>
   );
 };

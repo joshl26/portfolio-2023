@@ -4,3 +4,26 @@
   margin: 0 auto;
   vertical-align: middle;
 }
+
+.interface_spacer_small {
+  height: 10vh;
+}
+
+.interface_spacer_xsmall {
+  height: 2vh;
+}
+
+.interface_spacer {
+  height: 60vh;
+}
+
+.interface_label {
+  padding-left: 0px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .socialmedia_icon {
+    width: 50px;
+    padding-bottom: 1em;
+  }
+}
