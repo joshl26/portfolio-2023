@@ -6,8 +6,10 @@ Command: npx gltfjsx@6.1.2 public/models/office-baked.gltf
 import React from "react";
 import { useGLTF, useTexture, useVideoTexture } from "@react-three/drei";
 import * as THREE from "three";
+import { motion } from "framer-motion-3d";
 
 export function Office(props) {
+  const { section } = props;
   const { nodes } = useGLTF("models/office-baked.gltf");
   const texture = useTexture("textures/office.jpg");
   const textureVideo1 = useVideoTexture("textures/screen1.mp4");
@@ -21,7 +23,11 @@ export function Office(props) {
   });
 
   return (
-    <group {...props} dispose={null}>
+    <motion.group
+      animate={{ scale: section === 0 ? 1 : 0.25 }}
+      {...props}
+      dispose={null}
+    >
       <mesh
         geometry={nodes.FirstBook.geometry}
         material={textureMaterial}
@@ -34,7 +40,10 @@ export function Office(props) {
         position={[0.07, 9.23, -4.48]}
         rotation={[0, -0.17, -1.4]}
       />
-      <group position={[3.76, 2.07, -1.24]}>
+      <motion.group
+        animate={{ scale: section === 0 ? 1 : 0.5 }}
+        position={[3.76, 2.07, -1.24]}
+      >
         <mesh
           geometry={nodes.LargeDesk_1.geometry}
           material={textureMaterial}
@@ -43,7 +52,7 @@ export function Office(props) {
           geometry={nodes.LargeDesk_2.geometry}
           material={textureMaterial}
         />
-      </group>
+      </motion.group>
       <mesh
         geometry={nodes.OfficeChair.geometry}
         material={textureMaterial}
@@ -270,7 +279,7 @@ export function Office(props) {
       >
         <meshBasicMaterial map={textureVideo1} toneMapped={false} />
       </mesh>
-    </group>
+    </motion.group>
   );
 }
 
