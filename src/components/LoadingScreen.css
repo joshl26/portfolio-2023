@@ -74,6 +74,10 @@
   .column_spacer {
     height: 10vh;
   }
+
+  .spacer_small {
+    height: 2.5vh;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -133,6 +137,9 @@
     height: 100%;
   }
 
+  .spacer_small {
+    height: 7.5vh;
+  }
   .svg_animate {
     /* width: 100vw; */
     height: 70vh;

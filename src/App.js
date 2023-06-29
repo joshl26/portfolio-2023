@@ -39,7 +39,7 @@ function App() {
         >
           <Canvas shadows camera={{ position: [15, 15, 15], fov: 42 }}>
             <color attach="background" args={["#ececec"]} />
-            <ScrollControls pages={4} damping={0.1}>
+            <ScrollControls pages={4.25} damping={0.1}>
               <ScrollManager section={section} onSectionChange={setSection} />
               <Scroll>
                 <Experience section={section} menuOpened={menuOpened} />

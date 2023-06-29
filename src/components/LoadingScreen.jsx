@@ -7,8 +7,6 @@ import { useProgress } from "@react-three/drei";
 import Lottie from "lottie-react";
 import loadingCube from "../data/lottie/abstractCube.json";
 
-
-
 const LoadingScreen = () => {
   const LoadingScreenStyle = true
     ? "loading_screen_light"
@@ -18,6 +16,7 @@ const LoadingScreen = () => {
 
   return (
     <section className={LoadingScreenStyle}>
+      <div className="spacer_small"></div>
       <Row>
         <h1 style={{ textAlign: "center" }}>Hold on one second...</h1>
       </Row>

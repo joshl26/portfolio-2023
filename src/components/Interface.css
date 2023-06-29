@@ -13,17 +13,53 @@
   height: 2vh;
 }
 
-.interface_spacer {
-  height: 60vh;
-}
-
 .interface_label {
   padding-left: 0px !important;
+}
+
+.captcha_container {
+  margin: 0 auto;
+  padding: 2em 0 0 0;
+  width: fit-content;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-text {
+  position: absolute;
+  top: 80vh;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
   .socialmedia_icon {
     width: 50px;
     padding-bottom: 1em;
+  }
+
+  .interface_spacer {
+    height: 55vh;
+  }
+
+  .interface_about_p {
+    font-size: 1em;
+  }
+
+  .interface_about_h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .interface_spacer {
+    height: 60vh;
+  }
+
+  .interface_about_p {
+    font-size: 1.5em;
+  }
+
+  .interface_about_h1 {
+    font-size: 2em;
   }
 }

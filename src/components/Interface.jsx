@@ -1,6 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
 import signature from "../data/lottie/SignatureDark.json";
+import { useFrame, useThree } from "@react-three/fiber";
 
 import { motion } from "framer-motion";
 import "./Interface.css";
@@ -52,28 +53,47 @@ const Interface = (props) => {
 
 const AboutSection = (props) => {
   const { onSectionChange } = props;
+  const { viewport } = useThree();
 
   return (
     <Section>
       <div className="interface_spacer"></div>
-      <h1>
+      <motion.h1
+        className="interface_about_h1"
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{
+          opacity: 1,
+          y: viewport.height,
+          transition: { duration: 1, delay: 0.5 },
+        }}
+      >
         Hi, I'm
         <br />
         <span>Joshua Lehman</span>
-      </h1>
+      </motion.h1>
+
       <motion.p
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
+        className="interface_about_p"
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{
+          opacity: 1,
+          y: viewport.height,
+          transition: { duration: 1, delay: 1.5 },
+        }}
       >
-        I am a coder passionate about 3D graphics
+        A passionate programmer.
         <br />
-        See what I have to offer
+        Always learning new skills.
+        <br />
+        See what I have to offer!
       </motion.p>
       <motion.button
         initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 2.5 }}
+        whileInView={{
+          opacity: 1,
+          y: viewport.height,
+          transition: { duration: 1, delay: 2.5 },
+        }}
         onClick={() => onSectionChange(3)}
       >
         Contact Me
@@ -83,36 +103,37 @@ const AboutSection = (props) => {
 };
 
 const SkillsSection = () => {
+  const { viewport } = useThree();
   return (
     <Section>
       <motion.h2
-        initial={{ opacity: 0, x: -100, y: 100 }}
+        initial={{ opacity: 0, x: -100, y: viewport.height }}
         whileInView={{
           opacity: 1,
           x: 25,
-          y: 100,
+          y: viewport.height * 2.5,
           transition: { duration: 1, delay: 1.5 },
         }}
       >
         Passionate Programmer
       </motion.h2>
       <motion.h2
-        initial={{ opacity: 0, x: -100, y: 200 }}
+        initial={{ opacity: 0, x: -100, y: viewport.height }}
         whileInView={{
           opacity: 1,
           x: 25,
-          y: 200,
+          y: viewport.height * 7.5,
           transition: { duration: 1, delay: 2.5 },
         }}
       >
         Five plus years software engineering
       </motion.h2>
       <motion.h2
-        initial={{ opacity: 0, x: -100, y: 300 }}
+        initial={{ opacity: 0, x: -100, y: viewport.height }}
         whileInView={{
           opacity: 1,
           x: 25,
-          y: 300,
+          y: viewport.height * 12.5,
           transition: { duration: 1, delay: 3.5 },
         }}
       >
@@ -123,17 +144,19 @@ const SkillsSection = () => {
         whileInView={{
           opacity: 1,
           x: 25,
-          y: 400,
+          y: viewport.height * 17.5,
           transition: { duration: 1, delay: 4.5 },
         }}
       >
-        Always Learning new Skills
+        Continuously pushing the limits!
       </motion.h2>
     </Section>
   );
 };
 
 const ContactSection = () => {
+  const { viewport } = useThree();
+
   const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
@@ -250,13 +273,15 @@ const ContactSection = () => {
                 ""
               )}
             </form>
-            <ReCAPTCHA
-              sitekey={REACT_APP_SITE_KEY}
-              onChange={onChange}
-              className="recaptcha"
-            />
+            {/* <div className="captcha_container">
+              <ReCAPTCHA
+                size="compact"
+                className="captcha"
+                sitekey={REACT_APP_SITE_KEY}
+                onChange={onChange}
+              />
+            </div> */}
             <div className="interface_spacer_small"></div>
-
             <Row>
               <Col className="social_col" xs={6} md={3}>
                 <Container className="text_center">
@@ -312,7 +337,18 @@ const ContactSection = () => {
               animationData={signature}
               loop={true}
             /> */}
-          </Col>
+          </Col>{" "}
+          <motion.h3
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: viewport.height * 4,
+              transition: { duration: 1, delay: 1.5 },
+            }}
+          >
+            Made by Joshua Lehman
+          </motion.h3>
           <Col></Col>
         </Row>
       </Container>
