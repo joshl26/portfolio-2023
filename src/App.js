@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Scroll, ScrollControls } from "@react-three/drei";
+import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Container } from "react-bootstrap";
 import { MotionConfig } from "framer-motion";

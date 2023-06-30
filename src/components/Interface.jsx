@@ -196,7 +196,7 @@ const ContactSection = () => {
     // console.log(data);
   });
 
-  async function sendFeedback(templateId, variables) {
+  function sendFeedback(templateId, variables) {
     window.emailjs
       .send(EMAIL_JS_SERVICEID, templateId, variables)
       .then((res) => {
@@ -223,44 +223,93 @@ const ContactSection = () => {
             <Row>
               <h2 className="interface_label">Contact me</h2>
             </Row>
-            <form onSubmit={formSubmitHandler}>
-              <Row>
-                <label for="name" className="interface_label">
-                  Name
-                </label>
-                <input
-                  ref={nameInput}
-                  type="text"
-                  name="name"
-                  id="name"
-                  className=""
-                />
-              </Row>
-              <Row>
-                <label for="email" className="interface_label">
-                  Email
-                </label>
-                <input
-                  ref={emailInput}
-                  type="email"
-                  name="email"
-                  id="email"
-                  className=""
-                />
-              </Row>
-              <Row>
-                <label for="email" className="interface_label">
-                  Message
-                </label>
-                <textarea
-                  ref={messageInput}
-                  name="message"
-                  id="message"
-                  className=""
-                />
-              </Row>
+            <form id="contact-form" onSubmit={formSubmitHandler} method="POST">
+              {emailSent === false ? (
+                <>
+                  <Row>
+                    <label for="name" className="interface_label">
+                      Name
+                    </label>
+                    <input
+                      required
+                      ref={nameInput}
+                      type="text"
+                      name="name"
+                      id="name"
+                      className=""
+                    />
+                  </Row>
+                  <Row>
+                    <label for="email" className="interface_label">
+                      Email
+                    </label>
+                    <input
+                      required
+                      ref={emailInput}
+                      type="email"
+                      name="email"
+                      id="email"
+                      className=""
+                    />
+                  </Row>
+                  <Row>
+                    <label for="email" className="interface_label">
+                      Message
+                    </label>
+                    <textarea
+                      required
+                      ref={messageInput}
+                      name="message"
+                      id="message"
+                      className=""
+                    />
+                  </Row>
+                </>
+              ) : (
+                <>
+                  <Row>
+                    <label for="name" className="interface_label">
+                      Name
+                    </label>
+                    <input
+                      disabled
+                      ref={nameInput}
+                      type="text"
+                      name="name"
+                      id="name"
+                      className=""
+                    />
+                  </Row>
+                  <Row>
+                    <label for="email" className="interface_label">
+                      Email
+                    </label>
+                    <input
+                      disabled
+                      ref={emailInput}
+                      type="email"
+                      name="email"
+                      id="email"
+                      className=""
+                    />
+                  </Row>
+                  <Row>
+                    <label for="email" className="interface_label">
+                      Message
+                    </label>
+                    <textarea
+                      disabled
+                      ref={messageInput}
+                      name="message"
+                      id="message"
+                      className=""
+                    />
+                  </Row>
+                </>
+              )}
+
               <div className="interface_spacer_xsmall"></div>
-              {captcha ? (
+              {emailSent === false ? (
                 <button
                   type="submit"
                   data-sitekey="reCAPTCHA_site_key"
@@ -270,7 +319,7 @@ const ContactSection = () => {
                   Submit
                 </button>
               ) : (
-                ""
+                <p className="email_confirmation">Receipt confirmed!</p>
               )}
             </form>
             {/* <div className="captcha_container">
@@ -337,7 +386,7 @@ const ContactSection = () => {
               animationData={signature}
               loop={true}
             /> */}
-          </Col>{" "}
+          </Col>
           <motion.h3
             initial={{ opacity: 0, x: 0, y: 0 }}
             whileInView={{

@@ -32,6 +32,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .email_confirmation {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: green;
+  }
+
   .socialmedia_icon {
     width: 50px;
     padding-bottom: 1em;
@@ -51,6 +57,12 @@
 }
 
 @media only screen and (min-width: 769px) {
+  .email_confirmation {
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+  }
+
   .interface_spacer {
     height: 60vh;
   }
