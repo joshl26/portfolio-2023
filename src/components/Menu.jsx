@@ -1,13 +1,24 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
-import HamburgerMenu from "../data/lottie/menuAnimation.json";
+import HamburgerMenuDark from "../data/lottie/menuAnimationDark.json";
+import HamburgerMenuLight from "../data/lottie/menuAnimationLight.json";
+
 import { Col, Row } from "react-bootstrap";
 import "./Menu.css";
 
 const Menu = (props) => {
   const { lottieRef } = useRef();
 
-  const { onSectionChange, menuOpened, setMenuOpened } = props;
+  const { onSectionChange, menuOpened, setMenuOpened, colorMode, section } =
+    props;
+
+  const styleColormode = (styleClass) => {
+    if (colorMode === "light") {
+      return `${styleClass}-light`;
+    } else {
+      return `${styleClass}-dark`;
+    }
+  };
 
   const menuButtonClickHandler = () => {
     if (menuOpened) {
@@ -19,20 +30,38 @@ const Menu = (props) => {
 
   return (
     <>
-      <Lottie
-        lottieRef={lottieRef}
-        style={{
-          width: "50px",
-          height: "50px",
-          position: "absolute",
-          left: "10px",
-          top: "10px",
-          zIndex: 10,
-        }}
-        animationData={HamburgerMenu}
-        autoplay={false}
-        onClick={() => menuButtonClickHandler()}
-      />
+      {colorMode === "light" ? (
+        <Lottie
+          lottieRef={lottieRef}
+          style={{
+            width: "50px",
+            height: "50px",
+            position: "absolute",
+            left: "10px",
+            top: "10px",
+            zIndex: 10,
+          }}
+          animationData={HamburgerMenuLight}
+          autoplay={false}
+          onClick={() => menuButtonClickHandler()}
+        />
+      ) : (
+        <Lottie
+          lottieRef={lottieRef}
+          style={{
+            width: "50px",
+            height: "50px",
+            position: "absolute",
+            left: "10px",
+            top: "10px",
+            zIndex: 10,
+          }}
+          animationData={HamburgerMenuDark}
+          autoplay={false}
+          onClick={() => menuButtonClickHandler()}
+        />
+      )}
+
       {/* <button
         style={{ top: "50px", left: "50px", position: "fixed" }}
         onClick={() => setMenuOpened(!menuOpened)}
@@ -40,34 +69,41 @@ const Menu = (props) => {
         Menu
       </button> */}
       {menuOpened ? (
-        <div
-          style={{
-            top: "0px",
-            left: "0px",
-            width: "250px",
-            bottom: "0px",
-            position: "fixed",
-            backgroundColor: "rgba(236,236,236, 0.3)",
-          }}
-        >
+        <div className={styleColormode("menu-container")}>
           <Col>
             <div className="menu-spacer"></div>
             <Row className="menu-row">
-              <MenuButton lable="About" onClick={() => onSectionChange(0)} />
+              <MenuButton
+                lable="Home"
+                disabled={section === 0 ? true : false}
+                onClick={() => onSectionChange(0)}
+              />
             </Row>
             <div className="menu-sspacer"></div>
 
             <Row className="menu-row">
-              <MenuButton lable="Skills" onClick={() => onSectionChange(1)} />
+              <MenuButton
+                lable="About"
+                disabled={section === 1 ? true : false}
+                onClick={() => onSectionChange(1)}
+              />
             </Row>
             <div className="menu-sspacer"></div>
 
             <Row className="menu-row">
-              <MenuButton lable="Projects" onClick={() => onSectionChange(2)} />
+              <MenuButton
+                lable="Projects"
+                disabled={section === 2 ? true : false}
+                onClick={() => onSectionChange(2)}
+              />
             </Row>
             <div className="menu-sspacer"></div>
             <Row className="menu-row">
-              <MenuButton lable="Contact" onClick={() => onSectionChange(3)} />
+              <MenuButton
+                lable="Contact"
+                disabled={section === 3 ? true : false}
+                onClick={() => onSectionChange(3)}
+              />
             </Row>
           </Col>
         </div>
@@ -79,10 +115,10 @@ const Menu = (props) => {
 };
 
 const MenuButton = (props) => {
-  const { lable, onClick } = props;
+  const { lable, onClick, disabled } = props;
 
   return (
-    <button className="menu-button" onClick={onClick}>
+    <button disabled={disabled} className="menu-button" onClick={onClick}>
       {lable}
     </button>
   );
