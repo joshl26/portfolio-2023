@@ -34,9 +34,9 @@ const LoadingScreen = (props) => {
         </h1>
       </Row>
       <Row>
-        <h2 className={fontColormode("")} style={{ textAlign: "center" }}>
+        <h3 className={fontColormode("")} style={{ textAlign: "center" }}>
           Loading: {Math.floor(progress)}%...
-        </h2>
+        </h3>
       </Row>
       <Row>
         <Lottie

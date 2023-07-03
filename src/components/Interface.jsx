@@ -191,42 +191,45 @@ const ContactSection = (props) => {
   const emailInput = useRef();
   const messageInput = useRef();
 
-  const formSubmitHandler = useCallback((event) => {
-    const templateId = EMAIL_JS_TEMPLATEID;
+  const formSubmitHandler = useCallback(
+    (event) => {
+      const templateId = EMAIL_JS_TEMPLATEID;
 
-    setEmailSent(true);
+      setEmailSent(true);
 
-    event.preventDefault();
+      event.preventDefault();
 
-    const data = {
-      name: nameInput.current?.value,
-      email: emailInput.current?.value,
-      message: messageInput.current?.value,
-    };
+      const data = {
+        name: nameInput.current?.value,
+        email: emailInput.current?.value,
+        message: messageInput.current?.value,
+      };
 
-    sendFeedback(templateId, data);
+      function sendFeedback(templateId, variables) {
+        window.emailjs
+          .send(EMAIL_JS_SERVICEID, templateId, variables)
+          .then((res) => {
+            setEmailSent(true);
+            // setConfirmReceipt(true);
+          })
+          .catch((err) => {
+            setEmailSent(false);
+            // setConfirmReceipt(false);
+            setEmailError(emailError);
+            console.error(
+              "Oh well, you failed. Here some thoughts on the error that occured:",
+              err
+            );
+          });
+      }
 
-    // console.log("Form submit handler");
-    // console.log(data);
-  }, []);
+      sendFeedback(templateId, data);
 
-  function sendFeedback(templateId, variables) {
-    window.emailjs
-      .send(EMAIL_JS_SERVICEID, templateId, variables)
-      .then((res) => {
-        setEmailSent(true);
-        // setConfirmReceipt(true);
-      })
-      .catch((err) => {
-        setEmailSent(false);
-        // setConfirmReceipt(false);
-        setEmailError(emailError);
-        console.error(
-          "Oh well, you failed. Here some thoughts on the error that occured:",
-          err
-        );
-      });
-  }
+      // console.log("Form submit handler");
+      // console.log(data);
+    },
+    [emailError]
+  );
 
   return (
     <Section>

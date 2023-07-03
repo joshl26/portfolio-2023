@@ -26,3 +26,14 @@ body {
 .font_dark {
   color: var(--bg-color-light);
 }
+
+p,
+h3,
+h4 {
+  font-family: "Lusitana";
+}
+
+h1,
+h2 {
+  font-family: "Raleway";
+}
