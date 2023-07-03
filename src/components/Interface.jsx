@@ -102,9 +102,9 @@ const AboutSection = (props) => {
           y: viewport.height,
           transition: { duration: 1, delay: 2.5 },
         }}
-        onClick={() => onSectionChange(3)}
+        onClick={() => onSectionChange(1)}
       >
-        Contact Me
+        Learn More Below
       </motion.button>
     </Section>
   );

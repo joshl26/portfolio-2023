@@ -1,0 +1,17 @@
+.menu-button {
+  background-color: aqua;
+  width: 125px;
+}
+
+.menu-spacer {
+  height: 65px;
+}
+
+.menu-sspacer {
+  height: 15px;
+}
+
+.menu-row {
+  display: block;
+  text-align: center;
+}

@@ -5,9 +5,11 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { motion } from "framer-motion-3d";
 import { Office } from "./Office";
 import { useScroll } from "@react-three/drei";
+import { animate, useMotionValue } from "framer-motion";
+import { framerMotionConfig } from "../config";
 
 const Experience = (props) => {
-  //   const { menuOpened } = props;
+  const { menuOpened } = props;
   const { viewport } = useThree();
   const data = useScroll();
   const [section, setSection] = useState(0);
@@ -15,6 +17,18 @@ const Experience = (props) => {
   const characterContainerAboutRef = useRef();
 
   const [characterAnimation, setCharacterAnimation] = useState("Typing");
+
+  const cameraPositionX = useMotionValue(0);
+  const cameraPositionY = useMotionValue(0);
+  const cameraPositionZ = useMotionValue(0);
+
+  const cameraRotationX = useMotionValue(0);
+  const cameraRotationY = useMotionValue(0);
+  const cameraRotationZ = useMotionValue(0);
+
+  const cameraLookAtX = useMotionValue(0);
+  const cameraLookAtY = useMotionValue(0);
+  const cameraLookAtZ = useMotionValue(0);
 
   useEffect(() => {
     setCharacterAnimation("Falling");
@@ -34,6 +48,43 @@ const Experience = (props) => {
     }, 600);
   }, [section]);
 
+  useEffect(() => {
+    animate(cameraPositionX, menuOpened ? 5 : 15, {
+      ...framerMotionConfig,
+    });
+
+    animate(cameraPositionY, menuOpened ? 0 : 25, {
+      ...framerMotionConfig,
+    });
+
+    animate(cameraPositionZ, menuOpened ? 0 : 25, {
+      ...framerMotionConfig,
+    });
+
+    // animate(cameraRotationX, menuOpened ? 0 : 14, {
+    //   ...framerMotionConfig,
+    // });
+
+    // animate(cameraRotationY, menuOpened ? 0 : 15, {
+    //   ...framerMotionConfig,
+    // });
+
+    // animate(cameraRotationZ, menuOpened ? 0 : 20, {
+    //   ...framerMotionConfig,
+    // });
+
+    animate(cameraLookAtX + 5, menuOpened ? 0 : 1, {
+      ...framerMotionConfig,
+    });
+    animate(cameraLookAtY + 5, menuOpened ? 0 : 1, {
+      ...framerMotionConfig,
+    });
+
+    animate(cameraLookAtZ + 20, menuOpened ? 0 : 0, {
+      ...framerMotionConfig,
+    });
+  }, [menuOpened]);
+
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
 
@@ -45,6 +96,19 @@ const Experience = (props) => {
       setSection(curSection);
     }
 
+    state.camera.position.x = cameraPositionX.get();
+    state.camera.position.Y = cameraPositionY.get();
+    state.camera.position.Z = cameraPositionZ.get();
+
+    state.camera.rotation.x = cameraRotationX.get();
+    state.camera.rotation.Y = cameraRotationY.get();
+    state.camera.rotation.Z = cameraRotationZ.get();
+
+    state.camera.lookAt(
+      cameraLookAtX.get(),
+      cameraLookAtY.get(),
+      cameraLookAtZ.get()
+    );
     // const position = new THREE.Vector3();
     // characterContainerAboutRef.current.getWorldPosition(position);
     // console.log([position.x, position.y, position.z]);
@@ -96,9 +160,9 @@ const Experience = (props) => {
             scaleY: 5,
             scaleZ: 5,
             y: -viewport.height * 3,
-            x: 7,
-            z: 5,
-            rotateX: -2,
+            x: 5,
+            z: 0,
+            rotateX: -1.75,
             rotateY: -0.35,
             rotateZ: 0.5,
           },

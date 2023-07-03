@@ -29,16 +29,14 @@ const ColorMode = (props) => {
   }, []);
 
   return (
-    <div>
-      <Lottie
-        className="lottie_container"
-        lottieRef={lottieRef}
-        animationData={ToggleButton}
-        onClick={() => onLottieClickHandler()}
-        autoplay={false}
-        loop={false}
-      />
-    </div>
+    <Lottie
+      className="lottie_container"
+      lottieRef={lottieRef}
+      animationData={ToggleButton}
+      onClick={() => onLottieClickHandler()}
+      autoplay={false}
+      loop={false}
+    />
   );
 };
 

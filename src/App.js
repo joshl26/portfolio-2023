@@ -14,7 +14,7 @@ const Interface = React.lazy(() => import("./components/Interface"));
 const LoadingScreen = React.lazy(() => import("./components/LoadingScreen"));
 const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
 const ScrollManager = React.lazy(() => import("./components/ScrollManager"));
-// const Menu = React.lazy(() => import("./components/Menu"));
+const Menu = React.lazy(() => import("./components/Menu"));
 
 function App() {
   const [colorMode, setColorMode] = useLocalStorage("colorMode", "light");
@@ -48,15 +48,23 @@ function App() {
             restDelta: 0.0001,
           }}
         >
-          <Canvas shadows camera={{ position: [15, 15, 15], fov: 42 }}>
+          <Canvas
+            shadows
+            camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
+          >
             <color attach="background" args={[canvasBackGroundColor]} />
 
-            <ScrollControls pages={4.25} damping={0.1}>
+            <ScrollControls pages={3.9} damping={0.1}>
               <ScrollManager section={section} onSectionChange={setSection} />
               <Scroll>
                 <Experience section={section} menuOpened={menuOpened} />
               </Scroll>
               <Scroll className="scroll-container" html>
+                <Menu
+                  onSectionChange={setSection}
+                  menuOpened={menuOpened}
+                  setMenuOpened={setMenuOpened}
+                />
                 <ColorMode
                   colorMode={colorMode}
                   onColorModeChangeHandler={onColorModeChangeHandler}
@@ -71,11 +79,18 @@ function App() {
             </ScrollControls>
             <ambientLight />
           </Canvas>
-          {/* <Menu
-            onSectionChange={setSection}
-            menuOpened={menuOpened}
-            setMenuOpened={setMenuOpened}
-          /> */}
+
+          {/* <Container>
+            <Menu
+              onSectionChange={setSection}
+              menuOpened={menuOpened}
+              setMenuOpened={setMenuOpened}
+            />
+            <ColorMode
+              colorMode={colorMode}
+              onColorModeChangeHandler={onColorModeChangeHandler}
+            />
+          </Container> */}
           <Leva hidden />
         </MotionConfig>
       </Suspense>
