@@ -1,8 +1,5 @@
 import React from "react";
-// import Lottie from "lottie-react";
-// import signature from "../data/lottie/SignatureDark.json";
 import { useThree } from "@react-three/fiber";
-
 import { motion } from "framer-motion";
 import "./Interface.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -39,27 +36,38 @@ const Section = (props) => {
 };
 
 const Interface = (props) => {
-  const { onSectionChange } = props;
+  const { onSectionChange, colorMode } = props;
+
+  const fontColormode = (styleClass) => {
+    if (colorMode === "light") {
+      return `${styleClass} font_light`;
+    } else {
+      return `${styleClass} font_dark`;
+    }
+  };
 
   return (
     <>
-      <AboutSection onSectionChange={onSectionChange} />
-      <SkillsSection />
-      <PortfolioSection />
-      <ContactSection />
+      <AboutSection
+        fontColormode={fontColormode}
+        onSectionChange={onSectionChange}
+      />
+      <SkillsSection fontColormode={fontColormode} />
+      <PortfolioSection fontColormode={fontColormode} />
+      <ContactSection fontColormode={fontColormode} />
     </>
   );
 };
 
 const AboutSection = (props) => {
-  const { onSectionChange } = props;
+  const { onSectionChange, fontColormode } = props;
   const { viewport } = useThree();
 
   return (
     <Section>
       <div className="interface_spacer"></div>
       <motion.h1
-        className="interface_about_h1"
+        className={fontColormode("interface_about_h1")}
         initial={{ opacity: 0, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -73,7 +81,7 @@ const AboutSection = (props) => {
       </motion.h1>
 
       <motion.p
-        className="interface_about_p"
+        className={fontColormode("interface_about_p")}
         initial={{ opacity: 0, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -102,11 +110,13 @@ const AboutSection = (props) => {
   );
 };
 
-const SkillsSection = () => {
+const SkillsSection = (props) => {
+  const { fontColormode } = props;
   const { viewport } = useThree();
   return (
     <Section>
       <motion.h2
+        className={fontColormode("interface_about_h2")}
         initial={{ opacity: 0, x: -100, y: viewport.height }}
         whileInView={{
           opacity: 1,
@@ -118,6 +128,7 @@ const SkillsSection = () => {
         Passionate Programmer
       </motion.h2>
       <motion.h2
+        className={fontColormode("interface_about_h2")}
         initial={{ opacity: 0, x: -100, y: viewport.height }}
         whileInView={{
           opacity: 1,
@@ -129,6 +140,7 @@ const SkillsSection = () => {
         Five plus years software engineering
       </motion.h2>
       <motion.h2
+        className={fontColormode("interface_about_h2")}
         initial={{ opacity: 0, x: -100, y: viewport.height }}
         whileInView={{
           opacity: 1,
@@ -140,6 +152,7 @@ const SkillsSection = () => {
         Dedicated to Quality
       </motion.h2>
       <motion.h2
+        className={fontColormode("interface_about_h2")}
         initial={{ opacity: 0, x: -100, y: 400 }}
         whileInView={{
           opacity: 1,
@@ -154,7 +167,8 @@ const SkillsSection = () => {
   );
 };
 
-const ContactSection = () => {
+const ContactSection = (props) => {
+  const { fontColormode } = props;
   const { viewport } = useThree();
 
   // const [captcha, setCaptcha] = useState(null);
@@ -221,13 +235,16 @@ const ContactSection = () => {
         <Row>
           <Col xs={6} md={5} sm={5} lg={5}>
             <Row>
-              <h2 className="interface_label">Contact me</h2>
+              <h2 className={fontColormode("interface_label")}>Contact me</h2>
             </Row>
             <form id="contact-form" onSubmit={formSubmitHandler} method="POST">
               {emailSent === false ? (
                 <>
                   <Row>
-                    <label htmlFor="name" className="interface_label">
+                    <label
+                      htmlFor="name"
+                      className={fontColormode("interface_label")}
+                    >
                       Name
                     </label>
                     <input
@@ -240,7 +257,10 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label htmlFor="email" className="interface_label">
+                    <label
+                      htmlFor="email"
+                      className={fontColormode("interface_label")}
+                    >
                       Email
                     </label>
                     <input
@@ -253,7 +273,10 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label htmlFor="message" className="interface_label">
+                    <label
+                      htmlFor="message"
+                      className={fontColormode("interface_label")}
+                    >
                       Message
                     </label>
                     <textarea
@@ -268,7 +291,10 @@ const ContactSection = () => {
               ) : (
                 <>
                   <Row>
-                    <label htmlFor="name" className="interface_label">
+                    <label
+                      htmlFor="name"
+                      className={fontColormode("interface_label")}
+                    >
                       Name
                     </label>
                     <input
@@ -281,7 +307,10 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label htmlFor="email" className="interface_label">
+                    <label
+                      htmlFor="email"
+                      className={fontColormode("interface_label")}
+                    >
                       Email
                     </label>
                     <input
@@ -294,7 +323,10 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label htmlFor="message" className="interface_label">
+                    <label
+                      htmlFor="message"
+                      className={fontColormode("interface_label")}
+                    >
                       Message
                     </label>
                     <textarea
@@ -388,6 +420,7 @@ const ContactSection = () => {
             /> */}
           </Col>
           <motion.h3
+            className={fontColormode("interface_about_h3")}
             initial={{ opacity: 0, x: 0, y: 0 }}
             whileInView={{
               opacity: 1,
@@ -405,10 +438,12 @@ const ContactSection = () => {
   );
 };
 
-const PortfolioSection = () => {
+const PortfolioSection = (props) => {
+  const { fontColormode } = props;
   return (
     <Section>
       <motion.h2
+        className={fontColormode("interface_about_h2")}
         initial={{ opacity: 0, x: -100, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -420,6 +455,7 @@ const PortfolioSection = () => {
         Portfolio Section
       </motion.h2>
       <motion.h2
+        className={fontColormode("interface_about_h2")}
         initial={{ opacity: 0, x: -100, y: 0 }}
         whileInView={{
           opacity: 1,

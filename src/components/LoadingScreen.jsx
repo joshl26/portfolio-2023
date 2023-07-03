@@ -7,10 +7,19 @@ import { useProgress } from "@react-three/drei";
 import Lottie from "lottie-react";
 import loadingCube from "../data/lottie/abstractCube.json";
 
-const LoadingScreen = () => {
-  const LoadingScreenStyle = true
-    ? "loading_screen_light"
-    : "loading_screen_dark";
+const LoadingScreen = (props) => {
+  const { colorMode } = props;
+
+  const fontColormode = (styleClass) => {
+    if (colorMode === "light") {
+      return `${styleClass} font_light`;
+    } else {
+      return `${styleClass} font_dark`;
+    }
+  };
+
+  const LoadingScreenStyle =
+    colorMode === "light" ? "loading_screen_light" : "loading_screen_dark";
 
   const { progress } = useProgress();
 
@@ -20,10 +29,12 @@ const LoadingScreen = () => {
     <section className={LoadingScreenStyle}>
       <div className="spacer_small"></div>
       <Row>
-        <h1 style={{ textAlign: "center" }}>Hold on one second...</h1>
+        <h1 className={fontColormode("")} style={{ textAlign: "center" }}>
+          Hold on one second...
+        </h1>
       </Row>
       <Row>
-        <h2 style={{ textAlign: "center" }}>
+        <h2 className={fontColormode("")} style={{ textAlign: "center" }}>
           Loading: {Math.floor(progress)}%...
         </h2>
       </Row>
@@ -35,7 +46,9 @@ const LoadingScreen = () => {
         />
       </Row>
       <Row>
-        <h2 style={{ textAlign: "center" }}>Loading the Awesomeness!</h2>
+        <h2 className={fontColormode("")} style={{ textAlign: "center" }}>
+          Loading the Awesomeness!
+        </h2>
       </Row>
 
       {/* <div className="canvas_container">

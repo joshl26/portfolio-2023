@@ -17,7 +17,7 @@ const ScrollManager = React.lazy(() => import("./components/ScrollManager"));
 // const Menu = React.lazy(() => import("./components/Menu"));
 
 function App() {
-  const [colorMode, setColorMode] = useLocalStorage("colorMode");
+  const [colorMode, setColorMode] = useLocalStorage("colorMode", "light");
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
 
@@ -38,7 +38,7 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <Suspense fallback={<LoadingScreen />}>
+      <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
         <MotionConfig
           transition={{
             type: "spring",
@@ -62,7 +62,10 @@ function App() {
                   onColorModeChangeHandler={onColorModeChangeHandler}
                 />
                 <Container>
-                  <Interface onSectionChange={setSection} />
+                  <Interface
+                    onSectionChange={setSection}
+                    colorMode={colorMode}
+                  />
                 </Container>
               </Scroll>
             </ScrollControls>

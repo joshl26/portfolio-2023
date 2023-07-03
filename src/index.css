@@ -18,3 +18,11 @@
 body {
   margin: 0;
 }
+
+.font_light {
+  color: var(--bg-color-dark);
+}
+
+.font_dark {
+  color: var(--bg-color-light);
+}

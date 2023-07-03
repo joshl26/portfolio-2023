@@ -23,9 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&amp;display=swap"
       rel="stylesheet"
     />
-
     <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
-
     <title>Joshua Lehman Portfolio Site 2023</title>
   </head>
   <body>
@@ -34,18 +32,21 @@
         emailjs.init("CUcueSeHLP_pqrf-s"); // Obtain your user ID at the dashboard https://dashboard.emailjs.com/integration
       })();
     </script>
-
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="text/javascript">
       var colormode = JSON.parse(window.localStorage.getItem("colorMode"));
-
       var element = document.getElementById("root"); // get all elements
 
-      if (colormode === "light") {
-        element.style.backgroundColor = "#ececec";
+      //Check for existing colorMode field in localStorage, if it does not exist create ie and give a default value of "light"
+      if (colormode) {
+        if (colormode === "light") {
+          element.style.backgroundColor = "#ececec";
+        } else {
+          element.style.backgroundColor = "#293241";
+        }
       } else {
-        element.style.backgroundColor = "#293241";
+        window.localStorage.setItem("colorMode", `"light"`);
       }
     </script>
   </body>
