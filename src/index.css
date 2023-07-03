@@ -1,6 +1,18 @@
+:root {
+  --bg-color-dark: #293241;
+  --bg-color-light: #ececec;
+  --color-one: #3d5a80;
+  --color-two: #98c1d9;
+  --color-three: #e0fbfc;
+  --color-four: #ee6c4d;
+  --color-five: #293241;
+}
+
 #root {
   width: 100vw;
+  width: 100dvw;
   height: 100vh;
+  height: 100dvh;
 }
 
 body {

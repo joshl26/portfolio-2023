@@ -1,6 +1,6 @@
 import "./LoadingScreen.css";
 
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 import { useProgress } from "@react-three/drei";
 
@@ -12,7 +12,9 @@ const LoadingScreen = () => {
     ? "loading_screen_light"
     : "loading_screen_dark";
 
-  const { active, progress, errors, item, loaded, total } = useProgress();
+  const { progress } = useProgress();
+
+  // const { active, progress, errors, item, loaded, total } = useProgress();
 
   return (
     <section className={LoadingScreenStyle}>

@@ -12,7 +12,20 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
     ></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+
     <title>Joshua Lehman Portfolio Site 2023</title>
   </head>
   <body>
@@ -24,5 +37,16 @@
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="text/javascript">
+      var colormode = JSON.parse(window.localStorage.getItem("colorMode"));
+
+      var element = document.getElementById("root"); // get all elements
+
+      if (colormode === "light") {
+        element.style.backgroundColor = "#ececec";
+      } else {
+        element.style.backgroundColor = "#293241";
+      }
+    </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 import React from "react";
-import Lottie from "lottie-react";
-import signature from "../data/lottie/SignatureDark.json";
-import { useFrame, useThree } from "@react-three/fiber";
+// import Lottie from "lottie-react";
+// import signature from "../data/lottie/SignatureDark.json";
+import { useThree } from "@react-three/fiber";
 
 import { motion } from "framer-motion";
 import "./Interface.css";
@@ -10,10 +10,10 @@ import linkedInIcon from "../data/images/LinkedIn_Icon.svg";
 import webIcon from "../data/images/Web_Icon.svg";
 import gitHubIcon from "../data/images/GitHub_Icon.svg";
 import wordPressIcon from "../data/images/wordpress_Icon.svg";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const REACT_APP_SITE_KEY = "6LcIowYkAAAAAJAFOPqSUkepQZyQHB7-GFo5bjSb";
+// const REACT_APP_SITE_KEY = "6LcIowYkAAAAAJAFOPqSUkepQZyQHB7-GFo5bjSb";
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
 
@@ -157,20 +157,20 @@ const SkillsSection = () => {
 const ContactSection = () => {
   const { viewport } = useThree();
 
-  const [captcha, setCaptcha] = useState(null);
+  // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
-  const [confirmReceipt, setConfirmReceipt] = useState(false);
+  // const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
 
-  function onChange(value) {
-    setCaptcha(value);
-    console.log("Captcha value:", value);
-    console.log(value);
-  }
+  // function onChange(value) {
+  //   setCaptcha(value);
+  //   console.log("Captcha value:", value);
+  //   console.log(value);
+  // }
 
   useEffect(() => {
     setEmailSent(false);
-    setConfirmReceipt(false);
+    // setConfirmReceipt(false);
   }, []);
 
   const nameInput = useRef();
@@ -194,18 +194,18 @@ const ContactSection = () => {
 
     // console.log("Form submit handler");
     // console.log(data);
-  });
+  }, []);
 
   function sendFeedback(templateId, variables) {
     window.emailjs
       .send(EMAIL_JS_SERVICEID, templateId, variables)
       .then((res) => {
         setEmailSent(true);
-        setConfirmReceipt(true);
+        // setConfirmReceipt(true);
       })
       .catch((err) => {
         setEmailSent(false);
-        setConfirmReceipt(false);
+        // setConfirmReceipt(false);
         setEmailError(emailError);
         console.error(
           "Oh well, you failed. Here some thoughts on the error that occured:",
@@ -227,7 +227,7 @@ const ContactSection = () => {
               {emailSent === false ? (
                 <>
                   <Row>
-                    <label for="name" className="interface_label">
+                    <label htmlFor="name" className="interface_label">
                       Name
                     </label>
                     <input
@@ -240,7 +240,7 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label for="email" className="interface_label">
+                    <label htmlFor="email" className="interface_label">
                       Email
                     </label>
                     <input
@@ -253,7 +253,7 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label for="email" className="interface_label">
+                    <label htmlFor="message" className="interface_label">
                       Message
                     </label>
                     <textarea
@@ -268,7 +268,7 @@ const ContactSection = () => {
               ) : (
                 <>
                   <Row>
-                    <label for="name" className="interface_label">
+                    <label htmlFor="name" className="interface_label">
                       Name
                     </label>
                     <input
@@ -281,7 +281,7 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label for="email" className="interface_label">
+                    <label htmlFor="email" className="interface_label">
                       Email
                     </label>
                     <input
@@ -294,7 +294,7 @@ const ContactSection = () => {
                     />
                   </Row>
                   <Row>
-                    <label for="email" className="interface_label">
+                    <label htmlFor="message" className="interface_label">
                       Message
                     </label>
                     <textarea
