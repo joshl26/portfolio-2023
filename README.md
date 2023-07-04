@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to my Portfolio Site Repo 2023 Version 👋</h1>
+<h1 align="center">Welcome to the Github Repo for my Portfolio Site 2023 Version 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/npm-%3E%3D8.0.0-blue.svg" />
