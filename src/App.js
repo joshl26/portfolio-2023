@@ -25,7 +25,7 @@ function App() {
 
   const canvasBackGroundColor = colorMode === "light" ? "#ececec" : "#293241";
 
-  const onColorModeChangeHandler = (colorMode) => {
+  const onColorModeChangeHandler = () => {
     setColorMode(newColorMode);
   };
 
@@ -53,7 +53,6 @@ function App() {
             camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
           >
             <color attach="background" args={[canvasBackGroundColor]} />
-
             <ScrollControls pages={3.9} damping={0.1}>
               <ScrollManager section={section} onSectionChange={setSection} />
               <Scroll>
@@ -81,17 +80,6 @@ function App() {
             setMenuOpened={setMenuOpened}
             colorMode={colorMode}
           />
-          {/* <Container>
-            <Menu
-              onSectionChange={setSection}
-              menuOpened={menuOpened}
-              setMenuOpened={setMenuOpened}
-            />
-            <ColorMode
-              colorMode={colorMode}
-              onColorModeChangeHandler={onColorModeChangeHandler}
-            />
-          </Container> */}
           <Leva hidden />
         </MotionConfig>
       </Suspense>
