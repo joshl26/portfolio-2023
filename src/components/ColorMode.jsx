@@ -26,7 +26,7 @@ const ColorMode = (props) => {
     } else {
       lottieRef.current.goToAndStop(23, true);
     }
-  }, []);
+  }, [colorMode]);
 
   return (
     <Lottie

@@ -38,6 +38,23 @@ const Section = (props) => {
 const Interface = (props) => {
   const { onSectionChange, colorMode } = props;
 
+  const { viewport } = useThree();
+
+  console.log(viewport);
+  console.log(
+    "Viewport Height: " +
+      viewport.height +
+      ", Viewport Width: " +
+      viewport.width
+  );
+
+  console.log(
+    "Viewport Height px: " +
+      viewport.height * viewport.factor +
+      ", Viewport Width px: " +
+      viewport.width * viewport.factor
+  );
+
   const fontColormode = (styleClass) => {
     if (colorMode === "light") {
       return `${styleClass} font_light`;
@@ -51,61 +68,108 @@ const Interface = (props) => {
       <AboutSection
         fontColormode={fontColormode}
         onSectionChange={onSectionChange}
+        viewport={viewport}
       />
-      <SkillsSection fontColormode={fontColormode} />
-      <PortfolioSection fontColormode={fontColormode} />
-      <ContactSection fontColormode={fontColormode} />
+      <SkillsSection fontColormode={fontColormode} viewport={viewport} />
+      <PortfolioSection fontColormode={fontColormode} viewport={viewport} />
+      <ContactSection fontColormode={fontColormode} viewport={viewport} />
     </>
   );
 };
 
 const AboutSection = (props) => {
-  const { onSectionChange, fontColormode } = props;
-  const { viewport } = useThree();
+  const { onSectionChange, fontColormode, viewport } = props;
 
   return (
     <Section>
-      <div className="interface_spacer"></div>
-      <motion.h1
-        className={fontColormode("interface_about_h1")}
-        initial={{ opacity: 0, y: 0 }}
-        whileInView={{
-          opacity: 1,
-          y: viewport.height,
-          transition: { duration: 1, delay: 0.5 },
-        }}
-      >
-        Hi, I'm
-        <br />
-        <span>Joshua Lehman</span>
-      </motion.h1>
-
-      <motion.p
-        className={fontColormode("interface_about_p")}
-        initial={{ opacity: 0, y: 0 }}
-        whileInView={{
-          opacity: 1,
-          y: viewport.height,
-          transition: { duration: 1, delay: 1.5 },
-        }}
-      >
-        A passionate programmer.
-        <br />
-        Always learning new skills.
-        <br />
-        See what I have to offer!
-      </motion.p>
-      <motion.button
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{
-          opacity: 1,
-          y: viewport.height,
-          transition: { duration: 1, delay: 2.5 },
-        }}
-        onClick={() => onSectionChange(1)}
-      >
-        Learn More Below
-      </motion.button>
+      {viewport.width * viewport.factor >= 768 ? (
+        <>
+          <motion.h1
+            className={fontColormode("interface_about_h1")}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: viewport.height * viewport.factor - 350,
+              transition: { duration: 1, delay: 0.5 },
+            }}
+          >
+            Hi, I'm
+            <br />
+            <span>Joshua Lehman</span>
+          </motion.h1>
+          <motion.p
+            className={fontColormode("interface_about_p")}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: viewport.height * viewport.factor - 350,
+              transition: { duration: 1, delay: 1.5 },
+            }}
+          >
+            A passionate programmer.
+            <br />
+            Always learning new skills.
+            <br />
+            See what I have to offer!
+          </motion.p>
+          <motion.button
+            className="learn-more-button"
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: viewport.height * viewport.factor - 350,
+              transition: { duration: 1, delay: 2.5 },
+            }}
+            onClick={() => onSectionChange(1)}
+          >
+            Learn More Below
+          </motion.button>
+        </>
+      ) : (
+        <>
+          <motion.h1
+            className={fontColormode("interface_about_h1")}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: viewport.height * viewport.factor - 200,
+              transition: { duration: 1, delay: 0.5 },
+            }}
+          >
+            Hi, I'm
+            <br />
+            <span>Joshua Lehman</span>
+          </motion.h1>
+          <motion.p
+            className={fontColormode("interface_about_p")}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: viewport.height * viewport.factor - 200,
+              transition: { duration: 1, delay: 1.5 },
+            }}
+          >
+            A passionate programmer.
+            <br />
+            Always learning new skills.
+            <br />
+            See what I have to offer!
+          </motion.p>
+          <motion.button
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: viewport.height * viewport.factor - 200,
+              transition: { duration: 1, delay: 2.5 },
+            }}
+            onClick={() => onSectionChange(1)}
+          >
+            Learn More Below
+          </motion.button>
+        </>
+      )}
     </Section>
   );
 };
@@ -169,7 +233,6 @@ const SkillsSection = (props) => {
 
 const ContactSection = (props) => {
   const { fontColormode } = props;
-  const { viewport } = useThree();
 
   // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
@@ -238,7 +301,9 @@ const ContactSection = (props) => {
         <Row>
           <Col xs={6} md={5} sm={5} lg={5}>
             <Row>
-              <h2 className={fontColormode("interface_label")}>Contact me</h2>
+              <h2 className={fontColormode("interface_label contact_h1")}>
+                Contact
+              </h2>
             </Row>
             <form id="contact-form" onSubmit={formSubmitHandler} method="POST">
               {emailSent === false ? (
@@ -287,7 +352,7 @@ const ContactSection = (props) => {
                       ref={messageInput}
                       name="message"
                       id="message"
-                      className=""
+                      className="contact-text-area"
                     />
                   </Row>
                 </>
@@ -337,7 +402,7 @@ const ContactSection = (props) => {
                       ref={messageInput}
                       name="message"
                       id="message"
-                      className=""
+                      className="contact-text-area"
                     />
                   </Row>
                 </>
@@ -346,6 +411,7 @@ const ContactSection = (props) => {
               <div className="interface_spacer_xsmall"></div>
               {emailSent === false ? (
                 <button
+                  className="submit-button"
                   type="submit"
                   data-sitekey="reCAPTCHA_site_key"
                   data-callback="onSubmit"
@@ -365,77 +431,79 @@ const ContactSection = (props) => {
                 onChange={onChange}
               />
             </div> */}
-            <div className="interface_spacer_small"></div>
-            <Row>
-              <Col className="social_col" xs={6} md={3}>
-                <Container className="text_center">
-                  <div className="spacer"></div>
-                  <a href="https://www.linkedin.com/in/joshrlehman/">
-                    <img
-                      className="socialmedia_icon"
-                      src={linkedInIcon}
-                      alt="Linked In Icon"
-                    />
-                  </a>
-                </Container>
-                <div className="spacer"></div>
-              </Col>
-              <Col className="social_col" xs={6} md={3}>
-                <Container>
-                  <div className="spacer"></div>
-                  <a href="https://github.com/joshl26/">
-                    <img className="socialmedia_icon" src={gitHubIcon} alt="" />
-                  </a>
-                </Container>
-                <div className="spacer"></div>
-              </Col>
-              <Col className="social_col" xs={6} md={3}>
-                <Container className="text_center">
-                  <div className="spacer"></div>
-                  <a href="http://www.blackrock3d.ca/">
-                    <img
-                      className="socialmedia_icon"
-                      src={wordPressIcon}
-                      alt="Web Icon"
-                    />
-                  </a>
-                </Container>
-                <div className="spacer"></div>
-              </Col>
-              <Col className="social_col" xs={6} md={3}>
-                <Container className="text_center">
-                  <div className="spacer"></div>
-                  <a href="mailto:joshlehman.dev@gmail.com">
-                    <img
-                      className="socialmedia_icon"
-                      src={webIcon}
-                      alt="Mail Icon"
-                    />
-                  </a>
-                </Container>
-                <div className="spacer"></div>
-              </Col>
-            </Row>
+
             {/* <Lottie
               className="svg_animate"
               animationData={signature}
               loop={true}
             /> */}
           </Col>
-          <motion.h3
-            className={fontColormode("interface_about_h3")}
-            initial={{ opacity: 0, x: 0, y: 0 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              y: viewport.height * 4,
-              transition: { duration: 1, delay: 1.5 },
-            }}
-          >
-            Made by Joshua Lehman
-          </motion.h3>
+
           <Col></Col>
+          <div className="spacer_small"></div>
+          <Row>
+            <Col className="social_col" xs={3} md={3}>
+              <Container className="text_center">
+                <div className="spacer"></div>
+                <a href="https://www.linkedin.com/in/joshrlehman/">
+                  <img
+                    className="socialmedia_icon"
+                    src={linkedInIcon}
+                    alt="Linked In Icon"
+                  />
+                </a>
+              </Container>
+              <div className="spacer"></div>
+            </Col>
+            <Col className="social_col" xs={3} md={3}>
+              <Container>
+                <div className="spacer"></div>
+                <a href="https://github.com/joshl26/">
+                  <img className="socialmedia_icon" src={gitHubIcon} alt="" />
+                </a>
+              </Container>
+              <div className="spacer"></div>
+            </Col>
+            <Col className="social_col" xs={3} md={3}>
+              <Container className="text_center">
+                <div className="spacer"></div>
+                <a href="http://www.blackrock3d.ca/">
+                  <img
+                    className="socialmedia_icon"
+                    src={wordPressIcon}
+                    alt="Web Icon"
+                  />
+                </a>
+              </Container>
+              <div className="spacer"></div>
+            </Col>
+            <Col className="social_col" xs={3} md={3}>
+              <Container className="text_center">
+                <div className="spacer"></div>
+                <a href="mailto:joshlehman.dev@gmail.com">
+                  <img
+                    className="socialmedia_icon"
+                    src={webIcon}
+                    alt="Mail Icon"
+                  />
+                </a>
+              </Container>
+              <div className="spacer"></div>
+            </Col>
+          </Row>
         </Row>
+        {/* <motion.h3
+          className={fontColormode("interface_about_h3")}
+          initial={{ opacity: 0, x: 0, y: 0 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: viewport.height * 4,
+            transition: { duration: 1, delay: 1.5 },
+          }}
+        >
+          Made by Joshua Lehman
+        </motion.h3> */}
       </Container>
     </Section>
   );

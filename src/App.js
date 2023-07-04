@@ -60,10 +60,6 @@ function App() {
                 <Experience section={section} menuOpened={menuOpened} />
               </Scroll>
               <Scroll className="scroll-container" html>
-                <ColorMode
-                  colorMode={colorMode}
-                  onColorModeChangeHandler={onColorModeChangeHandler}
-                />
                 <Container>
                   <Interface
                     onSectionChange={setSection}
@@ -74,6 +70,10 @@ function App() {
             </ScrollControls>
             <ambientLight />
           </Canvas>
+          <ColorMode
+            colorMode={colorMode}
+            onColorModeChangeHandler={onColorModeChangeHandler}
+          />
           <Menu
             section={section}
             onSectionChange={setSection}

@@ -7,7 +7,7 @@ import { Col, Row } from "react-bootstrap";
 import "./Menu.css";
 
 const Menu = (props) => {
-  const { lottieRef } = useRef();
+  const lottieRef = useRef();
 
   const { onSectionChange, menuOpened, setMenuOpened, colorMode, section } =
     props;
@@ -21,47 +21,39 @@ const Menu = (props) => {
   };
 
   const menuButtonClickHandler = () => {
-    if (menuOpened) {
+    lottieRef.current.setSpeed(2.75);
+    if (menuOpened === false) {
+      lottieRef.current.playSegments([15, 75], true);
+      setMenuOpened(!menuOpened);
     } else {
+      lottieRef.current.playSegments([75, 15], true);
+      setMenuOpened(!menuOpened);
     }
-
-    setMenuOpened(!menuOpened);
   };
+
+  useEffect(() => {}, [section]);
 
   return (
     <>
       {colorMode === "light" ? (
         <Lottie
           lottieRef={lottieRef}
-          style={{
-            width: "50px",
-            height: "50px",
-            position: "absolute",
-            left: "10px",
-            top: "10px",
-            zIndex: 10,
-          }}
+          className="menu-open-button"
           animationData={HamburgerMenuLight}
           autoplay={false}
+          loop={false}
           onClick={() => menuButtonClickHandler()}
         />
       ) : (
         <Lottie
           lottieRef={lottieRef}
-          style={{
-            width: "50px",
-            height: "50px",
-            position: "absolute",
-            left: "10px",
-            top: "10px",
-            zIndex: 10,
-          }}
+          className="menu-open-button"
           animationData={HamburgerMenuDark}
           autoplay={false}
+          loop={false}
           onClick={() => menuButtonClickHandler()}
         />
       )}
-
       {/* <button
         style={{ top: "50px", left: "50px", position: "fixed" }}
         onClick={() => setMenuOpened(!menuOpened)}
@@ -75,34 +67,44 @@ const Menu = (props) => {
             <Row className="menu-row">
               <MenuButton
                 lable="Home"
-                disabled={section === 0 ? true : false}
-                onClick={() => onSectionChange(0)}
+                // disabled={section === 0 ? true : false}
+                onClick={() => {
+                  onSectionChange(0);
+                  menuButtonClickHandler();
+                }}
               />
             </Row>
             <div className="menu-sspacer"></div>
-
             <Row className="menu-row">
               <MenuButton
                 lable="About"
-                disabled={section === 1 ? true : false}
-                onClick={() => onSectionChange(1)}
+                // disabled={section === 1 ? true : false}
+                onClick={() => {
+                  onSectionChange(1);
+                  menuButtonClickHandler();
+                }}
               />
             </Row>
             <div className="menu-sspacer"></div>
-
             <Row className="menu-row">
               <MenuButton
                 lable="Projects"
-                disabled={section === 2 ? true : false}
-                onClick={() => onSectionChange(2)}
+                // disabled={section === 2 ? true : false}
+                onClick={() => {
+                  onSectionChange(2);
+                  menuButtonClickHandler();
+                }}
               />
             </Row>
             <div className="menu-sspacer"></div>
             <Row className="menu-row">
               <MenuButton
                 lable="Contact"
-                disabled={section === 3 ? true : false}
-                onClick={() => onSectionChange(3)}
+                // disabled={section === 3 ? true : false}
+                onClick={() => {
+                  onSectionChange(3);
+                  menuButtonClickHandler();
+                }}
               />
             </Row>
           </Col>

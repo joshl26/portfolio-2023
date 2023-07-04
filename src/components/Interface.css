@@ -6,7 +6,7 @@
 }
 
 .interface_spacer_small {
-  height: 10vh;
+  height: 3vh;
 }
 
 .interface_spacer_xsmall {
@@ -15,6 +15,7 @@
 
 .interface_label {
   padding-left: 0px !important;
+  padding-bottom: 0.25rem;
 }
 
 .captcha_container {
@@ -29,6 +30,28 @@
   position: absolute;
   top: 80vh;
   text-align: center;
+}
+
+.contact-text-area {
+  height: 25vh;
+}
+
+.contact-h1 {
+  font-size: 1.375rem;
+}
+
+.learn-more-button,
+.submit-button {
+  background-color: var(--bg-color-light);
+  border-radius: 0.35rem;
+  padding: 0.25rem;
+  width: 175px;
+}
+
+.learn-more-button:hover {
+  background-color: var(--bg-color-dark);
+  color: var(--bg-color-light);
+  border-radius: 0.35rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -49,10 +72,13 @@
 
   .interface_about_p {
     font-size: 1em;
+    font-weight: lighter;
+    -webkit-text-stroke: 0.25px black;
   }
 
   .interface_about_h1 {
     font-size: 1.5em;
+    -webkit-text-stroke: 0.5px black;
   }
 }
 
@@ -73,5 +99,10 @@
 
   .interface_about_h1 {
     font-size: 2em;
+  }
+
+  .socialmedia_icon {
+    width: 50px;
+    padding-bottom: 1em;
   }
 }

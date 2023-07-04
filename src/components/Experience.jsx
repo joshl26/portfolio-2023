@@ -83,7 +83,15 @@ const Experience = (props) => {
     animate(cameraLookAtZ + 20, menuOpened ? 0 : 0, {
       ...framerMotionConfig,
     });
-  }, [menuOpened]);
+  }, [
+    menuOpened,
+    cameraLookAtX,
+    cameraLookAtY,
+    cameraLookAtZ,
+    cameraPositionX,
+    cameraPositionY,
+    cameraPositionZ,
+  ]);
 
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
