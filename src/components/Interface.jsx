@@ -40,20 +40,20 @@ const Interface = (props) => {
 
   const { viewport } = useThree();
 
-  console.log(viewport);
-  console.log(
-    "Viewport Height: " +
-      viewport.height +
-      ", Viewport Width: " +
-      viewport.width
-  );
+  // console.log(viewport);
+  // console.log(
+  //   "Viewport Height: " +
+  //     viewport.height +
+  //     ", Viewport Width: " +
+  //     viewport.width
+  // );
 
-  console.log(
-    "Viewport Height px: " +
-      viewport.height * viewport.factor +
-      ", Viewport Width px: " +
-      viewport.width * viewport.factor
-  );
+  // console.log(
+  //   "Viewport Height px: " +
+  //     viewport.height * viewport.factor +
+  //     ", Viewport Width px: " +
+  //     viewport.width * viewport.factor
+  // );
 
   const fontColormode = (styleClass) => {
     if (colorMode === "light") {
