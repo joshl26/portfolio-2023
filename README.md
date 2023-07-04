@@ -25,6 +25,8 @@
 - npm >=8.0.0
 - node >=17.0.0
 
+*YOU WILL HAVE TO SUPPLY YOUR OWN BAKED TEXTURE MAP AND MODELS*
+
 ## Install
 
 ```sh
