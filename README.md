@@ -47,9 +47,22 @@ This portfolio site was created to showcase the prgramming abilities of Josh Leh
 
 > Joshua Lehman Portfolio Site
 
-### 🏠 [Homepage](https://github.com/joshl26/portfolio-2023#readme)
+## Screenshots
 
-### ✨ [Demo](https://joshlehman.ca)
+> Loading Page 
+> ![Home](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023.png)
+
+> Landing Page
+> ![All campsites](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023-1.png)
+
+> 3D Animated Experience as you scroll
+> ![Campsite Details](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023-2.png)
+
+## Demo
+
+### ✨ [Live Site](https://joshlehman.ca)
+
+> <p>Hosted with free tier on Render.com</p>
 
 ## Prerequisites
 
