@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to the Github Repo for my Portfolio Site 2023 Version 👋</h1>
+<h1 align="center">Welcome to my Portfolio Site 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/npm-%3E%3D8.0.0-blue.svg" />
@@ -13,6 +13,37 @@
     <img alt="License: MIT" src="https://img.shields.io/github/license/joshl26/portfolio-2023" />
   </a>
 </p>
+
+This portfolio site was created to showcase the prgramming abilities of Josh Lehman. It was designed and coded from scratch utilizing the latest tech in React and ThreeJS.
+
+## Technologies Utilized
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![React.js](https://img.shields.io/badge/react.js-%23404d59.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+
+> HTML5 - A markup language for creating web pages and web applications.
+
+> CSS3 - used for describing the presentation of a document written in a markup language.
+
+> Bootstrap - A free and open-source front-end web framework for designing websites and web applications quickly.
+
+> Node.js - Open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.
+
+> React.js - For building reactive/responsive web applications.
+
+> Swagger-UI/JSDOC - Powerful UI interface for documenting, testing and displaying API endpoints.
+
+> Render.com - Cloud platform as a service used as a web application deployment model.
+
+> AWS - Mongodb is hosted on Amazon ec2 instance.
 
 > Joshua Lehman Portfolio Site
 
