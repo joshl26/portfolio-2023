@@ -23,9 +23,7 @@ This portfolio site was created to showcase the prgramming abilities of Josh Leh
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![React.js](https://img.shields.io/badge/react.js-%23404d59.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
@@ -39,17 +37,11 @@ This portfolio site was created to showcase the prgramming abilities of Josh Leh
 
 > React.js - For building reactive/responsive web applications.
 
-> Swagger-UI/JSDOC - Powerful UI interface for documenting, testing and displaying API endpoints.
-
 > Render.com - Cloud platform as a service used as a web application deployment model.
-
-> AWS - Mongodb is hosted on Amazon ec2 instance.
-
-> Joshua Lehman Portfolio Site
 
 ## Screenshots
 
-> Loading Page 
+> Loading Page
 > ![Home](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023.png)
 
 > Landing Page
