@@ -25,8 +25,6 @@
 - npm >=8.0.0
 - node >=17.0.0
 
-_YOU WILL NEED TO SUPPLY YOUR OWN TEXTURE MAPS AND MODELS_
-
 ## Install
 
 ```sh
