@@ -54,7 +54,7 @@ This portfolio site was created to showcase the prgramming abilities of Josh Leh
 
 ### ✨ [Live Site](https://joshlehman.ca)
 
-> <p>Hosted with free tier on Render.com</p>
+> <p>Hosted with GoDaddy</p>
 
 ## Prerequisites
 
