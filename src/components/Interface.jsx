@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useThree } from "@react-three/fiber";
 import { motion } from "framer-motion";
-import "./Interface.css";
 import { Col, Container, Row } from "react-bootstrap";
+import { useAtom } from "jotai";
+import { currentProjectAtom, projects } from "./Projects";
+import emailjs from "@emailjs/browser";
 import linkedInIcon from "../data/images/LinkedIn_Icon.svg";
 import webIcon from "../data/images/Web_Icon.svg";
 import gitHubIcon from "../data/images/GitHub_Icon.svg";
 import wordPressIcon from "../data/images/wordpress_Icon.svg";
-// import ReCAPTCHA from "react-google-recaptcha";
-import { useCallback, useEffect, useRef, useState } from "react";
+import "./Interface.css";
 
-// const REACT_APP_SITE_KEY = "6LcIowYkAAAAAJAFOPqSUkepQZyQHB7-GFo5bjSb";
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
+const EMAIL_JS_PUBLIC_KEY = "87SpQ-1mR0MN2Rug9";
 
 const Section = (props) => {
   const { children } = props;
@@ -36,24 +37,7 @@ const Section = (props) => {
 };
 
 const Interface = (props) => {
-  const { onSectionChange, colorMode } = props;
-
-  const { viewport } = useThree();
-
-  // console.log(viewport);
-  // console.log(
-  //   "Viewport Height: " +
-  //     viewport.height +
-  //     ", Viewport Width: " +
-  //     viewport.width
-  // );
-
-  // console.log(
-  //   "Viewport Height px: " +
-  //     viewport.height * viewport.factor +
-  //     ", Viewport Width px: " +
-  //     viewport.width * viewport.factor
-  // );
+  const { onSectionChange, colorMode, viewport } = props;
 
   const fontColormode = (styleClass) => {
     if (colorMode === "light") {
@@ -86,11 +70,15 @@ const AboutSection = (props) => {
         <>
           <motion.h1
             className={fontColormode("interface_about_h1")}
-            initial={{ opacity: 0, x: 0, y: 0 }}
+            initial={{
+              opacity: 0,
+              x: -100,
+              y: viewport.height * viewport.factor * 0.58,
+            }}
             whileInView={{
               opacity: 1,
               x: 0,
-              y: viewport.height * viewport.factor - 350,
+              y: viewport.height * viewport.factor * 0.58,
               transition: { duration: 1, delay: 0.5 },
             }}
           >
@@ -100,25 +88,35 @@ const AboutSection = (props) => {
           </motion.h1>
           <motion.p
             className={fontColormode("interface_about_p")}
-            initial={{ opacity: 0, x: 0, y: 0 }}
+            initial={{
+              opacity: 0,
+              x: -100,
+              y: viewport.height * viewport.factor * 0.59,
+            }}
             whileInView={{
               opacity: 1,
-              y: viewport.height * viewport.factor - 350,
+              x: 0,
+              y: viewport.height * viewport.factor * 0.59,
               transition: { duration: 1, delay: 1.5 },
             }}
           >
-            A passionate programmer.
+            Digital Craftsman.
             <br />
-            Always learning new skills.
+            Always learning new Skills.
             <br />
-            See what I have to offer!
+            Scroll down to Explore!
           </motion.p>
           <motion.button
             className="learn-more-button"
-            initial={{ opacity: 0, x: 0, y: 0 }}
+            initial={{
+              opacity: 0,
+              x: -100,
+              y: viewport.height * viewport.factor * 0.6,
+            }}
             whileInView={{
               opacity: 1,
-              y: viewport.height * viewport.factor - 350,
+              x: 0,
+              y: viewport.height * viewport.factor * 0.6,
               transition: { duration: 1, delay: 2.5 },
             }}
             onClick={() => onSectionChange(1)}
@@ -130,7 +128,11 @@ const AboutSection = (props) => {
         <>
           <motion.h1
             className={fontColormode("interface_about_h1")}
-            initial={{ opacity: 0, x: 0, y: 0 }}
+            initial={{
+              opacity: 0,
+              x: -100,
+              y: viewport.height * viewport.factor - 200,
+            }}
             whileInView={{
               opacity: 1,
               x: 0,
@@ -144,23 +146,34 @@ const AboutSection = (props) => {
           </motion.h1>
           <motion.p
             className={fontColormode("interface_about_p")}
-            initial={{ opacity: 0, x: 0, y: 0 }}
+            initial={{
+              opacity: 0,
+              x: -100,
+              y: viewport.height * viewport.factor - 200,
+            }}
             whileInView={{
               opacity: 1,
+              x: 0,
               y: viewport.height * viewport.factor - 200,
               transition: { duration: 1, delay: 1.5 },
             }}
           >
-            A passionate programmer.
+            Digital Craftsman.
             <br />
-            Always learning new skills.
+            Always learning new Skills.
             <br />
-            See what I have to offer!
+            Scroll down to Explore!
           </motion.p>
           <motion.button
-            initial={{ opacity: 0, x: 0, y: 0 }}
+            className="learn-more-button"
+            initial={{
+              opacity: 0,
+              x: -100,
+              y: viewport.height * viewport.factor - 200,
+            }}
             whileInView={{
               opacity: 1,
+              x: 0,
               y: viewport.height * viewport.factor - 200,
               transition: { duration: 1, delay: 2.5 },
             }}
@@ -181,48 +194,48 @@ const SkillsSection = (props) => {
     <Section>
       <motion.h2
         className={fontColormode("interface_about_h2")}
-        initial={{ opacity: 0, x: -100, y: viewport.height }}
+        initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{
           opacity: 1,
-          x: 25,
-          y: viewport.height * 2.5,
-          transition: { duration: 1, delay: 1.5 },
+          x: 5,
+          y: viewport.height * viewport.factor * 0.125,
+          transition: { duration: 1, delay: 0.5 },
         }}
       >
         Passionate Programmer
       </motion.h2>
       <motion.h2
         className={fontColormode("interface_about_h2")}
-        initial={{ opacity: 0, x: -100, y: viewport.height }}
+        initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{
           opacity: 1,
-          x: 25,
-          y: viewport.height * 7.5,
-          transition: { duration: 1, delay: 2.5 },
+          x: 5,
+          y: viewport.height * viewport.factor * 0.25,
+          transition: { duration: 1, delay: 1.5 },
         }}
       >
         Five plus years software engineering
       </motion.h2>
       <motion.h2
         className={fontColormode("interface_about_h2")}
-        initial={{ opacity: 0, x: -100, y: viewport.height }}
+        initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{
           opacity: 1,
-          x: 25,
-          y: viewport.height * 12.5,
-          transition: { duration: 1, delay: 3.5 },
+          x: 5,
+          y: viewport.height * viewport.factor * 0.35,
+          transition: { duration: 1, delay: 2.5 },
         }}
       >
         Dedicated to Quality
       </motion.h2>
       <motion.h2
         className={fontColormode("interface_about_h2")}
-        initial={{ opacity: 0, x: -100, y: 400 }}
+        initial={{ opacity: 0, x: -100, y: 0 }}
         whileInView={{
           opacity: 1,
-          x: 25,
-          y: viewport.height * 17.5,
-          transition: { duration: 1, delay: 4.5 },
+          x: 5,
+          y: viewport.height * viewport.factor * 0.45,
+          transition: { duration: 1, delay: 3.5 },
         }}
       >
         Continuously pushing the limits!
@@ -236,63 +249,35 @@ const ContactSection = (props) => {
 
   // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
-  // const [confirmReceipt, setConfirmReceipt] = useState(false);
+  const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
 
-  // function onChange(value) {
-  //   setCaptcha(value);
-  //   console.log("Captcha value:", value);
-  //   console.log(value);
-  // }
+  useEffect(() => {}, [emailSent, confirmReceipt]);
 
-  useEffect(() => {
-    setEmailSent(false);
-    // setConfirmReceipt(false);
-  }, []);
+  const form = useRef();
 
-  const nameInput = useRef();
-  const emailInput = useRef();
-  const messageInput = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setEmailSent(true);
 
-  const formSubmitHandler = useCallback(
-    (event) => {
-      const templateId = EMAIL_JS_TEMPLATEID;
-
-      setEmailSent(true);
-
-      event.preventDefault();
-
-      const data = {
-        name: nameInput.current?.value,
-        email: emailInput.current?.value,
-        message: messageInput.current?.value,
-      };
-
-      function sendFeedback(templateId, variables) {
-        window.emailjs
-          .send(EMAIL_JS_SERVICEID, templateId, variables)
-          .then((res) => {
-            setEmailSent(true);
-            // setConfirmReceipt(true);
-          })
-          .catch((err) => {
-            setEmailSent(false);
-            // setConfirmReceipt(false);
-            setEmailError(emailError);
-            console.error(
-              "Oh well, you failed. Here some thoughts on the error that occured:",
-              err
-            );
-          });
-      }
-
-      sendFeedback(templateId, data);
-
-      // console.log("Form submit handler");
-      // console.log(data);
-    },
-    [emailError]
-  );
+    emailjs
+      .sendForm(
+        EMAIL_JS_SERVICEID,
+        EMAIL_JS_TEMPLATEID,
+        form.current,
+        EMAIL_JS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setConfirmReceipt(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setEmailError(error.text);
+        }
+      );
+  };
 
   return (
     <Section>
@@ -305,7 +290,7 @@ const ContactSection = (props) => {
                 Contact
               </h2>
             </Row>
-            <form id="contact-form" onSubmit={formSubmitHandler} method="POST">
+            <form ref={form} id="contact-form" onSubmit={sendEmail}>
               {emailSent === false ? (
                 <>
                   <Row>
@@ -317,7 +302,6 @@ const ContactSection = (props) => {
                     </label>
                     <input
                       required
-                      ref={nameInput}
                       type="text"
                       name="name"
                       id="name"
@@ -333,7 +317,6 @@ const ContactSection = (props) => {
                     </label>
                     <input
                       required
-                      ref={emailInput}
                       type="email"
                       name="email"
                       id="email"
@@ -349,7 +332,6 @@ const ContactSection = (props) => {
                     </label>
                     <textarea
                       required
-                      ref={messageInput}
                       name="message"
                       id="message"
                       className="contact-text-area"
@@ -367,7 +349,6 @@ const ContactSection = (props) => {
                     </label>
                     <input
                       disabled
-                      ref={nameInput}
                       type="text"
                       name="name"
                       id="name"
@@ -383,7 +364,6 @@ const ContactSection = (props) => {
                     </label>
                     <input
                       disabled
-                      ref={emailInput}
                       type="email"
                       name="email"
                       id="email"
@@ -399,7 +379,6 @@ const ContactSection = (props) => {
                     </label>
                     <textarea
                       disabled
-                      ref={messageInput}
                       name="message"
                       id="message"
                       className="contact-text-area"
@@ -407,38 +386,33 @@ const ContactSection = (props) => {
                   </Row>
                 </>
               )}
-
               <div className="interface_spacer_xsmall"></div>
-              {emailSent === false ? (
-                <button
-                  className="submit-button"
-                  type="submit"
-                  data-sitekey="reCAPTCHA_site_key"
-                  data-callback="onSubmit"
-                  data-action="submit"
-                >
-                  Submit
-                </button>
-              ) : (
-                <p className="email_confirmation">Receipt confirmed!</p>
-              )}
+              <Row>
+                <Col className="submit-btn-col">
+                  {emailSent === false && confirmReceipt === false ? (
+                    <button
+                      className="submit-button"
+                      type="submit"
+                      data-sitekey="reCAPTCHA_site_key"
+                      data-callback="onSubmit"
+                      data-action="submit"
+                    >
+                      Submit
+                    </button>
+                  ) : (
+                    <p className="email_sent">
+                      Email sent, awaiting confirmation...
+                    </p>
+                  )}
+                  {emailSent === true && confirmReceipt === true ? (
+                    <p className="email_confirmation">Email Received!</p>
+                  ) : (
+                    <p className="email_confirmation">{emailError}</p>
+                  )}
+                </Col>
+              </Row>
             </form>
-            {/* <div className="captcha_container">
-              <ReCAPTCHA
-                size="compact"
-                className="captcha"
-                sitekey={REACT_APP_SITE_KEY}
-                onChange={onChange}
-              />
-            </div> */}
-
-            {/* <Lottie
-              className="svg_animate"
-              animationData={signature}
-              loop={true}
-            /> */}
           </Col>
-
           <Col></Col>
           <div className="spacer_small"></div>
           <Row>
@@ -492,25 +466,22 @@ const ContactSection = (props) => {
             </Col>
           </Row>
         </Row>
-        {/* <motion.h3
-          className={fontColormode("interface_about_h3")}
-          initial={{ opacity: 0, x: 0, y: 0 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: viewport.height * 4,
-            transition: { duration: 1, delay: 1.5 },
-          }}
-        >
-          Made by Joshua Lehman
-        </motion.h3> */}
       </Container>
     </Section>
   );
 };
 
 const PortfolioSection = (props) => {
-  const { fontColormode } = props;
+  const { fontColormode, viewport } = props;
+  const [currentProject, setCurrentProject] = useAtom(currentProjectAtom);
+
+  const nextProject = () => {
+    setCurrentProject((currentProject + 1) % projects.length);
+  };
+
+  const previousProject = () => {
+    setCurrentProject((currentProject - 1 + projects.length) % projects.length);
+  };
   return (
     <Section>
       <motion.h2
@@ -518,25 +489,76 @@ const PortfolioSection = (props) => {
         initial={{ opacity: 0, x: -100, y: 0 }}
         whileInView={{
           opacity: 1,
-          x: 25,
+          x: 0,
           y: 0,
           transition: { duration: 1, delay: 1.5 },
         }}
       >
         Portfolio Section
       </motion.h2>
-      <motion.h2
-        className={fontColormode("interface_about_h2")}
-        initial={{ opacity: 0, x: -100, y: 0 }}
-        whileInView={{
-          opacity: 1,
-          x: 25,
-          y: 0,
-          transition: { duration: 1, delay: 2.5 },
-        }}
-      >
-        Currently In Progress, Coming soon late June 2023!!
-      </motion.h2>
+
+      <div className="interface_spacer_xsmall"></div>
+      <Row>
+        <Col xs={4} sm={4} md={4}>
+          <motion.button
+            className="scroll-button"
+            initial={{
+              opacity: 0,
+              x: 0,
+              y: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: viewport.height * viewport.factor * 0.67,
+              transition: { duration: 1, delay: 2.5 },
+            }}
+            onClick={previousProject}
+          >
+            ← Prev
+          </motion.button>
+        </Col>
+        <Col xs={4} sm={4} md={4}>
+          <motion.p
+            className={fontColormode("scroll_p")}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: viewport.height * viewport.factor * 0.67,
+              transition: { duration: 1, delay: 2.5 },
+            }}
+          ></motion.p>
+        </Col>
+
+        <Col xs={4} sm={4} md={4}>
+          <motion.button
+            className="scroll-button"
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              y: viewport.height * viewport.factor * 0.67,
+              transition: { duration: 1, delay: 2.5 },
+            }}
+            onClick={nextProject}
+          >
+            Next →
+          </motion.button>
+        </Col>
+        <motion.h2
+          className={fontColormode("interface_about_h2")}
+          initial={{ opacity: 0, x: -100, y: 0 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            y: viewport.height * viewport.factor * 0.7,
+            transition: { duration: 1, delay: 2.5 },
+          }}
+        >
+          Click on any card to see project details.
+        </motion.h2>
+      </Row>
     </Section>
   );
 };

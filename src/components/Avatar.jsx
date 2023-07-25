@@ -19,11 +19,19 @@ export function Avatar(props) {
 
   const group = useRef();
 
-  const { nodes, materials } = useGLTF("/models/original-avatar.glb");
+  const { nodes, materials } = useGLTF(
+    "https://res.cloudinary.com/dv6keahg3/image/upload/fl_draco/v1688838830/PortfolioSite/original_avatar_q6ndg5.gltf"
+  );
 
-  const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
-  const { animations: standingAnimation } = useFBX("animations/Standing.fbx");
-  const { animations: fallingAnimation } = useFBX("animations/Falling.fbx");
+  const { animations: typingAnimation } = useFBX(
+    "https://res.cloudinary.com/dv6keahg3/raw/upload/v1688838498/PortfolioSite/Typing_ig6qh8.fbx"
+  );
+  const { animations: standingAnimation } = useFBX(
+    "https://res.cloudinary.com/dv6keahg3/raw/upload/v1688838498/PortfolioSite/Standing_fr0uuz.fbx"
+  );
+  const { animations: fallingAnimation } = useFBX(
+    "https://res.cloudinary.com/dv6keahg3/raw/upload/v1688838497/PortfolioSite/Falling_kym4f1.fbx"
+  );
 
   typingAnimation[0].name = "Typing";
   standingAnimation[0].name = "Standing";
@@ -61,75 +69,79 @@ export function Avatar(props) {
 
   return (
     <group {...props} ref={group} dispose={null}>
-      <primitive object={nodes.Hips} />
-      <skinnedMesh
-        frustumCulled={false}
-        geometry={nodes.Wolf3D_Body.geometry}
-        material={materials.Wolf3D_Body}
-        skeleton={nodes.Wolf3D_Body.skeleton}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
-        material={materials.Wolf3D_Outfit_Bottom}
-        skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
-        material={materials.Wolf3D_Outfit_Footwear}
-        skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        geometry={nodes.Wolf3D_Outfit_Top.geometry}
-        material={materials.Wolf3D_Outfit_Top}
-        skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        geometry={nodes.Wolf3D_Headwear.geometry}
-        material={materials.Wolf3D_Headwear}
-        skeleton={nodes.Wolf3D_Headwear.skeleton}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        name="EyeLeft"
-        geometry={nodes.EyeLeft.geometry}
-        material={materials.Wolf3D_Eye}
-        skeleton={nodes.EyeLeft.skeleton}
-        morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
-        morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        name="EyeRight"
-        geometry={nodes.EyeRight.geometry}
-        material={materials.Wolf3D_Eye}
-        skeleton={nodes.EyeRight.skeleton}
-        morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
-        morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        name="Wolf3D_Head"
-        geometry={nodes.Wolf3D_Head.geometry}
-        material={materials.Wolf3D_Skin}
-        skeleton={nodes.Wolf3D_Head.skeleton}
-        morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
-        morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
-      />
-      <skinnedMesh
-        frustumCulled={false}
-        name="Wolf3D_Teeth"
-        geometry={nodes.Wolf3D_Teeth.geometry}
-        material={materials.Wolf3D_Teeth}
-        skeleton={nodes.Wolf3D_Teeth.skeleton}
-        morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
-        morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
-      />
+      <group name="Armature" position={[0, -0.42, 0]}>
+        <primitive object={nodes.Hips} />
+        <skinnedMesh
+          frustumCulled={false}
+          geometry={nodes.Wolf3D_Body.geometry}
+          material={materials.Wolf3D_Body}
+          skeleton={nodes.Wolf3D_Body.skeleton}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
+          material={materials.Wolf3D_Outfit_Bottom}
+          skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
+          material={materials.Wolf3D_Outfit_Footwear}
+          skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          geometry={nodes.Wolf3D_Outfit_Top.geometry}
+          material={materials.Wolf3D_Outfit_Top}
+          skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          geometry={nodes.Wolf3D_Headwear.geometry}
+          material={materials.Wolf3D_Headwear}
+          skeleton={nodes.Wolf3D_Headwear.skeleton}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          name="EyeLeft"
+          geometry={nodes.EyeLeft.geometry}
+          material={materials.Wolf3D_Eye}
+          skeleton={nodes.EyeLeft.skeleton}
+          morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
+          morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          name="EyeRight"
+          geometry={nodes.EyeRight.geometry}
+          material={materials.Wolf3D_Eye}
+          skeleton={nodes.EyeRight.skeleton}
+          morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
+          morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          name="Wolf3D_Head"
+          geometry={nodes.Wolf3D_Head.geometry}
+          material={materials.Wolf3D_Skin}
+          skeleton={nodes.Wolf3D_Head.skeleton}
+          morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
+          morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
+        />
+        <skinnedMesh
+          frustumCulled={false}
+          name="Wolf3D_Teeth"
+          geometry={nodes.Wolf3D_Teeth.geometry}
+          material={materials.Wolf3D_Teeth}
+          skeleton={nodes.Wolf3D_Teeth.skeleton}
+          morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
+          morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
+        />
+      </group>
     </group>
   );
 }
 
-useGLTF.preload("/models/original-avatar.glb");
+useGLTF.preload(
+  "https://res.cloudinary.com/dv6keahg3/image/upload/fl_draco/v1688838830/PortfolioSite/original_avatar_q6ndg5.gltf"
+);

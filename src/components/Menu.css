@@ -1,11 +1,6 @@
-.menu-button {
-  background-color: rgb(245, 249, 249);
-  width: 125px;
-  border-radius: 0.25rem;
-}
-
 .menu-spacer {
   height: 10vh;
+  height: 10dvh;
   height: 80px;
 }
 
@@ -27,20 +22,54 @@
   background-color: rgba(41, 50, 65, 0.3);
 }
 
-.menu-container-dark {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  bottom: 0px;
-  position: fixed;
-  background-color: rgba(236, 236, 236, 0.2);
+@media only screen and (min-width: 769px) {
+  .menu-container-dark {
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    bottom: 0px;
+    position: fixed;
+    background-color: rgba(236, 236, 236, 0.2);
+  }
+
+  .menu-button {
+    background-color: rgb(245, 249, 249);
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+  }
+
+  .menu-open-button {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    z-index: 10;
+  }
 }
 
-.menu-open-button {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  z-index: 10;
+@media only screen and (max-width: 768px) {
+  .menu-container-dark {
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    bottom: 0px;
+    position: fixed;
+    background-color: rgba(236, 236, 236, 0.2);
+  }
+
+  .menu-button {
+    background-color: rgb(245, 249, 249);
+    width: 100px;
+    border-radius: 0.25rem;
+  }
+
+  .menu-open-button {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+  }
 }

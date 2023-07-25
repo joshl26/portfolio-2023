@@ -9,7 +9,7 @@
   <a href="https://github.com/joshl26/portfolio-2023/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-<a href="https://github.com/joshl26/Outdoorsy/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/joshl26/portfolio-2023/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/joshl26/portfolio-2023" />
   </a>
 </p>

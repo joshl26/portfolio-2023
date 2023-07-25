@@ -21,10 +21,12 @@ body {
 
 .font_light {
   color: var(--bg-color-dark);
+  -webkit-text-fill-color: var(--bg-color-dark);
 }
 
 .font_dark {
   color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-light);
 }
 
 p,

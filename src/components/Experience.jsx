@@ -1,30 +1,25 @@
 import React, { useRef, useState, useEffect } from "react";
-// import * as THREE from "three";
 import { Avatar } from "./Avatar";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { motion } from "framer-motion-3d";
 import { Office } from "./Office";
 import { useScroll } from "@react-three/drei";
 import { animate, useMotionValue } from "framer-motion";
 import { framerMotionConfig } from "../config";
+import { Projects } from "./Projects";
 
 const Experience = (props) => {
-  const { menuOpened } = props;
-  const { viewport } = useThree();
+  const { menuOpened, viewport } = props;
   const data = useScroll();
   const [section, setSection] = useState(0);
 
   const characterContainerAboutRef = useRef();
 
-  const [characterAnimation, setCharacterAnimation] = useState("Typing");
+  const [characterAnimation, setCharacterAnimation] = useState("Standing");
 
   const cameraPositionX = useMotionValue(0);
   const cameraPositionY = useMotionValue(0);
   const cameraPositionZ = useMotionValue(0);
-
-  const cameraRotationX = useMotionValue(0);
-  const cameraRotationY = useMotionValue(0);
-  const cameraRotationZ = useMotionValue(0);
 
   const cameraLookAtX = useMotionValue(0);
   const cameraLookAtY = useMotionValue(0);
@@ -40,7 +35,7 @@ const Experience = (props) => {
         setCharacterAnimation("Falling");
       }
       if (section === 2) {
-        setCharacterAnimation("Falling");
+        setCharacterAnimation("Standing");
       }
       if (section === 3) {
         setCharacterAnimation("Standing");
@@ -60,18 +55,6 @@ const Experience = (props) => {
     animate(cameraPositionZ, menuOpened ? 0 : 25, {
       ...framerMotionConfig,
     });
-
-    // animate(cameraRotationX, menuOpened ? 0 : 14, {
-    //   ...framerMotionConfig,
-    // });
-
-    // animate(cameraRotationY, menuOpened ? 0 : 15, {
-    //   ...framerMotionConfig,
-    // });
-
-    // animate(cameraRotationZ, menuOpened ? 0 : 20, {
-    //   ...framerMotionConfig,
-    // });
 
     animate(cameraLookAtX + 5, menuOpened ? 0 : 1, {
       ...framerMotionConfig,
@@ -108,10 +91,6 @@ const Experience = (props) => {
     state.camera.position.Y = cameraPositionY.get();
     state.camera.position.Z = cameraPositionZ.get();
 
-    state.camera.rotation.x = cameraRotationX.get();
-    state.camera.rotation.Y = cameraRotationY.get();
-    state.camera.rotation.Z = cameraRotationZ.get();
-
     state.camera.lookAt(
       cameraLookAtX.get(),
       cameraLookAtY.get(),
@@ -128,57 +107,56 @@ const Experience = (props) => {
   });
 
   return (
-    <>
+    <group>
       <motion.group
-        position={[4.57668149100008, 0, 0.6859031024848536]}
-        rotation={[
-          -1.5031521515285498, -0.020905795243101558, -2.682477934066836,
-        ]}
+        position={[4.683831780878145, 2.42, 0.8132562154387455]}
+        rotation={[3.141592653589793, -0.42000000000000015, 3.141592653589793]}
         animate={"" + section}
         transition={{
           duration: 0.6,
         }}
         variants={{
           0: {
-            scaleX: 5.5,
-            scaleY: 5.5,
-            scaleZ: 5.5,
+            scaleX: 5.23,
+            scaleY: 5.23,
+            scaleZ: 5.23,
           },
           1: {
-            scaleX: 5.5,
-            scaleY: 5.5,
-            scaleZ: 5.5,
-            y: -viewport.height + 3,
-            x: 15,
+            scaleX: 5.23,
+            scaleY: 5.23,
+            scaleZ: 5.23,
+            y: -viewport.height * 0.8,
+            x: 10,
             z: 5,
-            rotateX: -2,
-            rotateY: -1,
-            rotateZ: 1,
+            rotateX: 0,
+            rotateY: -5,
+            rotateZ: 0,
           },
           2: {
             scaleX: 5.5,
             scaleY: 5.5,
             scaleZ: 5.5,
-            y: -viewport.height * 2,
-            x: 7,
-            z: 0,
-            rotateX: -1,
-            rotateY: 0,
-            rotateZ: 0,
+            y: -viewport.height * 1.85,
+            x: 10,
+            z: 3,
+            rotateX: -0.5,
+            rotateY: 0.5,
+            rotateZ: 0.5,
           },
           3: {
             scaleX: 7,
             scaleY: 7,
             scaleZ: 7,
-            y: -viewport.height * 3,
+            y: -viewport.height * 2.95,
             x: 5,
             z: 0,
-            rotateX: -1.75,
-            rotateY: -0.35,
-            rotateZ: 0.5,
+            rotateX: -0.5,
+            rotateY: 1,
+            rotateZ: 0.46,
           },
         }}
       >
+        <ambientLight intensity={1} />
         <Avatar animation={characterAnimation} />
       </motion.group>
       <motion.group
@@ -193,12 +171,22 @@ const Experience = (props) => {
         <group
           ref={characterContainerAboutRef}
           name="CharacterSpot"
-          position={[2.3, 0, 2.1]}
-          rotation={[-1.5, 0, 3.9]}
-          scale={5.5}
+          position={[2.44, 2.42, 2.19]}
+          rotation={[Math.PI, -0.72, Math.PI]}
+          scale={5.23}
         ></group>
       </motion.group>
-    </>
+      <motion.group
+        position={[-4, -3, -3]}
+        rotation-y={0}
+        rotation-z={0}
+        animate={{
+          y: section === 2 ? 0 : -1,
+        }}
+      >
+        <Projects viewport={viewport} />
+      </motion.group>
+    </group>
   );
 };
 

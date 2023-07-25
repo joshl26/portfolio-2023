@@ -1,6 +1,19 @@
-.lottie_container {
-  height: 30px;
-  position: absolute;
-  top: 20px;
-  right: 25px;
+@media only screen and (max-width: 768px) {
+  .lottie_container {
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .lottie_container {
+    height: 40px;
+    width: 60px;
+    position: relative;
+    top: 20px;
+    float: right;
+  }
 }

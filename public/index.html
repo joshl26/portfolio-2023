@@ -2,19 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Designed and Coded by Joshua Lehman" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
-    ></script>
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Lusitana&amp;display=swap"
       rel="stylesheet"
@@ -23,31 +24,24 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+    <meta name="description" content="Joshua Lehman Portfolio Site 2023" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Joshua Lehman Portfolio Site 2023</title>
   </head>
   <body>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("CUcueSeHLP_pqrf-s"); // Obtain your user ID at the dashboard https://dashboard.emailjs.com/integration
-      })();
-    </script>
+    <!-- <script type="text/javascript">
+      emailjs.init("CUcueSeHLP_pqrf-s");
+    </script> -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="text/javascript">
-      var colormode = JSON.parse(window.localStorage.getItem("colorMode"));
-      var element = document.getElementById("root"); // get all elements
-
-      //Check for existing colorMode field in localStorage, if it does not exist create ie and give a default value of "light"
-      if (colormode) {
-        if (colormode === "light") {
-          element.style.backgroundColor = "#ececec";
-        } else {
-          element.style.backgroundColor = "#293241";
-        }
-      } else {
-        window.localStorage.setItem("colorMode", `"light"`);
-      }
+      var colormode = JSON.parse(window.localStorage.getItem("colorMode")),
+        element = document.getElementById("root");
+      colormode
+        ? (element.style.backgroundColor =
+            "light" === colormode ? "#ececec" : "#293241")
+        : window.localStorage.setItem("colorMode", '"light"');
     </script>
   </body>
 </html>

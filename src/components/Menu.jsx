@@ -62,52 +62,56 @@ const Menu = (props) => {
       </button> */}
       {menuOpened ? (
         <div className={styleColormode("menu-container")}>
-          <Col>
-            <div className="menu-spacer"></div>
-            <Row className="menu-row">
-              <MenuButton
-                lable="Home"
-                // disabled={section === 0 ? true : false}
-                onClick={() => {
-                  onSectionChange(0);
-                  menuButtonClickHandler();
-                }}
-              />
-            </Row>
-            <div className="menu-sspacer"></div>
-            <Row className="menu-row">
-              <MenuButton
-                lable="About"
-                // disabled={section === 1 ? true : false}
-                onClick={() => {
-                  onSectionChange(1);
-                  menuButtonClickHandler();
-                }}
-              />
-            </Row>
-            <div className="menu-sspacer"></div>
-            <Row className="menu-row">
-              <MenuButton
-                lable="Projects"
-                // disabled={section === 2 ? true : false}
-                onClick={() => {
-                  onSectionChange(2);
-                  menuButtonClickHandler();
-                }}
-              />
-            </Row>
-            <div className="menu-sspacer"></div>
-            <Row className="menu-row">
-              <MenuButton
-                lable="Contact"
-                // disabled={section === 3 ? true : false}
-                onClick={() => {
-                  onSectionChange(3);
-                  menuButtonClickHandler();
-                }}
-              />
-            </Row>
-          </Col>
+          <Row>
+            <Col xs={2}></Col>
+            <Col>
+              <div className="menu-spacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="Home"
+                  // disabled={section === 0 ? true : false}
+                  onClick={() => {
+                    onSectionChange(0);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+              <div className="menu-sspacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="About"
+                  // disabled={section === 1 ? true : false}
+                  onClick={() => {
+                    onSectionChange(1);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+              <div className="menu-sspacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="Projects"
+                  // disabled={section === 2 ? true : false}
+                  onClick={() => {
+                    onSectionChange(2);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+              <div className="menu-sspacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="Contact"
+                  // disabled={section === 3 ? true : false}
+                  onClick={() => {
+                    onSectionChange(3);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+            </Col>
+            <Col xs={2}></Col>
+          </Row>
         </div>
       ) : (
         ""

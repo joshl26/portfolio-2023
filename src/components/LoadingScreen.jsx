@@ -27,17 +27,17 @@ const LoadingScreen = (props) => {
 
   return (
     <section className={LoadingScreenStyle}>
-      <div className="spacer_small"></div>
-      <Row>
-        <h1 className={fontColormode("")} style={{ textAlign: "center" }}>
+      <div className="loading_spacer_small"></div>
+      <Row className="row-one">
+        <h1 className={fontColormode("loading_header")}>
           Hold on one second...
         </h1>
-      </Row>
-      <Row>
-        <h3 className={fontColormode("")} style={{ textAlign: "center" }}>
+
+        <h3 className={fontColormode("loading_header_3")}>
           Loading: {Math.floor(progress)}%...
         </h3>
       </Row>
+      <div className="loading_spacer_small"></div>
       <Row>
         <Lottie
           className="svg_animate"
@@ -45,12 +45,12 @@ const LoadingScreen = (props) => {
           loop={true}
         />
       </Row>
-      <Row>
-        <h2 className={fontColormode("")} style={{ textAlign: "center" }}>
+      <Row className="row-one">
+        <h2 className={fontColormode("loading_header_2")}>
           Loading the Awesomeness!
         </h2>
       </Row>
-
+      <div className="loading_spacer_small"></div>
       {/* <div className="canvas_container">
         <Lottie
           className="svg_animate"

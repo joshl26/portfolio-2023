@@ -10,12 +10,21 @@ import { motion } from "framer-motion-3d";
 
 export function Office(props) {
   const { section } = props;
-  const { nodes } = useGLTF("models/office-baked.gltf");
-  const texture = useTexture("textures/office.jpg");
-  const textureVideo1 = useVideoTexture("textures/screen1.mp4");
-  const textureVideo2 = useVideoTexture("textures/screen2.mp4");
+  const { nodes } = useGLTF(
+    "https://res.cloudinary.com/dv6keahg3/image/upload/fl_draco/v1688838830/PortfolioSite/office-baked_jtnms5.gltf"
+  );
+  const texture = useTexture(
+    "https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/e_improve:indoor:100/v1688838386/PortfolioSite/office_blsofi.jpg"
+  );
+  const textureVideo1 = useVideoTexture(
+    "https://res.cloudinary.com/dv6keahg3/video/upload/v1688838386/PortfolioSite/screen2_m6bc2q.mp4"
+  );
+  const textureVideo2 = useVideoTexture(
+    "https://res.cloudinary.com/dv6keahg3/video/upload/v1688838386/PortfolioSite/screen1_dbwpe6.mp4"
+  );
 
   texture.flipY = false;
+
   texture.colorSpace = THREE.SRGBColorSpace;
 
   const textureMaterial = new THREE.MeshStandardMaterial({
@@ -56,8 +65,8 @@ export function Office(props) {
       <mesh
         geometry={nodes.OfficeChair.geometry}
         material={textureMaterial}
-        position={[2.31, 0.27, 2.34]}
-        rotation={[Math.PI / 2, 0, 2.44]}
+        position={[2.28, 0.23, 2.06]}
+        rotation={[Math.PI / 2, 0, 2.36]}
       />
       <mesh
         geometry={nodes.SecondBook.geometry}
@@ -283,4 +292,6 @@ export function Office(props) {
   );
 }
 
-useGLTF.preload("models/office-baked.gltf");
+useGLTF.preload(
+  "https://res.cloudinary.com/dv6keahg3/image/upload/fl_draco/v1688838830/PortfolioSite/office-baked_jtnms5.gltf"
+);
