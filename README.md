@@ -23,9 +23,7 @@ This portfolio site was created to showcase the prgramming abilities of Josh Leh
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![React.js](https://img.shields.io/badge/react.js-%23404d59.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
 > HTML5 - A markup language for creating web pages and web applications.
 
