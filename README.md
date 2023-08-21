@@ -43,10 +43,10 @@ This portfolio site was created to showcase the prgramming abilities of Josh Leh
 > ![Home](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023.png)
 
 > Landing Page
-> ![All campsites](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023-1.png)
+> ![About](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023-1.png)
 
 > 3D Animated Experience as you scroll
-> ![Campsite Details](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023-2.png)
+> ![Scroll Effect](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2023-2.png)
 
 ## Demo
 
