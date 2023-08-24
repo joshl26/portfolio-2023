@@ -128,7 +128,11 @@
   .dropdown-toggle {
     font-size: 1rem !important;
     margin: 0;
-    padding: 0;
+    padding: 0.25rem;
+  }
+
+  .dropdown-item {
+    font-size: 1rem !important;
   }
 }
 
@@ -204,6 +208,10 @@
   }
 
   .dropdown-toggle {
+    font-size: 2rem !important;
+  }
+
+  .dropdown-item {
     font-size: 2rem !important;
   }
 }

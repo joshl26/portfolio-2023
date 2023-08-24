@@ -316,7 +316,7 @@ const ContactSection = (props) => {
                       Name
                     </label>
                     <input
-                      placeholder="Type a name"
+                      placeholder=" Type a name"
                       autoComplete="given-name"
                       required
                       type="text"
@@ -333,7 +333,7 @@ const ContactSection = (props) => {
                       Email
                     </label>
                     <input
-                      placeholder="Type an email address"
+                      placeholder=" Type an email"
                       autoComplete="off"
                       required
                       type="email"
@@ -358,7 +358,7 @@ const ContactSection = (props) => {
                       name="topic"
                       type="text"
                       className="topic"
-                      placeholder="Select a message topic"
+                      placeholder=" Select topic"
                       value={topic}
                       style={{ padding: "0" }}
                     ></input>
@@ -370,25 +370,28 @@ const ContactSection = (props) => {
                       id="selectTopic"
                     >
                       <Dropdown.Item
-                        classname="submit-button"
+                        classname="dropdown"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Standard Comment
                       </Dropdown.Item>
                       <Dropdown.Item
+                        classname="dropdown"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Recruiter Query
                       </Dropdown.Item>
                       <Dropdown.Item
+                        classname="dropdown"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Work Request
                       </Dropdown.Item>
                       <Dropdown.Item
+                        classname="dropdown"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
@@ -404,7 +407,7 @@ const ContactSection = (props) => {
                       Message
                     </label>
                     <textarea
-                      placeholder="Write a message"
+                      placeholder=" Write a message"
                       required
                       name="message"
                       id="message"
