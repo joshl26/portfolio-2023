@@ -1,11 +1,12 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { MotionConfig } from "framer-motion";
 import { Leva } from "leva";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { framerMotionConfig } from "./config";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import GetWebGLVersion from "./hooks/GetWebGLVersion";
 
 const LoadingScreen = React.lazy(() => import("./components/LoadingScreen"));
 const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -43,6 +44,7 @@ function App() {
             shadows
             camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
           >
+            {/* <GetWebGLVersion /> */}
             <color attach="background" args={[canvasBackGroundColor]} />
             <CanvasContainer
               colorMode={colorMode}

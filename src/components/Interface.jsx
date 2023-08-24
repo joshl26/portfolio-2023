@@ -1,7 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useThree } from "@react-three/fiber";
 import { motion } from "framer-motion";
-import { Col, Container, Row } from "react-bootstrap";
+import {
+  Col,
+  Container,
+  Dropdown,
+  DropdownButton,
+  Form,
+  InputGroup,
+  Row,
+} from "react-bootstrap";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import emailjs from "@emailjs/browser";
@@ -251,6 +259,11 @@ const ContactSection = (props) => {
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [topic, setTopic] = useState("");
+
+  const onTopicChanged = (e) => {
+    setTopic(e.target.innerHTML);
+  };
 
   useEffect(() => {}, [emailSent, confirmReceipt]);
 
@@ -269,6 +282,8 @@ const ContactSection = (props) => {
       )
       .then(
         (result) => {
+          console.log(form.current);
+
           console.log(result.text);
           setConfirmReceipt(true);
         },
@@ -301,6 +316,8 @@ const ContactSection = (props) => {
                       Name
                     </label>
                     <input
+                      placeholder="Type a name"
+                      autoComplete="given-name"
                       required
                       type="text"
                       name="name"
@@ -316,12 +333,68 @@ const ContactSection = (props) => {
                       Email
                     </label>
                     <input
+                      placeholder="Type an email address"
+                      autoComplete="off"
                       required
                       type="email"
                       name="email"
                       id="email"
                       className=""
                     />
+                  </Row>
+
+                  <Row>
+                    <label
+                      htmlFor="topic"
+                      className={fontColormode("interface_label")}
+                    >
+                      Topic
+                    </label>
+                  </Row>
+                  <Row>
+                    <input
+                      required
+                      id="topic"
+                      name="topic"
+                      type="text"
+                      className="topic"
+                      placeholder="Select a message topic"
+                      value={topic}
+                      style={{ padding: "0" }}
+                    ></input>
+
+                    <DropdownButton
+                      variant=""
+                      className="type-btn"
+                      title="Select"
+                      id="selectTopic"
+                    >
+                      <Dropdown.Item
+                        classname="submit-button"
+                        onClick={(e) => onTopicChanged(e)}
+                        href="#"
+                      >
+                        Standard Comment
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={(e) => onTopicChanged(e)}
+                        href="#"
+                      >
+                        Recruiter Query
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={(e) => onTopicChanged(e)}
+                        href="#"
+                      >
+                        Work Request
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={(e) => onTopicChanged(e)}
+                        href="#"
+                      >
+                        Consultation
+                      </Dropdown.Item>
+                    </DropdownButton>
                   </Row>
                   <Row>
                     <label
@@ -331,6 +404,7 @@ const ContactSection = (props) => {
                       Message
                     </label>
                     <textarea
+                      placeholder="Write a message"
                       required
                       name="message"
                       id="message"
@@ -369,6 +443,24 @@ const ContactSection = (props) => {
                       id="email"
                       className=""
                     />
+                  </Row>
+                  <Row>
+                    <label
+                      htmlFor="topic"
+                      className={fontColormode("interface_label")}
+                    >
+                      Topic
+                    </label>
+                    <input
+                      disabled
+                      required
+                      id="topic"
+                      name="topic"
+                      type="text"
+                      placeholder="Select a message topic"
+                      value={topic}
+                      style={{ padding: "0" }}
+                    ></input>
                   </Row>
                   <Row>
                     <label
