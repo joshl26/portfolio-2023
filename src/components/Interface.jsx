@@ -353,6 +353,7 @@ const ContactSection = (props) => {
                   </Row>
                   <Row>
                     <input
+                      readOnly
                       required
                       id="topic"
                       name="topic"
@@ -362,36 +363,35 @@ const ContactSection = (props) => {
                       value={topic}
                       style={{ padding: "0" }}
                     ></input>
-
                     <DropdownButton
                       variant=""
-                      className="type-btn"
+                      className={fontColormode("type-btn")}
                       title="Select"
                       id="selectTopic"
                     >
                       <Dropdown.Item
-                        classname="dropdown"
+                        className={fontColormode("dropdown")}
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Standard Comment
                       </Dropdown.Item>
                       <Dropdown.Item
-                        classname="dropdown"
+                        className={fontColormode("dropdown")}
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Recruiter Query
                       </Dropdown.Item>
                       <Dropdown.Item
-                        classname="dropdown"
+                        className={fontColormode("dropdown")}
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Work Request
                       </Dropdown.Item>
                       <Dropdown.Item
-                        classname="dropdown"
+                        className={fontColormode("dropdown")}
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >

@@ -214,4 +214,8 @@
   .dropdown-item {
     font-size: 2rem !important;
   }
+
+  .dropdown {
+    color: black;
+  }
 }

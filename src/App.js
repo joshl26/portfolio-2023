@@ -7,6 +7,8 @@ import { framerMotionConfig } from "./config";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import GetWebGLVersion from "./hooks/GetWebGLVersion";
+import Menu from "./components/Menu";
+import ColorMode from "./components/ColorMode";
 
 const LoadingScreen = React.lazy(() => import("./components/LoadingScreen"));
 const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -40,11 +42,22 @@ function App() {
             ...framerMotionConfig,
           }}
         >
+          <ColorMode
+            colorMode={colorMode}
+            onColorModeChangeHandler={onColorModeChangeHandler}
+          />
+          <Menu
+            section={section}
+            menuOpened={menuOpened}
+            setMenuOpened={setMenuOpened}
+            colorMode={colorMode}
+          />
           <Canvas
             shadows
             camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
           >
             {/* <GetWebGLVersion /> */}
+            <ambientLight position={(0, 0, 0)} color="white" intensity="1.5" />
             <color attach="background" args={[canvasBackGroundColor]} />
             <CanvasContainer
               colorMode={colorMode}

@@ -5,6 +5,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 1000;
   }
 }
 
@@ -12,8 +13,9 @@
   .lottie_container {
     height: 40px;
     width: 60px;
-    position: relative;
+    position: absolute;
     top: 20px;
-    float: right;
+    right: 50px;
+    z-index: 1000;
   }
 }

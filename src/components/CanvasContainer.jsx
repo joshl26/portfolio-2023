@@ -33,7 +33,7 @@ const CanvasContainer = (props) => {
       </Scroll>
       <Scroll className="scroll-container" html>
         <Container>
-          <ColorMode
+          {/* <ColorMode
             colorMode={colorMode}
             onColorModeChangeHandler={onColorModeChangeHandler}
           />
@@ -43,7 +43,7 @@ const CanvasContainer = (props) => {
             menuOpened={menuOpened}
             setMenuOpened={setMenuOpened}
             colorMode={colorMode}
-          />
+          /> */}
           <Interface
             onSectionChange={onSectionChange}
             colorMode={colorMode}
