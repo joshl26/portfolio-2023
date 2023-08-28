@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { MotionConfig } from "framer-motion";
 import { Leva } from "leva";
 import { useLocalStorage } from "./hooks/useLocalStorage";
@@ -7,9 +7,9 @@ import { framerMotionConfig } from "./config";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import GetWebGLVersion from "./hooks/GetWebGLVersion";
-import Menu from "./components/Menu";
-import ColorMode from "./components/ColorMode";
 
+const ColorMode = React.lazy(() => import("./components/ColorMode"));
+const Menu = React.lazy(() => import("./components/Menu"));
 const LoadingScreen = React.lazy(() => import("./components/LoadingScreen"));
 const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
 const CanvasContainer = React.lazy(() =>
@@ -49,6 +49,7 @@ function App() {
           <Menu
             section={section}
             menuOpened={menuOpened}
+            onSectionChange={setSection}
             setMenuOpened={setMenuOpened}
             colorMode={colorMode}
           />

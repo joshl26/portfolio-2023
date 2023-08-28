@@ -1,11 +1,10 @@
 .menu-spacer {
-  height: 10vh;
-  height: 10dvh;
-  height: 80px;
+  height: 15vh;
+  height: 15dvh;
 }
 
 .menu-sspacer {
-  height: 20px;
+  height: 50px;
 }
 
 .menu-row {
@@ -23,6 +22,8 @@
   z-index: 1000;
 }
 
+
+
 @media only screen and (min-width: 769px) {
   .menu-container-dark {
     top: 0px;
@@ -38,6 +39,7 @@
     background-color: rgb(245, 249, 249);
     border-radius: 0.25rem;
     font-size: 1.5rem;
+    width: 175px;
   }
 
   .menu-open-button {
@@ -54,16 +56,19 @@
   .menu-container-dark {
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 40vw;
+    width: 40dvw;
     bottom: 0px;
     position: fixed;
     background-color: rgba(236, 236, 236, 0.2);
+    z-index: 1000;
   }
 
   .menu-button {
     background-color: rgb(245, 249, 249);
     width: 100px;
     border-radius: 0.25rem;
+    z-index: 1001;
   }
 
   .menu-open-button {
@@ -72,6 +77,6 @@
     position: absolute;
     left: 10px;
     top: 10px;
-    z-index: 10;
+    z-index: 10001;
   }
 }

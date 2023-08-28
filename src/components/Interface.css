@@ -89,7 +89,7 @@
   }
 
   .submit-button {
-    width: 100px;
+    width: 75px;
   }
 
   .email_confirmation {
@@ -152,10 +152,10 @@
 
   .scroll-button {
     background-color: var(--bg-color-light);
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 0.35rem;
-    padding: 0.25rem;
-    width: 100%;
+    padding: 0.125rem;
+    width: 130px;
   }
   .contact_h1 {
     font-size: 3rem;
@@ -164,8 +164,9 @@
   .submit-button {
     background-color: var(--bg-color-light);
     border-radius: 0.35rem;
-    padding: 0.25rem;
-    width: 250px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: fit-content;
     font-size: 1.5rem;
   }
 

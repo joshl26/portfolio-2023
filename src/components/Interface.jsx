@@ -108,11 +108,10 @@ const AboutSection = (props) => {
               transition: { duration: 1, delay: 1.5 },
             }}
           >
-            Digital Craftsman.
+            Passionate about ones and zeros.
             <br />
             Always learning new Skills.
             <br />
-            Scroll down to Explore!
           </motion.p>
           <motion.button
             className="learn-more-button"
@@ -166,11 +165,10 @@ const AboutSection = (props) => {
               transition: { duration: 1, delay: 1.5 },
             }}
           >
-            Digital Craftsman.
+            Passionate about ones and zeros.
             <br />
             Always learning new Skills.
             <br />
-            Scroll down to Explore!
           </motion.p>
           <motion.button
             className="learn-more-button"
@@ -210,7 +208,7 @@ const SkillsSection = (props) => {
           transition: { duration: 1, delay: 0.5 },
         }}
       >
-        Passionate Programmer
+        Experienced Engineer 15 yrs in Manufacturing
       </motion.h2>
       <motion.h2
         className={fontColormode("interface_about_h2")}
@@ -222,7 +220,7 @@ const SkillsSection = (props) => {
           transition: { duration: 1, delay: 1.5 },
         }}
       >
-        Five plus years software engineering
+        Pragmatic and thoughtful digital craftsman
       </motion.h2>
       <motion.h2
         className={fontColormode("interface_about_h2")}
@@ -234,7 +232,7 @@ const SkillsSection = (props) => {
           transition: { duration: 1, delay: 2.5 },
         }}
       >
-        Dedicated to Quality
+        Five plus years software engineering
       </motion.h2>
       <motion.h2
         className={fontColormode("interface_about_h2")}
@@ -246,7 +244,7 @@ const SkillsSection = (props) => {
           transition: { duration: 1, delay: 3.5 },
         }}
       >
-        Continuously pushing the limits!
+        Continuously learning new skills
       </motion.h2>
     </Section>
   );
@@ -370,28 +368,28 @@ const ContactSection = (props) => {
                       id="selectTopic"
                     >
                       <Dropdown.Item
-                        className={fontColormode("dropdown")}
+                        className="font_light"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Standard Comment
                       </Dropdown.Item>
                       <Dropdown.Item
-                        className={fontColormode("dropdown")}
+                        className="font_light"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Recruiter Query
                       </Dropdown.Item>
                       <Dropdown.Item
-                        className={fontColormode("dropdown")}
+                        className="font_light"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
                         Work Request
                       </Dropdown.Item>
                       <Dropdown.Item
-                        className={fontColormode("dropdown")}
+                        className="font_light"
                         onClick={(e) => onTopicChanged(e)}
                         href="#"
                       >
@@ -589,11 +587,11 @@ const PortfolioSection = (props) => {
           transition: { duration: 1, delay: 1.5 },
         }}
       >
-        Portfolio Section
+        Projects
       </motion.h2>
 
       <div className="interface_spacer_xsmall"></div>
-      <Row>
+      <Row style={{ textAlign: "center" }}>
         <Col xs={4} sm={4} md={4}>
           <motion.button
             className="scroll-button"
