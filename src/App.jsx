@@ -6,7 +6,6 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import { framerMotionConfig } from "./config";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import GetWebGLVersion from "./hooks/GetWebGLVersion";
 
 const ColorMode = React.lazy(() => import("./components/ColorMode"));
 const Menu = React.lazy(() => import("./components/Menu"));
