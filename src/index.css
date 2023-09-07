@@ -6,6 +6,9 @@
   --color-three: #e0fbfc;
   --color-four: #ee6c4d;
   --color-five: #293241;
+  --button-color-light: #ececec;
+  --button-color-dark: #ececec;
+  --button-color-hover: #293241;
 }
 
 #root {
