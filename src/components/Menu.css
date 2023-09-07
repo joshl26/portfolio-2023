@@ -55,6 +55,13 @@
     top: 10px;
     z-index: 1001;
   }
+
+  .menu-open-button:hover {
+    cursor: pointer;
+    border: 1px solid var(--bg-color-light);
+    border-radius: 0.5rem;
+    color: red;
+  }
 }
 
 @media only screen and (max-width: 768px) {

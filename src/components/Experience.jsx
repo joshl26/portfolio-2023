@@ -156,7 +156,7 @@ const Experience = (props) => {
           },
         }}
       >
-        <ambientLight intensity={1} />
+        {/* <ambientLight intensity={1} /> */}
         <Avatar animation={characterAnimation} />
       </motion.group>
       <motion.group
