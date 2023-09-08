@@ -63,8 +63,12 @@ const Menu = (props) => {
       {menuOpened ? (
         <motion.div
           initial={{ x: -200, y: 0 }}
-          animate={{ x: 0, y: 0, boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)" }}
-          transition={{ duration: 0.5 }}
+          animate={{
+            x: 0,
+            y: 0,
+            boxShadow: "10px 10px 5px rgba(0, 0, 0, 0.2)",
+          }}
+          transition={{ duration: 0.25 }}
           className={styleColormode("menu-container")}
         >
           <Row>
@@ -120,13 +124,12 @@ const Menu = (props) => {
         </motion.div>
       ) : (
         <motion.div
-          initial={{ x: 0, y: 0 }}
+          initial={{ x: 0, y: 0, boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)" }}
           animate={{
-            x: -300,
+            x: -400,
             y: 0,
-            boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.375 }}
           className={styleColormode("menu-container")}
         >
           <Row>

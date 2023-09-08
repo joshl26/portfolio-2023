@@ -1,6 +1,6 @@
 .menu-spacer {
-  height: 15vh;
-  height: 15dvh;
+  height: 13vh;
+  height: 13dvh;
 }
 
 .menu-sspacer {
@@ -100,7 +100,7 @@
 
   .menu-open-button:hover {
     cursor: pointer;
-    border: 1px solid var(--bg-color-light);
-    border-radius: 0.5rem;
+    /* border: 1px solid var(--bg-color-light);
+    border-radius: 0.5rem; */
   }
 }
