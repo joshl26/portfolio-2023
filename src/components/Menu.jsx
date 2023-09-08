@@ -63,7 +63,7 @@ const Menu = (props) => {
       {menuOpened ? (
         <motion.div
           initial={{ x: -200, y: 0 }}
-          animate={{ x: 0, y: 0 }}
+          animate={{ x: 0, y: 0, boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)" }}
           transition={{ duration: 0.5 }}
           className={styleColormode("menu-container")}
         >
@@ -119,7 +119,67 @@ const Menu = (props) => {
           </Row>
         </motion.div>
       ) : (
-        ""
+        <motion.div
+          initial={{ x: 0, y: 0 }}
+          animate={{
+            x: -300,
+            y: 0,
+            boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)",
+          }}
+          transition={{ duration: 0.5 }}
+          className={styleColormode("menu-container")}
+        >
+          <Row>
+            <Col xs={2}></Col>
+            <Col>
+              <div className="menu-spacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="Home"
+                  // disabled={section === 0 ? true : false}
+                  onClick={() => {
+                    onSectionChange(0);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+              <div className="menu-sspacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="About"
+                  // disabled={section === 1 ? true : false}
+                  onClick={() => {
+                    onSectionChange(1);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+              <div className="menu-sspacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="Projects"
+                  // disabled={section === 2 ? true : false}
+                  onClick={() => {
+                    onSectionChange(2);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+              <div className="menu-sspacer"></div>
+              <Row className="menu-row">
+                <MenuButton
+                  lable="Contact"
+                  // disabled={section === 3 ? true : false}
+                  onClick={() => {
+                    onSectionChange(3);
+                    menuButtonClickHandler();
+                  }}
+                />
+              </Row>
+            </Col>
+            <Col xs={2}></Col>
+          </Row>
+        </motion.div>
       )}
     </>
   );
