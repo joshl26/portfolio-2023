@@ -7,6 +7,10 @@
     right: 20px;
     z-index: 1000;
   }
+
+  .lottie_container:hover {
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -17,5 +21,9 @@
     top: 20px;
     right: 50px;
     z-index: 1000;
+  }
+
+  .lottie_container:hover {
+    cursor: pointer;
   }
 }

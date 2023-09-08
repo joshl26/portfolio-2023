@@ -36,9 +36,11 @@
   height: 25dvh;
 }
 
-.learn-more-button:hover {
+.learn-more-button:hover,
+.submit-button:hover {
   background-color: var(--bg-color-dark);
   color: var(--bg-color-light);
+  border: 1px solid var(--bg-color-light);
   border-radius: 0.35rem;
 }
 
@@ -168,6 +170,11 @@
     padding-right: 0.5rem;
     width: fit-content;
     font-size: 1.5rem;
+  }
+
+  .learn-more-button {
+    width: 225px;
+    padding-bottom: 0.25rem;
   }
 
   .email_confirmation {

@@ -60,7 +60,6 @@
     cursor: pointer;
     border: 1px solid var(--bg-color-light);
     border-radius: 0.5rem;
-    color: red;
   }
 }
 
@@ -95,5 +94,11 @@
     left: 10px;
     top: 10px;
     z-index: 10001;
+  }
+
+  .menu-open-button:hover {
+    cursor: pointer;
+    border: 1px solid var(--bg-color-light);
+    border-radius: 0.5rem;
   }
 }

@@ -9,11 +9,13 @@ const ColorMode = (props) => {
   const lottieRef = useRef();
 
   const onLottieClickHandler = () => {
-    if (colorMode === "light") {
-      lottieRef.current.playSegments([0, 22], true);
+    if (colorMode === "dark") {
+      // lottieRef.current.playSegments([0, 22], true);
       onColorModeChangeHandler();
-    } else {
-      lottieRef.current.playSegments([22, 0], true);
+    }
+
+    if (colorMode === "light") {
+      // lottieRef.current.playSegments([22, 0], true);
       onColorModeChangeHandler();
     }
 
@@ -21,9 +23,10 @@ const ColorMode = (props) => {
   };
 
   useEffect(() => {
-    if (colorMode === "light") {
+    if (colorMode === "dark") {
       lottieRef.current.goToAndStop(0, true);
-    } else {
+    }
+    if (colorMode === "light") {
       lottieRef.current.goToAndStop(23, true);
     }
   }, [colorMode]);
