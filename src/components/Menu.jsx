@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import HamburgerMenuDark from "../data/lottie/menuAnimationDark.json";
 import HamburgerMenuLight from "../data/lottie/menuAnimationLight.json";
-
+import { motion } from "framer-motion";
 import { Col, Row } from "react-bootstrap";
 import "./Menu.css";
 
@@ -61,7 +61,12 @@ const Menu = (props) => {
         Menu
       </button> */}
       {menuOpened ? (
-        <div className={styleColormode("menu-container")}>
+        <motion.div
+          initial={{ x: -200, y: 0 }}
+          animate={{ x: 0, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className={styleColormode("menu-container")}
+        >
           <Row>
             <Col xs={2}></Col>
             <Col>
@@ -112,7 +117,7 @@ const Menu = (props) => {
             </Col>
             <Col xs={2}></Col>
           </Row>
-        </div>
+        </motion.div>
       ) : (
         ""
       )}
