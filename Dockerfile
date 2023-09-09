@@ -6,4 +6,4 @@ COPY package.json /portfolio-2023/
 RUN npm install
 COPY . .
 CMD ["npm", "start"]
-EXPOSE 3000
+EXPOSE 3001
