@@ -1,15 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useThree } from "@react-three/fiber";
 import { motion } from "framer-motion";
-import {
-  Col,
-  Container,
-  Dropdown,
-  DropdownButton,
-  Form,
-  InputGroup,
-  Row,
-} from "react-bootstrap";
+import { Col, Container, Dropdown, DropdownButton, Row } from "react-bootstrap";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import emailjs from "@emailjs/browser";
