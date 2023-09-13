@@ -62,7 +62,7 @@ const Menu = (props) => {
       </button> */}
       {menuOpened ? (
         <motion.div
-          initial={{ x: -200, y: 0 }}
+          initial={false}
           animate={{
             x: 0,
             y: 0,
@@ -124,7 +124,7 @@ const Menu = (props) => {
         </motion.div>
       ) : (
         <motion.div
-          initial={{ x: 0, y: 0, boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.2)" }}
+          initial={false}
           animate={{
             x: -400,
             y: 0,

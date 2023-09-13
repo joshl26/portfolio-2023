@@ -1,11 +1,9 @@
 import "./LoadingScreen.css";
-
 import { Row } from "react-bootstrap";
-
 import { useProgress } from "@react-three/drei";
-
 import Lottie from "lottie-react";
 import loadingCube from "../data/lottie/abstractCube.json";
+import React from "react";
 
 const LoadingScreen = (props) => {
   const { colorMode } = props;

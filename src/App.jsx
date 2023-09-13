@@ -6,9 +6,10 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import { framerMotionConfig } from "./config";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Menu from "./components/Menu";
 
 const ColorMode = React.lazy(() => import("./components/ColorMode"));
-const Menu = React.lazy(() => import("./components/Menu"));
+// const Menu = React.lazy(() => import("./components/Menu"));
 const LoadingScreen = React.lazy(() => import("./components/LoadingScreen"));
 const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
 const CanvasContainer = React.lazy(() =>
@@ -26,9 +27,9 @@ function App() {
     setColorMode(newColorMode);
   };
 
-  useEffect(() => {
-    setMenuOpened(false);
-  }, [section, colorMode]);
+  // useEffect(() => {
+  //   setMenuOpened(false);
+  // }, [section, colorMode]);
 
   return (
     <ThemeProvider
