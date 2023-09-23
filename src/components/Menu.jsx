@@ -100,7 +100,6 @@ const Menu = (props) => {
               <Row className="menu-row">
                 <MenuButton
                   lable="Projects"
-                  // disabled={section === 2 ? true : false}
                   onClick={() => {
                     onSectionChange(2);
                     menuButtonClickHandler();
@@ -111,7 +110,6 @@ const Menu = (props) => {
               <Row className="menu-row">
                 <MenuButton
                   lable="Contact"
-                  // disabled={section === 3 ? true : false}
                   onClick={() => {
                     onSectionChange(3);
                     menuButtonClickHandler();
