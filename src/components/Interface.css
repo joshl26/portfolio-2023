@@ -6,6 +6,11 @@
   vertical-align: middle;
 }
 
+.interface_spacer_medium {
+  height: 6vh;
+  height: 6dvh;
+}
+
 .interface_spacer_small {
   height: 3vh;
   height: 3dvh;

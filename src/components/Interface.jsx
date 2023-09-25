@@ -303,26 +303,33 @@ const ContactSection = (props) => {
                 Contact
               </h2>
             </Row>
+            <div className="interface_spacer_medium"></div>
             <form ref={form} id="contact-form" onSubmit={sendEmail}>
               {emailSent === false ? (
                 <>
-                  <Row>
-                    <label
-                      htmlFor="name"
-                      className={fontColormode("interface_label")}
-                    >
-                      Name
-                    </label>
-                    <input
-                      placeholder=" Type a name"
-                      autoComplete="given-name"
-                      required
-                      type="text"
-                      name="name"
-                      id="name"
-                      className=""
-                    />
-                  </Row>
+                  <Col>
+                    <Row>
+                      <label
+                        htmlFor="name"
+                        className={fontColormode("interface_label")}
+                      >
+                        Name
+                      </label>
+                    </Row>
+                    <Row>
+                      <input
+                        placeholder=" Type a name"
+                        autoComplete="given-name"
+                        required
+                        type="text"
+                        name="name"
+                        id="name"
+                        className=""
+                      />
+                    </Row>
+                  </Col>
+                  <div className="interface_spacer_xsmall"></div>
+
                   <Row>
                     <label
                       htmlFor="email"
@@ -340,6 +347,7 @@ const ContactSection = (props) => {
                       className=""
                     />
                   </Row>
+                  <div className="interface_spacer_xsmall"></div>
 
                   <Row>
                     <label
@@ -349,6 +357,7 @@ const ContactSection = (props) => {
                       Topic
                     </label>
                   </Row>
+
                   <Row>
                     {/* <input
                       disabled
@@ -363,6 +372,8 @@ const ContactSection = (props) => {
                       onTopicChanged={onTopicChanged}
                     />
                   </Row>
+                  <div className="interface_spacer_xsmall"></div>
+
                   <Row>
                     <label
                       htmlFor="message"
@@ -436,7 +447,7 @@ const ContactSection = (props) => {
                   </Row>
                 </>
               )}
-              <div className="interface_spacer_xsmall"></div>
+              <div className="interface_spacer_small"></div>
               <Row>
                 <Col className="submit-btn-col">
                   {emailSent === false && confirmReceipt === false ? (
@@ -447,7 +458,7 @@ const ContactSection = (props) => {
                       data-callback="onSubmit"
                       data-action="submit"
                     >
-                      Submit
+                      Submit Request
                     </button>
                   ) : (
                     <p className="email_sent">
