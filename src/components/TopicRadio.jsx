@@ -3,7 +3,7 @@ import { ButtonGroup, Col, Stack, ToggleButton } from "react-bootstrap";
 import "./TopicRadio.css";
 
 const TopicRadio = ({ colorMode, onTopicChanged, disabled }) => {
-  const [radioValue, setRadioValue] = useState("1");
+  const [radioValue, setRadioValue] = useState("Comment");
 
   const radios = [
     { name: "Comment", value: "1" },
@@ -14,7 +14,7 @@ const TopicRadio = ({ colorMode, onTopicChanged, disabled }) => {
 
   const onButtonChange = (e) => {
     setRadioValue(e.target.value);
-    // console.log(e.target.name);
+    console.log(radioValue);
     onTopicChanged(e);
   };
 
@@ -28,9 +28,9 @@ const TopicRadio = ({ colorMode, onTopicChanged, disabled }) => {
             id={`radio-${idx}`}
             type="radio"
             variant={`outline-${colorMode}`}
-            name={radio.name}
-            value={radio.value}
-            checked={radioValue === radio.value}
+            name="topic"
+            value={radio.name}
+            checked={radioValue === radio.name}
             onChange={(e) => onButtonChange(e)}
             onClick={(e) => onTopicChanged(e)}
             disabled={disabled}

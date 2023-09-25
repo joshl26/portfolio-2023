@@ -35,7 +35,7 @@ const CanvasContainer = (props) => {
       </Scroll>
     </ScrollControls>
   ) : (
-    <ScrollControls pages={4.4} damping={0.1}>
+    <ScrollControls pages={4.5} damping={0.1}>
       <ScrollManager section={section} onSectionChange={onSectionChange} />
       <Scroll>
         <Experience

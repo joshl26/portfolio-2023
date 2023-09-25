@@ -354,7 +354,7 @@ const ContactSection = (props) => {
                       htmlFor="topic"
                       className={fontColormode("interface_label")}
                     >
-                      Topic
+                      Choose a Topic
                     </label>
                   </Row>
 
@@ -462,11 +462,14 @@ const ContactSection = (props) => {
                     </button>
                   ) : (
                     <p className="email_sent">
-                      Email sent, awaiting confirmation...
+                      Message sent, awaiting confirmation...
                     </p>
                   )}
                   {emailSent === true && confirmReceipt === true ? (
-                    <p className="email_confirmation">Email Received!</p>
+                    <p className="email_confirmation">
+                      Message received! <br />
+                      Check your inbox to confirm.
+                    </p>
                   ) : (
                     <p className="email_confirmation">{emailError}</p>
                   )}
