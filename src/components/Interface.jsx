@@ -11,6 +11,7 @@ import gitHubIcon from "../data/images/GitHub_Icon.svg";
 import wordPressIcon from "../data/images/wordpress_Icon.svg";
 import "./Interface.css";
 import TopicRadio from "./TopicRadio";
+import { PopupButton } from "react-calendly";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
@@ -302,8 +303,33 @@ const ContactSection = (props) => {
               <h2 className={fontColormode("interface_label contact_h1")}>
                 Contact
               </h2>
+              <div className="interface_spacer_small"></div>
+              <h3 className={fontColormode("contact_h3")}>
+                Schedule a time with Calendly:
+              </h3>
+              <div className="interface_spacer_small"></div>
+              <Container>
+                <Row>
+                  <Col md={1}></Col>
+                  <Col style={{ textAlign: "center" }}>
+                    <PopupButton
+                      url="https://calendly.com/joshlehman-dev"
+                      rootElement={document.getElementById("root")}
+                      text="Click here to schedule!"
+                      className="schedule-button"
+                    />
+                  </Col>
+                  <Col md={1}></Col>
+                </Row>
+              </Container>
             </Row>
-            <div className="interface_spacer_medium"></div>
+            <div className="interface_spacer_small"></div>
+            <Row>
+              <div className="interface_spacer_small"></div>
+              <h3 className={fontColormode("contact_h3")}>
+                OR Send a message with Email:
+              </h3>
+            </Row>
             <form ref={form} id="contact-form" onSubmit={sendEmail}>
               {emailSent === false ? (
                 <>
@@ -317,19 +343,20 @@ const ContactSection = (props) => {
                       </label>
                     </Row>
                     <Row>
-                      <input
-                        placeholder=" Type a name"
-                        autoComplete="given-name"
-                        required
-                        type="text"
-                        name="name"
-                        id="name"
-                        className=""
-                      />
+                      <Container>
+                        <input
+                          placeholder="Full name"
+                          autoComplete="given-name"
+                          required
+                          type="text"
+                          name="name"
+                          id="name"
+                          className="input"
+                        />
+                      </Container>
                     </Row>
                   </Col>
                   <div className="interface_spacer_xsmall"></div>
-
                   <Row>
                     <label
                       htmlFor="email"
@@ -337,18 +364,21 @@ const ContactSection = (props) => {
                     >
                       Email
                     </label>
-                    <input
-                      placeholder=" Type an email"
-                      autoComplete="off"
-                      required
-                      type="email"
-                      name="email"
-                      id="email"
-                      className=""
-                    />
+                  </Row>
+                  <Row>
+                    <Container>
+                      <input
+                        placeholder="Email address"
+                        autoComplete="off"
+                        required
+                        type="email"
+                        name="email"
+                        id="email"
+                        className="input"
+                      />
+                    </Container>
                   </Row>
                   <div className="interface_spacer_xsmall"></div>
-
                   <Row>
                     <label
                       htmlFor="topic"
@@ -357,23 +387,13 @@ const ContactSection = (props) => {
                       Choose a Topic
                     </label>
                   </Row>
-
                   <Row>
-                    {/* <input
-                      disabled
-                      type="topic"
-                      name="topic"
-                      id="topic"
-                      className="topic"
-                      value={topic}
-                    /> */}
                     <TopicRadio
                       colorMode={correctedColorMode}
                       onTopicChanged={onTopicChanged}
                     />
                   </Row>
                   <div className="interface_spacer_xsmall"></div>
-
                   <Row>
                     <label
                       htmlFor="message"
@@ -381,13 +401,17 @@ const ContactSection = (props) => {
                     >
                       Message
                     </label>
-                    <textarea
-                      placeholder=" Write a message"
-                      required
-                      name="message"
-                      id="message"
-                      className="contact-text-area"
-                    />
+                  </Row>
+                  <Row>
+                    <Container>
+                      <textarea
+                        placeholder="Type message"
+                        required
+                        name="message"
+                        id="message"
+                        className="contact-text-area"
+                      />
+                    </Container>
                   </Row>
                 </>
               ) : (
@@ -458,7 +482,7 @@ const ContactSection = (props) => {
                       data-callback="onSubmit"
                       data-action="submit"
                     >
-                      Submit Request
+                      Submit Message
                     </button>
                   ) : (
                     <p className="email_sent">

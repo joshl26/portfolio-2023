@@ -144,9 +144,9 @@ const Experience = (props) => {
             rotateZ: 0.5,
           },
           3: {
-            scaleX: 7,
-            scaleY: 7,
-            scaleZ: 7,
+            scaleX: 9,
+            scaleY: 9,
+            scaleZ: 9,
             y: -viewport.height * 3.25,
             x: 5,
             z: 0,

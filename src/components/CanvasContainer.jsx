@@ -15,7 +15,7 @@ const CanvasContainer = (props) => {
   console.log(viewport);
 
   return viewport.width * viewport.factor >= 768 ? (
-    <ScrollControls pages={4.25} damping={0.1}>
+    <ScrollControls pages={4.4} damping={0.1}>
       <ScrollManager section={section} onSectionChange={onSectionChange} />
       <Scroll>
         <Experience
