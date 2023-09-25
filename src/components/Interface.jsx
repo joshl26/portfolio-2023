@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useThree } from "@react-three/fiber";
 import { motion } from "framer-motion";
-import { Col, Container, Dropdown, DropdownButton, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import emailjs from "@emailjs/browser";
@@ -254,15 +254,16 @@ const ContactSection = (props) => {
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
-  const [topic, setTopic] = useState("");
+  const [topic, setTopic] = useState("Comment");
 
   var correctedColorMode = colorMode === "light" ? "dark" : "light";
 
   const onTopicChanged = (e) => {
-    setTopic(e);
+    setTopic(e.target.innerHTML);
+    console.log(topic);
   };
 
-  useEffect(() => {}, [emailSent, confirmReceipt]);
+  // useEffect(() => {}, [emailSent, confirmReceipt, topic, setTopic]);
 
   const form = useRef();
 
@@ -350,51 +351,13 @@ const ContactSection = (props) => {
                   </Row>
                   <Row>
                     {/* <input
-                      readOnly
-                      required
-                      id="topic"
+                      disabled
+                      type="topic"
                       name="topic"
-                      type="text"
+                      id="topic"
                       className="topic"
-                      placeholder=" Select topic"
                       value={topic}
-                      style={{ padding: "0" }}
-                    ></input> */}
-                    {/* <DropdownButton
-                      variant=""
-                      className={fontColormode("type-btn")}
-                      title="Select"
-                      id="selectTopic"
-                    >
-                      <Dropdown.Item
-                        className="font_light"
-                        onClick={(e) => onTopicChanged(e)}
-                        href="#"
-                      >
-                        Standard Comment
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="font_light"
-                        onClick={(e) => onTopicChanged(e)}
-                        href="#"
-                      >
-                        Recruiter Query
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="font_light"
-                        onClick={(e) => onTopicChanged(e)}
-                        href="#"
-                      >
-                        Work Request
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="font_light"
-                        onClick={(e) => onTopicChanged(e)}
-                        href="#"
-                      >
-                        Consultation
-                      </Dropdown.Item>
-                    </DropdownButton> */}
+                    /> */}
                     <TopicRadio
                       colorMode={correctedColorMode}
                       onTopicChanged={onTopicChanged}
@@ -455,17 +418,7 @@ const ContactSection = (props) => {
                     >
                       Topic
                     </label>
-                    {/* <input
-                      disabled
-                      required
-                      id="topic"
-                      name="topic"
-                      type="text"
-                      placeholder="Select a message topic"
-                      value={topic}
-                      style={{ padding: "0" }}
-                    ></input> */}
-                    <TopicRadio />
+                    <TopicRadio disabled={true} />
                   </Row>
                   <Row>
                     <label

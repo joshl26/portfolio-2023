@@ -48,6 +48,10 @@
   text-align: center;
 }
 
+.submit-button {
+  padding: 0.5rem;
+}
+
 .submit-btn-col {
   text-align: center;
 }
@@ -92,6 +96,7 @@
 
   .submit-button {
     width: 75px;
+    padding: 0.5rem;
   }
 
   .email_confirmation {
