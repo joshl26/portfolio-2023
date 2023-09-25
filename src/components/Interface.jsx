@@ -10,6 +10,7 @@ import webIcon from "../data/images/Web_Icon.svg";
 import gitHubIcon from "../data/images/GitHub_Icon.svg";
 import wordPressIcon from "../data/images/wordpress_Icon.svg";
 import "./Interface.css";
+import TopicRadio from "./TopicRadio";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
@@ -56,7 +57,11 @@ const Interface = (props) => {
       />
       <SkillsSection fontColormode={fontColormode} viewport={viewport} />
       <PortfolioSection fontColormode={fontColormode} viewport={viewport} />
-      <ContactSection fontColormode={fontColormode} viewport={viewport} />
+      <ContactSection
+        colorMode={colorMode}
+        fontColormode={fontColormode}
+        viewport={viewport}
+      />
     </>
   );
 };
@@ -243,7 +248,7 @@ const SkillsSection = (props) => {
 };
 
 const ContactSection = (props) => {
-  const { fontColormode } = props;
+  const { fontColormode, colorMode } = props;
 
   // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
@@ -251,8 +256,10 @@ const ContactSection = (props) => {
   const [emailError, setEmailError] = useState(false);
   const [topic, setTopic] = useState("");
 
+  var correctedColorMode = colorMode === "light" ? "dark" : "light";
+
   const onTopicChanged = (e) => {
-    setTopic(e.target.innerHTML);
+    setTopic(e);
   };
 
   useEffect(() => {}, [emailSent, confirmReceipt]);
@@ -342,7 +349,7 @@ const ContactSection = (props) => {
                     </label>
                   </Row>
                   <Row>
-                    <input
+                    {/* <input
                       readOnly
                       required
                       id="topic"
@@ -352,8 +359,8 @@ const ContactSection = (props) => {
                       placeholder=" Select topic"
                       value={topic}
                       style={{ padding: "0" }}
-                    ></input>
-                    <DropdownButton
+                    ></input> */}
+                    {/* <DropdownButton
                       variant=""
                       className={fontColormode("type-btn")}
                       title="Select"
@@ -387,7 +394,11 @@ const ContactSection = (props) => {
                       >
                         Consultation
                       </Dropdown.Item>
-                    </DropdownButton>
+                    </DropdownButton> */}
+                    <TopicRadio
+                      colorMode={correctedColorMode}
+                      onTopicChanged={onTopicChanged}
+                    />
                   </Row>
                   <Row>
                     <label
@@ -444,7 +455,7 @@ const ContactSection = (props) => {
                     >
                       Topic
                     </label>
-                    <input
+                    {/* <input
                       disabled
                       required
                       id="topic"
@@ -453,7 +464,8 @@ const ContactSection = (props) => {
                       placeholder="Select a message topic"
                       value={topic}
                       style={{ padding: "0" }}
-                    ></input>
+                    ></input> */}
+                    <TopicRadio />
                   </Row>
                   <Row>
                     <label
