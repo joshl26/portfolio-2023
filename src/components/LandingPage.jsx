@@ -1,14 +1,21 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const LandingPage = ({ chooseExperienceChangeHandler }) => {
   return (
     <Container>
-      <div>
-        <button onClick={() => chooseExperienceChangeHandler()}>
-          Continue...
-        </button>
-      </div>
+      <Row>
+        <div className="spacer"></div>
+        <Col></Col>
+        <Col md={1}>
+          <Row>
+            <button onClick={() => chooseExperienceChangeHandler()}>
+              Continue...
+            </button>
+          </Row>
+        </Col>
+        <Col></Col>
+      </Row>
     </Container>
   );
 };

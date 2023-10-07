@@ -1,4 +1,4 @@
-.loading_spacer_small {
+.loading-spacer-small {
   height: 5vh;
   height: 5dvh;
 }
@@ -8,30 +8,30 @@
   height: 10dvh;
 }
 
-.loading_header {
+.loading-header {
   font-size: clamp(2rem, 1.5rem + 2.5vw, 4rem);
   font-size: clamp(2rem, 1.5rem + 2.5dvw, 4rem);
 }
 
-.loading_header_2 {
+.loading-header-2 {
   font-size: clamp(1.5rem, 0.875rem + 3.125vw, 4rem);
   font-size: clamp(1.5rem, 0.875rem + 3.125dvw, 4rem);
 }
-.loading_header_3 {
+.loading-header-3 {
   font-size: clamp(1.5rem, 1.125rem + 1.875vw, 3rem);
   font-size: clamp(1.5rem, 1.125rem + 1.875dvw, 3rem);
 }
 
-.loading_header,
-.loading_header_2,
-.loading_header_3 {
+.loading-header,
+.loading-header-2,
+.loading-header-3 {
   text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
-  .canvas_container {
+  .canvas-container {
     position: fixed;
     left: 0;
     right: 0;
@@ -41,7 +41,7 @@
     z-index: -1;
   }
 
-  .loading_screen_light {
+  .loading-screen-light {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -53,7 +53,7 @@
     overflow-x: hidden;
   }
 
-  .loading_screen_dark {
+  .loading-screen-dark {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -65,7 +65,7 @@
     overflow-x: hidden;
   }
 
-  .header_container {
+  .header-container {
     position: fixed;
     left: 0;
     right: 0;
@@ -74,21 +74,21 @@
     z-index: 10;
   }
 
-  .spacer {
+  .loading-spacer {
     height: 100%;
   }
 
-  .svg_animate {
+  .svg-animate {
     height: 65vh;
     height: 65dvh;
   }
 
-  .column_spacer {
+  .column-spacer {
     height: 10vh;
     height: 10dvh;
   }
 
-  .spacer_small {
+  .spacer-small {
     height: 2.5vh;
     height: 2.5dvh;
   }
@@ -97,7 +97,7 @@
 @media only screen and (min-width: 769px) {
   /* For desktop: */
 
-  .canvas_container {
+  .canvas-container {
     position: fixed;
     left: 0;
     right: 0;
@@ -108,7 +108,7 @@
     z-index: -1;
   }
 
-  .loading_screen_light {
+  .loading-screen-light {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -121,7 +121,7 @@
     transition: background-color 2s;
   }
 
-  .loading_screen_dark {
+  .loading-screen-dark {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -134,7 +134,7 @@
     transition: background-color 2s;
   }
 
-  .header_container {
+  .header-container {
     position: fixed;
     left: 0;
     right: 0;
@@ -143,20 +143,20 @@
     z-index: 10;
   }
 
-  .spacer {
+  .loading-spacer {
     height: 100%;
   }
 
-  .spacer_small {
+  .spacer-small {
     height: 7.5vh;
     height: 7.5dvh;
   }
-  .svg_animate {
+  .svg-animate {
     height: 65vh;
     height: 65dvh;
   }
 
-  .column_spacer {
+  .column-spacer {
     height: 10vh;
     height: 10dvh;
   }

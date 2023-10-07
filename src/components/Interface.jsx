@@ -43,9 +43,9 @@ const Interface = (props) => {
 
   const fontColormode = (styleClass) => {
     if (colorMode === "light") {
-      return `${styleClass} font_light`;
+      return `${styleClass} font-light`;
     } else {
-      return `${styleClass} font_dark`;
+      return `${styleClass} font-dark`;
     }
   };
 
@@ -75,7 +75,7 @@ const AboutSection = (props) => {
       {viewport.width * viewport.factor >= 768 ? (
         <>
           <motion.h1
-            className={fontColormode("interface_about_h1")}
+            className={fontColormode("interface-about-h1")}
             initial={{
               opacity: 0,
               x: -100,
@@ -93,7 +93,7 @@ const AboutSection = (props) => {
             <span>Joshua Lehman</span>
           </motion.h1>
           <motion.p
-            className={fontColormode("interface_about_p")}
+            className={fontColormode("interface-about-p")}
             initial={{
               opacity: 0,
               x: -100,
@@ -132,7 +132,7 @@ const AboutSection = (props) => {
       ) : (
         <>
           <motion.h1
-            className={fontColormode("interface_about_h1")}
+            className={fontColormode("interface-about-h1")}
             initial={{
               opacity: 0,
               x: -100,
@@ -150,7 +150,7 @@ const AboutSection = (props) => {
             <span>Joshua Lehman</span>
           </motion.h1>
           <motion.p
-            className={fontColormode("interface_about_p")}
+            className={fontColormode("interface-about-p")}
             initial={{
               opacity: 0,
               x: -100,
@@ -197,7 +197,7 @@ const SkillsSection = (props) => {
   return (
     <Section>
       <motion.h2
-        className={fontColormode("interface_about_h2")}
+        className={fontColormode("interface-about-h2")}
         initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -209,7 +209,7 @@ const SkillsSection = (props) => {
         Experienced Engineer 15 yrs in Manufacturing
       </motion.h2>
       <motion.h2
-        className={fontColormode("interface_about_h2")}
+        className={fontColormode("interface-about-h2")}
         initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -221,7 +221,7 @@ const SkillsSection = (props) => {
         Pragmatic and thoughtful digital craftsman
       </motion.h2>
       <motion.h2
-        className={fontColormode("interface_about_h2")}
+        className={fontColormode("interface-about-h2")}
         initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -233,7 +233,7 @@ const SkillsSection = (props) => {
         Five plus years software engineering
       </motion.h2>
       <motion.h2
-        className={fontColormode("interface_about_h2")}
+        className={fontColormode("interface-about-h2")}
         initial={{ opacity: 0, x: -100, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -295,19 +295,19 @@ const ContactSection = (props) => {
 
   return (
     <Section>
-      <div className="interface_spacer_small"></div>
-      <Container className="contact_container">
+      <div className="interface-spacer-small"></div>
+      <Container className="contact-container">
         <Row>
           <Col xs={6} md={5} sm={5} lg={5}>
             <Row>
-              <h2 className={fontColormode("interface_label contact_h1")}>
+              <h2 className={fontColormode("interface-label contact-h1")}>
                 Contact
               </h2>
-              <div className="interface_spacer_small"></div>
-              <h3 className={fontColormode("contact_h3")}>
+              <div className="interface-spacer-small"></div>
+              <h3 className={fontColormode("contact-h3")}>
                 Schedule a time with Calendly:
               </h3>
-              <div className="interface_spacer_small"></div>
+              <div className="interface-spacer-small"></div>
               <Container>
                 <Row>
                   <Col md={1}></Col>
@@ -323,10 +323,10 @@ const ContactSection = (props) => {
                 </Row>
               </Container>
             </Row>
-            <div className="interface_spacer_small"></div>
+            <div className="interface-spacer-small"></div>
             <Row>
-              <div className="interface_spacer_small"></div>
-              <h3 className={fontColormode("contact_h3")}>
+              <div className="interface-spacer-small"></div>
+              <h3 className={fontColormode("contact-h3")}>
                 OR Send a message with Email:
               </h3>
             </Row>
@@ -337,7 +337,7 @@ const ContactSection = (props) => {
                     <Row>
                       <label
                         htmlFor="name"
-                        className={fontColormode("interface_label")}
+                        className={fontColormode("interface-label")}
                       >
                         Name
                       </label>
@@ -356,11 +356,11 @@ const ContactSection = (props) => {
                       </Container>
                     </Row>
                   </Col>
-                  <div className="interface_spacer_xsmall"></div>
+                  <div className="interface-spacer-xsmall"></div>
                   <Row>
                     <label
                       htmlFor="email"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Email
                     </label>
@@ -378,11 +378,11 @@ const ContactSection = (props) => {
                       />
                     </Container>
                   </Row>
-                  <div className="interface_spacer_xsmall"></div>
+                  <div className="interface-spacer-xsmall"></div>
                   <Row>
                     <label
                       htmlFor="topic"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Choose a Topic
                     </label>
@@ -393,11 +393,11 @@ const ContactSection = (props) => {
                       onTopicChanged={onTopicChanged}
                     />
                   </Row>
-                  <div className="interface_spacer_xsmall"></div>
+                  <div className="interface-spacer-xsmall"></div>
                   <Row>
                     <label
                       htmlFor="message"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Message
                     </label>
@@ -419,7 +419,7 @@ const ContactSection = (props) => {
                   <Row>
                     <label
                       htmlFor="name"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Name
                     </label>
@@ -434,7 +434,7 @@ const ContactSection = (props) => {
                   <Row>
                     <label
                       htmlFor="email"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Email
                     </label>
@@ -449,7 +449,7 @@ const ContactSection = (props) => {
                   <Row>
                     <label
                       htmlFor="topic"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Topic
                     </label>
@@ -458,7 +458,7 @@ const ContactSection = (props) => {
                   <Row>
                     <label
                       htmlFor="message"
-                      className={fontColormode("interface_label")}
+                      className={fontColormode("interface-label")}
                     >
                       Message
                     </label>
@@ -471,7 +471,7 @@ const ContactSection = (props) => {
                   </Row>
                 </>
               )}
-              <div className="interface_spacer_small"></div>
+              <div className="interface-spacer-small"></div>
               <Row>
                 <Col className="submit-btn-col">
                   {emailSent === false && confirmReceipt === false ? (
@@ -485,31 +485,31 @@ const ContactSection = (props) => {
                       Submit Message
                     </button>
                   ) : (
-                    <p className="email_sent">
+                    <p className="email-sent">
                       Message sent, awaiting confirmation...
                     </p>
                   )}
                   {emailSent === true && confirmReceipt === true ? (
-                    <p className="email_confirmation">
+                    <p className="email-confirmation">
                       Message received! <br />
                       Check your inbox to confirm.
                     </p>
                   ) : (
-                    <p className="email_confirmation">{emailError}</p>
+                    <p className="email-confirmation">{emailError}</p>
                   )}
                 </Col>
               </Row>
             </form>
           </Col>
           <Col></Col>
-          <div className="spacer_small"></div>
+          <div className="spacer-small"></div>
           <Row>
-            <Col className="social_col" xs={3} md={3}>
-              <Container className="text_center">
+            <Col className="social-col" xs={3} md={3}>
+              <Container className="text-center">
                 <div className="spacer"></div>
                 <a href="https://www.linkedin.com/in/joshrlehman/">
                   <img
-                    className="socialmedia_icon"
+                    className="socialmedia-icon"
                     src={linkedInIcon}
                     alt="Linked In Icon"
                   />
@@ -517,21 +517,21 @@ const ContactSection = (props) => {
               </Container>
               <div className="spacer"></div>
             </Col>
-            <Col className="social_col" xs={3} md={3}>
+            <Col className="social-col" xs={3} md={3}>
               <Container>
                 <div className="spacer"></div>
                 <a href="https://github.com/joshl26/">
-                  <img className="socialmedia_icon" src={gitHubIcon} alt="" />
+                  <img className="socialmedia-icon" src={gitHubIcon} alt="" />
                 </a>
               </Container>
               <div className="spacer"></div>
             </Col>
-            <Col className="social_col" xs={3} md={3}>
-              <Container className="text_center">
+            <Col className="social-col" xs={3} md={3}>
+              <Container className="text-center">
                 <div className="spacer"></div>
                 <a href="http://www.blackrock3d.ca/">
                   <img
-                    className="socialmedia_icon"
+                    className="socialmedia-icon"
                     src={wordPressIcon}
                     alt="Web Icon"
                   />
@@ -539,12 +539,12 @@ const ContactSection = (props) => {
               </Container>
               <div className="spacer"></div>
             </Col>
-            <Col className="social_col" xs={3} md={3}>
-              <Container className="text_center">
+            <Col className="social-col" xs={3} md={3}>
+              <Container className="text-center">
                 <div className="spacer"></div>
                 <a href="mailto:joshlehman.dev@gmail.com">
                   <img
-                    className="socialmedia_icon"
+                    className="socialmedia-icon"
                     src={webIcon}
                     alt="Mail Icon"
                   />
@@ -573,7 +573,7 @@ const PortfolioSection = (props) => {
   return (
     <Section>
       <motion.h2
-        className={fontColormode("interface_about_h2")}
+        className={fontColormode("interface-about-h2")}
         initial={{ opacity: 0, x: -100, y: 0 }}
         whileInView={{
           opacity: 1,
@@ -585,7 +585,7 @@ const PortfolioSection = (props) => {
         Projects
       </motion.h2>
 
-      <div className="interface_spacer_xsmall"></div>
+      <div className="interface-spacer-xsmall"></div>
       <Row style={{ textAlign: "center" }}>
         <Col xs={4} sm={4} md={4}>
           <motion.button
@@ -608,7 +608,7 @@ const PortfolioSection = (props) => {
         </Col>
         <Col xs={4} sm={4} md={4}>
           <motion.p
-            className={fontColormode("scroll_p")}
+            className={fontColormode("scroll-p")}
             initial={{ opacity: 0, x: 0, y: 0 }}
             whileInView={{
               opacity: 1,
@@ -635,7 +635,7 @@ const PortfolioSection = (props) => {
           </motion.button>
         </Col>
         <motion.h2
-          className={fontColormode("interface_about_h2")}
+          className={fontColormode("interface-about-h2")}
           initial={{ opacity: 0, x: -100, y: 0 }}
           whileInView={{
             opacity: 1,

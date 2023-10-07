@@ -33,7 +33,7 @@ const ColorMode = (props) => {
 
   return (
     <Lottie
-      className="lottie_container"
+      className="lottie-container"
       lottieRef={lottieRef}
       animationData={ToggleButton}
       onClick={() => onLottieClickHandler()}

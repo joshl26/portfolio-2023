@@ -10,14 +10,14 @@ const LoadingScreen = (props) => {
 
   const fontColormode = (styleClass) => {
     if (colorMode === "light") {
-      return `${styleClass} font_light`;
+      return `${styleClass} font-light`;
     } else {
-      return `${styleClass} font_dark`;
+      return `${styleClass} font-dark`;
     }
   };
 
   const LoadingScreenStyle =
-    colorMode === "light" ? "loading_screen_light" : "loading_screen_dark";
+    colorMode === "light" ? "loading-screen-light" : "loading-screen-dark";
 
   const { progress } = useProgress();
 
@@ -25,30 +25,30 @@ const LoadingScreen = (props) => {
 
   return (
     <section className={LoadingScreenStyle}>
-      <div className="loading_spacer_small"></div>
+      <div className="loading-spacer-small"></div>
       <Row className="row-one">
-        <h1 className={fontColormode("loading_header")}>
+        <h1 className={fontColormode("loading-header")}>
           Hold on one second...
         </h1>
 
-        <h3 className={fontColormode("loading_header_3")}>
+        <h3 className={fontColormode("loading-header-3")}>
           Loading: {Math.floor(progress)}%...
         </h3>
       </Row>
-      <div className="loading_spacer_small"></div>
+      <div className="loading-spacer-small"></div>
       <Row>
         <Lottie
-          className="svg_animate"
+          className="svg-animate"
           animationData={loadingCube}
           loop={true}
         />
       </Row>
       <Row className="row-one">
-        <h2 className={fontColormode("loading_header_2")}>
+        <h2 className={fontColormode("loading-header-2")}>
           Loading the Awesomeness!
         </h2>
       </Row>
-      <div className="loading_spacer_small"></div>
+      <div className="loading-spacer-small"></div>
       {/* <div className="canvas_container">
         <Lottie
           className="svg_animate"

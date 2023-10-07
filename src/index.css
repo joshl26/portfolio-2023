@@ -22,12 +22,12 @@ body {
   margin: 0;
 }
 
-.font_light {
+.font-light {
   color: var(--bg-color-dark);
   -webkit-text-fill-color: var(--bg-color-dark);
 }
 
-.font_dark {
+.font-dark {
   color: var(--bg-color-light);
   -webkit-text-fill-color: var(--bg-color-light);
 }
