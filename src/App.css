@@ -14,3 +14,8 @@
 .dropdown-menu li > a:hover {
   background: white;
 }
+
+.spacer {
+  height: 5vh;
+  height: 5dvh;
+}

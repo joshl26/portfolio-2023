@@ -3,8 +3,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 import "./ChooseYourExperience.css";
 
-const ChooseYourExperience = ({ colorMode }) => {
-  const ref = useRef();
+const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
+  const refOne = useRef();
+  const refTwo = useRef();
 
   const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
   const [animatedCursorOne, setAnimatedCursorOne] = useState(true);
@@ -16,12 +17,41 @@ const ChooseYourExperience = ({ colorMode }) => {
   return (
     <Container>
       <div className="spacer"></div>
+
       <Row>
         <Col md={3}></Col>
         <Col>
-          <>
+          <TypeAnimation
+            ref={refOne}
+            cursor={false}
+            style={{
+              color: animatedFontStyleColor,
+              fontSize: "1.75rem",
+            }}
+            className={CURSOR_CLASS_NAME}
+            sequence={[
+              1250,
+              "Choose your experience:",
+              100,
+              (el) => {
+                setAnimatedCursorOne(false);
+                el.classList.remove(CURSOR_CLASS_NAME);
+              }, // A reference to the element gets passed as the first argument of a callback function
+            ]}
+            repeat={false}
+          />
+        </Col>
+        <Col md={3}></Col>
+      </Row>
+
+      <div className="spacer"></div>
+      <Row>
+        <Col md={3}></Col>
+        <Col>
+          <Row>
             <TypeAnimation
-              ref={ref}
+              speed={100}
+              ref={refTwo}
               cursor={false}
               style={{
                 color: animatedFontStyleColor,
@@ -29,28 +59,105 @@ const ChooseYourExperience = ({ colorMode }) => {
               }}
               className={CURSOR_CLASS_NAME}
               sequence={[
-                "One",
-                800,
-                "One Two",
-                800,
-                "One Two Three",
                 (el) => {
                   setAnimatedCursorOne(false);
                   el.classList.remove(CURSOR_CLASS_NAME);
                 }, // A reference to the element gets passed as the first argument of a callback function
-                2000,
+                3500,
                 (el) => {
                   setAnimatedCursorOne(true);
                   el.classList.add(CURSOR_CLASS_NAME);
-                },
-                "",
+                }, // A reference to the element gets passed as the first argument of a callback function
+                "Text (3G/old Browser)",
+                100,
+                (el) => {
+                  setAnimatedCursorOne(false);
+                  el.classList.remove(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
               ]}
-              repeat={Infinity}
+              repeat={false}
             />
-          </>
+          </Row>
         </Col>
         <Col md={3}></Col>
       </Row>
+      <div className="spacer"></div>
+      <Row>
+        <Col md={3}></Col>
+        <Col>
+          <Row>
+            <TypeAnimation
+              speed={100}
+              ref={refTwo}
+              cursor={false}
+              style={{
+                color: animatedFontStyleColor,
+                fontSize: "1.75rem",
+              }}
+              className={CURSOR_CLASS_NAME}
+              sequence={[
+                (el) => {
+                  setAnimatedCursorOne(false);
+                  el.classList.remove(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
+                3500,
+                (el) => {
+                  setAnimatedCursorOne(true);
+                  el.classList.add(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
+                "Video (4G/new Browser)",
+                100,
+                (el) => {
+                  setAnimatedCursorOne(false);
+                  el.classList.remove(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
+              ]}
+              repeat={false}
+            />
+          </Row>
+        </Col>
+        <Col md={3}></Col>
+      </Row>
+      <div className="spacer"></div>
+      <Row>
+        <Col md={3}></Col>
+        <Col>
+          <Row onClick={() => setExperienceChangeHandler("interactive")}>
+            <TypeAnimation
+              speed={100}
+              ref={refTwo}
+              cursor={false}
+              style={{
+                color: animatedFontStyleColor,
+                fontSize: "1.75rem",
+              }}
+              className={CURSOR_CLASS_NAME}
+              sequence={[
+                (el) => {
+                  setAnimatedCursorOne(false);
+                  el.classList.remove(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
+                3500,
+                (el) => {
+                  setAnimatedCursorOne(true);
+                  el.classList.add(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
+                "Interactive (5G/Desktop)",
+                100,
+                (el) => {
+                  setAnimatedCursorOne(false);
+                  el.classList.remove(CURSOR_CLASS_NAME);
+                }, // A reference to the element gets passed as the first argument of a callback function
+              ]}
+              repeat={false}
+            />
+          </Row>
+        </Col>
+        <Col md={3}></Col>
+      </Row>
+
+      <div className="spacer"></div>
+
       {animatedCursorOne ? "1" : ""}
       {/* <TypeAnimation
       style={{
