@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
+import "./ChooseYourExperience.css";
 
 const ChooseYourExperience = ({ colorMode }) => {
   const ref = useRef();
@@ -23,6 +24,7 @@ const ChooseYourExperience = ({ colorMode }) => {
               ref={ref}
               cursor={false}
               style={{
+                color: animatedFontStyleColor,
                 fontSize: "1.75rem",
               }}
               className={CURSOR_CLASS_NAME}
@@ -45,18 +47,6 @@ const ChooseYourExperience = ({ colorMode }) => {
               ]}
               repeat={Infinity}
             />
-
-            <style global jsx>{`
-              .custom-type-animation-cursor::after {
-                content: "|";
-                animation: cursor 1.1s infinite step-start;
-              }
-              @keyframes cursor {
-                50% {
-                  opacity: 0;
-                }
-              }
-            `}</style>
           </>
         </Col>
         <Col md={3}></Col>

@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu";
 import { TypeAnimation } from "react-type-animation";
 import { Col, Container, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
+import ChooseYourExperience from "./components/ChooseYourExperience";
+import LandingPage from "./components/LandingPage";
 
 const ColorMode = React.lazy(() => import("./components/ColorMode"));
 // const Menu = React.lazy(() => import("./components/Menu"));
@@ -24,14 +26,19 @@ function App() {
   const [menuOpened, setMenuOpened] = useState(false);
   const newColorMode = colorMode === "light" ? "dark" : "light";
   const canvasBackGroundColor = colorMode === "light" ? "#ececec" : "#293241";
-  const landingPage = useState(true);
-  const chooseYourExperience = useState(false);
+  const [landingPage, setLandingPage] = useState(true);
+  const [chooseYourExperience, setChooseYourExperience] = useState(false);
 
   // const onColorModeChangeHandler = () => {
   //   setColorMode("dark");
   // };
 
   // useEffect(() => {}, []);
+
+  const chooseExperienceChangeHandler = () => {
+    setChooseYourExperience(!chooseYourExperience);
+    setLandingPage(!landingPage);
+  };
 
   return (
     <ThemeProvider
@@ -40,7 +47,7 @@ function App() {
     >
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">J Lehman</Navbar.Brand>
+          <Navbar.Brand href="/">J Lehman</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -64,6 +71,19 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      {chooseYourExperience ? (
+        <ChooseYourExperience colorMode={colorMode} />
+      ) : (
+        ""
+      )}
+      {landingPage ? (
+        <LandingPage
+          chooseExperienceChangeHandler={chooseExperienceChangeHandler}
+        />
+      ) : (
+        ""
+      )}
+
       {/* <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
         <MotionConfig
           transition={{
