@@ -15,6 +15,7 @@ import ColorMode from "./components/ColorMode";
 import LoadingScreen from "./components/LoadingScreen";
 import { ThemeProvider } from "react-bootstrap";
 import CanvasContainer from "./components/CanvasContainer";
+import ResponsiveHeader from "./components/ResponsiveHeader";
 // const ColorMode = React.lazy(() => import("./components/ColorMode"));
 // const Menu = React.lazy(() => import("./components/Menu"));
 // const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -54,7 +55,9 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <ResponsiveHeader />
+
+      {/* <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/">J Lehman</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -90,7 +93,7 @@ function App() {
             )}
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> */}
 
       {chooseYourExperience ? (
         <ChooseYourExperience

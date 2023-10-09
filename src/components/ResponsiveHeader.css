@@ -1,0 +1,15 @@
+.header-container {
+  width: 100vw;
+  width: 100dvw;
+}
+
+.header-hero-container {
+  height: 75px;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.header-hero-image {
+  height: 100%;
+  width: auto;
+}
