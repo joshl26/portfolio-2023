@@ -19,3 +19,16 @@
   height: 5vh;
   height: 5dvh;
 }
+
+.round-button {
+  width: fit-content !important;
+  height: 50px !important;
+  border-radius: 25px;
+}
+
+.round-button:hover {
+  width: fit-content !important;
+  height: 50px !important;
+  border-radius: 25px;
+  background-color: blue;
+}

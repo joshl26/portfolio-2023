@@ -2,11 +2,20 @@ import React from "react";
 import { Col, Image, Nav, Row } from "react-bootstrap";
 import "./ResponsiveHeader.css";
 import JLIconSmall from "../data/images/JL_Icon_Small.png";
+import { useState } from "react";
 
 const ResponsiveHeader = () => {
+  const [menuClicked, setMenuClicked] = useState(false);
+
+  const hamburgerMenuClicked = () => {
+    setMenuClicked(!menuClicked);
+  };
+
+  var hamburgerMenuStyle = menuClicked ? "is-active" : "";
+
   return (
-    <header>
-      <div className="header-container">
+    <header className="header-container">
+      <div>
         <Row>
           <Col>
             <div className="header-hero-container">
@@ -22,7 +31,10 @@ const ResponsiveHeader = () => {
           <Col></Col>
           <Col>
             <div className="hamburger-container">
-              <div className="hamburger hamburger--spring">
+              <div
+                onClick={hamburgerMenuClicked}
+                className={`hamburger hamburger--spring + ${hamburgerMenuStyle}`}
+              >
                 <div className="hamburger-box">
                   <div className="hamburger-inner"></div>
                 </div>

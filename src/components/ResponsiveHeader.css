@@ -20,7 +20,7 @@
 .hamburger-container {
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  padding-right: 0.5rem;
   text-align: right;
 }
 
