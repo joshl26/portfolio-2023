@@ -1,16 +1,37 @@
 import React from "react";
-import { Image } from "react-bootstrap";
+import { Col, Image, Nav, Row } from "react-bootstrap";
 import "./ResponsiveHeader.css";
 import JLIconSmall from "../data/images/JL_Icon_Small.png";
 
 const ResponsiveHeader = () => {
   return (
-    <div className="header-container">
-      <div className="header-hero-container">
-        <Image className="header-hero-image" alt="" src={JLIconSmall}></Image>
+    <header>
+      <div className="header-container">
+        <Row>
+          <Col>
+            <div className="header-hero-container">
+              <a href="/">
+                <Image
+                  className="header-hero-image"
+                  alt="header hero image"
+                  src={JLIconSmall}
+                ></Image>
+              </a>
+            </div>
+          </Col>
+          <Col></Col>
+          <Col>
+            <div className="hamburger-container">
+              <div className="hamburger hamburger--spring">
+                <div className="hamburger-box">
+                  <div className="hamburger-inner"></div>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
       </div>
-      <h1>ResponsiveHeader</h1>
-    </div>
+    </header>
   );
 };
 
