@@ -7,6 +7,7 @@
 }
 
 .responsive-menu-container {
+  width: 100vw;
   text-align: center;
   margin: 0 auto;
 }
@@ -15,6 +16,7 @@
   color: var(--bg-color-light);
   font-size: 7rem;
   width: fit-content;
+  margin-left: 4rem;
 }
 
 .responsive-menu-header:hover {

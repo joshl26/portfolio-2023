@@ -72,103 +72,105 @@ function App() {
       ) : (
         ""
       )}
+      <main>
+        {menuClicked ? (
+          <ResponsiveMenu
+            hamburgerMenuClicked={hamburgerMenuClicked}
+            menuClicked={menuClicked}
+          />
+        ) : (
+          ""
+        )}
 
-      {menuClicked ? (
-        <ResponsiveMenu
-          hamburgerMenuClicked={hamburgerMenuClicked}
-          menuClicked={menuClicked}
-        />
-      ) : (
-        ""
-      )}
+        {chooseYourExperience ? (
+          <ChooseYourExperience
+            colorMode={colorMode}
+            setExperienceChangeHandler={setExperienceChangeHandler}
+          />
+        ) : (
+          ""
+        )}
+        {landingPage ? (
+          <LandingPage
+            chooseExperienceChangeHandler={chooseExperienceChangeHandler}
+          />
+        ) : (
+          ""
+        )}
 
-      {chooseYourExperience ? (
-        <ChooseYourExperience
-          colorMode={colorMode}
-          setExperienceChangeHandler={setExperienceChangeHandler}
-        />
-      ) : (
-        ""
-      )}
-      {landingPage ? (
-        <LandingPage
-          chooseExperienceChangeHandler={chooseExperienceChangeHandler}
-        />
-      ) : (
-        ""
-      )}
-
-      {experience === "text" ? (
-        <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
-          <MotionConfig
-            transition={{
-              ...framerMotionConfig,
-            }}
-          >
-            <TextBasedHome />
-          </MotionConfig>
-        </Suspense>
-      ) : (
-        ""
-      )}
-
-      {experience === "video" ? (
-        <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
-          <MotionConfig
-            transition={{
-              ...framerMotionConfig,
-            }}
-          >
-            <h1>VIDEO BASED</h1>
-          </MotionConfig>
-        </Suspense>
-      ) : (
-        ""
-      )}
-
-      {experience === "interactive" ? (
-        <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
-          <MotionConfig
-            transition={{
-              ...framerMotionConfig,
-            }}
-          >
-            <ColorMode
-              colorMode={colorMode}
-              onColorModeChangeHandler={onColorModeChangeHandler}
-            />
-            <Menu
-              section={section}
-              menuOpened={menuOpened}
-              onSectionChange={setSection}
-              setMenuOpened={setMenuOpened}
-              colorMode={colorMode}
-            />
-            <Canvas
-              shadows
-              camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
+        {experience === "text" ? (
+          <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
+            <MotionConfig
+              transition={{
+                ...framerMotionConfig,
+              }}
             >
-              <ambientLight
-                position={(0, 0, 0)}
-                color="white"
-                intensity="1.5"
-              />
-              <color attach="background" args={[canvasBackGroundColor]} />
-              <CanvasContainer
+              <TextBasedHome />
+            </MotionConfig>
+          </Suspense>
+        ) : (
+          ""
+        )}
+
+        {experience === "video" ? (
+          <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
+            <MotionConfig
+              transition={{
+                ...framerMotionConfig,
+              }}
+            >
+              <h1>VIDEO BASED</h1>
+            </MotionConfig>
+          </Suspense>
+        ) : (
+          ""
+        )}
+
+        {experience === "interactive" ? (
+          <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
+            <MotionConfig
+              transition={{
+                ...framerMotionConfig,
+              }}
+            >
+              <ColorMode
                 colorMode={colorMode}
-                onSectionChange={setSection}
+                onColorModeChangeHandler={onColorModeChangeHandler}
+              />
+              <Menu
                 section={section}
                 menuOpened={menuOpened}
-                onColorModeChangeHandler={onColorModeChangeHandler}
+                onSectionChange={setSection}
                 setMenuOpened={setMenuOpened}
+                colorMode={colorMode}
               />
-            </Canvas>
-          </MotionConfig>
-          <Leva hidden />
-        </Suspense>
-      ) : (
-        ""
-      )}
+              <Canvas
+                shadows
+                camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
+              >
+                <ambientLight
+                  position={(0, 0, 0)}
+                  color="white"
+                  intensity="1.5"
+                />
+                <color attach="background" args={[canvasBackGroundColor]} />
+                <CanvasContainer
+                  colorMode={colorMode}
+                  onSectionChange={setSection}
+                  section={section}
+                  menuOpened={menuOpened}
+                  onColorModeChangeHandler={onColorModeChangeHandler}
+                  setMenuOpened={setMenuOpened}
+                />
+              </Canvas>
+            </MotionConfig>
+            <Leva hidden />
+          </Suspense>
+        ) : (
+          ""
+        )}
+      </main>
+      
     </ThemeProvider>
   );
 }
