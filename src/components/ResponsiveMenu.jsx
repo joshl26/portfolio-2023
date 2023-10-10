@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ResponsiveMenu.css";
+import { motion } from "framer-motion";
 
-const ResponsiveMenu = () => {
+const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
+  // const [isOpen, setIsOpen] = useState(false);
+
+  const variants = {
+    open: { position: "absolute", zIndex: 1000, opacity: 1, x: "5%" },
+    closed: { position: "absolute", zIndex: 0, opacity: 0, x: "-25%" },
+  };
+
   return (
-    <section className="responsive-menu-section">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={menuClicked ? "open" : "closed"}
+      variants={variants}
+      transition={{ duration: 1.5 }}
+      className="responsive-menu-section"
+    >
       <div className="responsive-menu-container">
         <div className="spacer"></div>
         <a href="/home">
@@ -25,7 +39,7 @@ const ResponsiveMenu = () => {
           <h3 className="responsive-menu-header">Contact</h3>
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -17,6 +17,7 @@ import { ThemeProvider } from "react-bootstrap";
 import CanvasContainer from "./components/CanvasContainer";
 import ResponsiveHeader from "./components/ResponsiveHeader";
 import ResponsiveMenu from "./components/ResponsiveMenu";
+import TextBasedHome from "./components/TextBasedHome";
 // const ColorMode = React.lazy(() => import("./components/ColorMode"));
 // const Menu = React.lazy(() => import("./components/Menu"));
 // const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -72,7 +73,14 @@ function App() {
         ""
       )}
 
-      {menuClicked ? <ResponsiveMenu /> : ""}
+      {menuClicked ? (
+        <ResponsiveMenu
+          hamburgerMenuClicked={hamburgerMenuClicked}
+          menuClicked={menuClicked}
+        />
+      ) : (
+        ""
+      )}
 
       {chooseYourExperience ? (
         <ChooseYourExperience
@@ -97,7 +105,7 @@ function App() {
               ...framerMotionConfig,
             }}
           >
-            <h1>TEXT BASED</h1>
+            <TextBasedHome />
           </MotionConfig>
         </Suspense>
       ) : (
