@@ -1,3 +1,13 @@
 .landing-header {
+  color: var(--bg-color-light);
+  max-width: 95vw;
+}
+
+.landing-section {
   text-align: center;
+  height: 100%;
+  width: 100vw;
+  vertical-align: middle;
+  position: absolute;
+  top: 40%;
 }

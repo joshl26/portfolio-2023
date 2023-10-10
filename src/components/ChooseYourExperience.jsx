@@ -17,7 +17,6 @@ const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
   return (
     <Container>
       <div className="spacer"></div>
-
       <Row>
         <Col md={3}></Col>
         <Col>

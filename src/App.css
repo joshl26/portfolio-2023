@@ -22,13 +22,17 @@
 
 .round-button {
   width: fit-content !important;
-  height: 50px !important;
+  height: fit-content !important;
   border-radius: 25px;
+  padding: 10px 20px 10px 20px;
 }
 
 .round-button:hover {
   width: fit-content !important;
-  height: 50px !important;
+  height: fit-content !important;
   border-radius: 25px;
-  background-color: blue;
+  background-color: var(--button-color-hover);
+  border-color: beige;
+  color: beige;
+  padding: 10px 20px 10px 20px;
 }

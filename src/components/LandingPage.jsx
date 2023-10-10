@@ -7,25 +7,27 @@ const LandingPage = ({ chooseExperienceChangeHandler }) => {
   const buttonClass = "round-button";
 
   return (
-    <section>
-      <Col>
-        <h1 className="landing-header">
-          Welcome to Josh Lehmans portfolio site!
-        </h1>
-      </Col>
-      <div className="spacer"></div>
-      <Row>
-        <Col></Col>
-        <Col style={{ textAlign: "center" }}>
-          <RoundButton
-            buttonText={"Click here to continue..."}
-            href={"/"}
-            buttonClass={buttonClass}
-            clickHandler={() => chooseExperienceChangeHandler()}
-          />
+    <section className="landing-section">
+      <div className="landing-container">
+        <Col>
+          <h1 className="landing-header">
+            Welcome to Josh Lehmans portfolio site!
+          </h1>
         </Col>
-        <Col></Col>
-      </Row>
+        <div className="spacer"></div>
+        <Row>
+          <Col sm={1}></Col>
+          <Col style={{ textAlign: "center" }}>
+            <RoundButton
+              buttonText={"Choose an experience type to begin"}
+              href={"/"}
+              buttonClass={buttonClass}
+              clickHandler={() => chooseExperienceChangeHandler()}
+            />
+          </Col>
+          <Col sm={1}></Col>
+        </Row>
+      </div>
     </section>
   );
 };
