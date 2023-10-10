@@ -1,0 +1,22 @@
+.title-container {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 8rem);
+}
+
+.text-based-title {
+  font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem);
+  color: var(--bg-color-light);
+}
+
+.title-accent {
+  color: beige;
+  font-family: lucitana;
+  font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+}
+
+.title-year {
+  font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+}

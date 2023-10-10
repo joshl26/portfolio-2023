@@ -14,7 +14,7 @@
 
 .responsive-menu-header {
   color: var(--bg-color-light);
-  font-size: 7rem;
+  font-size: clamp(3rem, 2.2147rem + 3.9264vw, 7rem);
   width: fit-content;
   margin-left: 4rem;
 }

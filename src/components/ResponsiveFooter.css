@@ -7,7 +7,7 @@
   color: var(--bg-color-light);
   font-weight: 200;
   font-family: raleway;
-  font-size: 1.5rem;
+  font-size: clamp(0.5rem, 1.0449rem + 1.3381vw, 0.75rem);
   margin-left: 1rem;
 }
 

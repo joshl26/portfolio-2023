@@ -13,24 +13,24 @@ const ResponsiveFooter = () => {
     <footer className="responsive-footer">
       <div className="footer-container">
         <Row>
-          <Col>
+          <Col xxs={4} sm={2} md={3}>
             <div className="copyright-container">
-              <p className="copyright-text">©Josh Lehman - 2023</p>
+              <p className="copyright-text">©Josh Lehman</p>
             </div>
           </Col>
-          <Col></Col>
-          <Col md={2}>
+          <Col xxs={1} sm={2} md={7}></Col>
+          <Col xxs={6} sm={2} md={2}>
             <Row>
               <Col></Col>
-              <Col md={1}>
+              <Col xxs={1} md={1}>
                 <FaLinkedinIn className="social-icon" />
               </Col>
               <Col></Col>
-              <Col md={1}>
+              <Col xxs={1} md={1}>
                 <FaGithub className="social-icon" />
               </Col>
               <Col></Col>
-              <Col md={1}>
+              <Col xxs={1} md={1}>
                 <FaYoutubeSquare className="social-icon" />
               </Col>
               <Col></Col>
