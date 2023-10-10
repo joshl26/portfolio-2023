@@ -48,7 +48,7 @@ const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
       <Row>
         <Col md={3}></Col>
         <Col>
-          <Row>
+          <Row onClick={() => setExperienceChangeHandler("text")}>
             <TypeAnimation
               speed={100}
               ref={refTwo}
@@ -85,7 +85,7 @@ const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
       <Row>
         <Col md={3}></Col>
         <Col>
-          <Row>
+          <Row onClick={() => setExperienceChangeHandler("video")}>
             <TypeAnimation
               speed={100}
               ref={refTwo}

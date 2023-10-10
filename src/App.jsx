@@ -74,44 +74,6 @@ function App() {
 
       {menuClicked ? <ResponsiveMenu /> : ""}
 
-      {/* <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="/">J Lehman</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            {chooseYourExperience === true ? (
-              <Nav className="me-auto">
-                <NavDropdown
-                  title="Choose your Experience"
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown.Item href="#experience/1.1">
-                    Text Based (3G/old browser)
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#experience/1.2">
-                    Video Based (4G/new browser)
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#experience/1.3">
-                    3D Interactive (Desktop/5G)
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            ) : landingPage ? (
-              ""
-            ) : (
-              <Nav className="me-auto">
-                <Nav.Link href="#">Home</Nav.Link>
-                <Nav.Link href="#">About</Nav.Link>
-                <Nav.Link href="#">Porfolio</Nav.Link>
-                <Nav.Link href="#">Contact</Nav.Link>
-              </Nav>
-            )}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar> */}
-
       {chooseYourExperience ? (
         <ChooseYourExperience
           colorMode={colorMode}
@@ -124,6 +86,34 @@ function App() {
         <LandingPage
           chooseExperienceChangeHandler={chooseExperienceChangeHandler}
         />
+      ) : (
+        ""
+      )}
+
+      {experience === "text" ? (
+        <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
+          <MotionConfig
+            transition={{
+              ...framerMotionConfig,
+            }}
+          >
+            <h1>TEXT BASED</h1>
+          </MotionConfig>
+        </Suspense>
+      ) : (
+        ""
+      )}
+
+      {experience === "video" ? (
+        <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
+          <MotionConfig
+            transition={{
+              ...framerMotionConfig,
+            }}
+          >
+            <h1>VIDEO BASED</h1>
+          </MotionConfig>
+        </Suspense>
       ) : (
         ""
       )}
