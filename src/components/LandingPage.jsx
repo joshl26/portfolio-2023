@@ -11,7 +11,7 @@ const LandingPage = ({ chooseExperienceChangeHandler }) => {
       <div className="landing-container">
         <Col>
           <h1 className="landing-header">
-            Welcome to Josh Lehmans portfolio site!
+            Welcome to the portfolio site of Josh Lehman
           </h1>
         </Col>
         <div className="spacer"></div>

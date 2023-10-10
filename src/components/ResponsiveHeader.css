@@ -15,6 +15,13 @@
 .header-hero-image {
   height: 100%;
   width: auto;
+  -webkit-transition: -webkit-transform 5.33s;
+  transition: transform 5.33s; /* Animate the transform properties */
+}
+
+.header-hero-image:hover {
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
 .hamburger-container {

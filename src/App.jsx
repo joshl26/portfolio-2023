@@ -33,7 +33,6 @@ function App() {
   const [landingPage, setLandingPage] = useState(true);
   const [chooseYourExperience, setChooseYourExperience] = useState(false);
   const [experience, setExperience] = useState();
-
   const [menuClicked, setMenuClicked] = useState(false);
 
   const hamburgerMenuClicked = () => {
@@ -62,10 +61,16 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <ResponsiveHeader
-        hamburgerMenuClicked={hamburgerMenuClicked}
-        menuClicked={menuClicked}
-      />
+      {experience !== "interactive" ? (
+        <ResponsiveHeader
+          hamburgerMenuClicked={hamburgerMenuClicked}
+          menuClicked={menuClicked}
+          experience={experience}
+          chooseYourExperience={chooseYourExperience}
+        />
+      ) : (
+        ""
+      )}
 
       {menuClicked ? <ResponsiveMenu /> : ""}
 

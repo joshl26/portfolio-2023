@@ -6,6 +6,7 @@ import "./ChooseYourExperience.css";
 const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
   const refOne = useRef();
   const refTwo = useRef();
+  const refThree = useRef();
 
   const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
   const [animatedCursorOne, setAnimatedCursorOne] = useState(true);
@@ -30,7 +31,7 @@ const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
             className={CURSOR_CLASS_NAME}
             sequence={[
               1250,
-              "Choose your experience:",
+              "Select your preference:",
               100,
               (el) => {
                 setAnimatedCursorOne(false);
@@ -124,7 +125,7 @@ const ChooseYourExperience = ({ colorMode, setExperienceChangeHandler }) => {
           <Row onClick={() => setExperienceChangeHandler("interactive")}>
             <TypeAnimation
               speed={100}
-              ref={refTwo}
+              ref={refThree}
               cursor={false}
               style={{
                 color: animatedFontStyleColor,
