@@ -7,8 +7,8 @@ import { framerMotionConfig } from "./config";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Menu from "./components/Menu";
-import { TypeAnimation } from "react-type-animation";
-import { Col, Container, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
+// import { TypeAnimation } from "react-type-animation";
+// import { Col, Container, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
 import ChooseYourExperience from "./components/ChooseYourExperience";
 import LandingPage from "./components/LandingPage";
 import ColorMode from "./components/ColorMode";
@@ -16,6 +16,7 @@ import LoadingScreen from "./components/LoadingScreen";
 import { ThemeProvider } from "react-bootstrap";
 import CanvasContainer from "./components/CanvasContainer";
 import ResponsiveHeader from "./components/ResponsiveHeader";
+import ResponsiveMenu from "./components/ResponsiveMenu";
 // const ColorMode = React.lazy(() => import("./components/ColorMode"));
 // const Menu = React.lazy(() => import("./components/Menu"));
 // const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -27,11 +28,17 @@ function App() {
   const [colorMode, setColorMode] = useLocalStorage("colorMode", "light");
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
-  const newColorMode = colorMode === "light" ? "dark" : "light";
+  // const newColorMode = colorMode === "light" ? "dark" : "light";
   const canvasBackGroundColor = colorMode === "light" ? "#ececec" : "#293241";
   const [landingPage, setLandingPage] = useState(true);
   const [chooseYourExperience, setChooseYourExperience] = useState(false);
   const [experience, setExperience] = useState();
+
+  const [menuClicked, setMenuClicked] = useState(false);
+
+  const hamburgerMenuClicked = () => {
+    setMenuClicked(!menuClicked);
+  };
 
   const onColorModeChangeHandler = () => {
     setColorMode("dark");
@@ -55,7 +62,12 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <ResponsiveHeader />
+      <ResponsiveHeader
+        hamburgerMenuClicked={hamburgerMenuClicked}
+        menuClicked={menuClicked}
+      />
+
+      {menuClicked ? <ResponsiveMenu /> : ""}
 
       {/* <Navbar expand="lg" className="bg-body-tertiary">
         <Container>

@@ -9,7 +9,7 @@
   height: 45px;
   width: auto;
   padding: 0.75rem;
-  /* margin-left: 1rem; */
+  margin-left: 5px;
 }
 
 .header-hero-image {
@@ -25,7 +25,7 @@
 }
 
 .hamburger {
-  padding: 15px 15px;
+  padding: 20px 11px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;

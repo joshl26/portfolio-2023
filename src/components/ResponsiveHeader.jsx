@@ -4,13 +4,7 @@ import "./ResponsiveHeader.css";
 import JLIconSmall from "../data/images/JL_Icon_Small.png";
 import { useState } from "react";
 
-const ResponsiveHeader = () => {
-  const [menuClicked, setMenuClicked] = useState(false);
-
-  const hamburgerMenuClicked = () => {
-    setMenuClicked(!menuClicked);
-  };
-
+const ResponsiveHeader = ({ menuClicked, hamburgerMenuClicked }) => {
   var hamburgerMenuStyle = menuClicked ? "is-active" : "";
 
   return (
