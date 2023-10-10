@@ -18,6 +18,7 @@ import CanvasContainer from "./components/CanvasContainer";
 import ResponsiveHeader from "./components/ResponsiveHeader";
 import ResponsiveMenu from "./components/ResponsiveMenu";
 import TextBasedHome from "./components/TextBasedHome";
+import ResponsiveFooter from "./components/ResponsiveFooter";
 // const ColorMode = React.lazy(() => import("./components/ColorMode"));
 // const Menu = React.lazy(() => import("./components/Menu"));
 // const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -33,7 +34,7 @@ function App() {
   const canvasBackGroundColor = colorMode === "light" ? "#ececec" : "#293241";
   const [landingPage, setLandingPage] = useState(true);
   const [chooseYourExperience, setChooseYourExperience] = useState(false);
-  const [experience, setExperience] = useState();
+  const [experience, setExperience] = useState("");
   const [menuClicked, setMenuClicked] = useState(false);
 
   const hamburgerMenuClicked = () => {
@@ -170,7 +171,12 @@ function App() {
           ""
         )}
       </main>
-      
+
+      {experience !== "" && experience !== "interactive" ? (
+        <ResponsiveFooter />
+      ) : (
+        ""
+      )}
     </ThemeProvider>
   );
 }
