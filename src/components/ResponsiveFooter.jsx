@@ -23,11 +23,17 @@ const ResponsiveFooter = () => {
             <Row>
               <Col></Col>
               <Col xxs={1} md={1}>
-                <FaLinkedinIn className="social-icon" />
+                <FaLinkedinIn
+                  href="https://www.linkedin.com/in/joshrlehman/"
+                  className="social-icon"
+                />
               </Col>
               <Col></Col>
               <Col xxs={1} md={1}>
-                <FaGithub className="social-icon" />
+                <FaGithub
+                  href="https://github.com/joshl26"
+                  className="social-icon"
+                />
               </Col>
               <Col></Col>
               <Col xxs={1} md={1}>

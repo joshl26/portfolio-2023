@@ -20,3 +20,15 @@
 .title-year {
   font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
 }
+
+.showcased-work {
+  border-top: 0.0625rem solid #c6c0c4;
+}
+
+.showcased-h2 {
+  font-size: 4rem;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: lucitana;
+  font-weight: 200;
+}

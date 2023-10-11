@@ -25,6 +25,7 @@
   height: fit-content !important;
   border-radius: 25px;
   padding: 10px 20px 10px 20px;
+  transition: 0.5s;
 }
 
 .round-button:hover {
@@ -35,4 +36,5 @@
   border-color: beige;
   color: beige;
   padding: 10px 20px 10px 20px;
+  transition: 0.5s;
 }
