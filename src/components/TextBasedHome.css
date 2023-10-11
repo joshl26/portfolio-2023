@@ -33,11 +33,66 @@
   font-weight: 200;
 }
 
-.showcase-card-container {
+.showcased-h3 {
+  font-size: 2rem;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 300;
+}
+
+.showcase-card-container-1 {
   height: 600px;
   width: 100%;
-  background-color: aqua;
+  background-size: cover;
+  background-image: url("../data/images/mockups/pexels-adrienne-andersen-2282997.jpg");
   border-radius: 0.75rem;
+}
+
+.showcase-card-container-2 {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../data/images/mockups/pexels-karina-zhukovskaya-6446709.jpg");
+  border-radius: 0.75rem;
+}
+
+.showcase-card-container-3 {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../data/images/mockups/pexels-stefan-coders-2070069.jpg");
+  border-radius: 0.75rem;
+}
+
+.showcase-card-container-4 {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../data/images/mockups/pexels-tima-miroshnichenko-5703527.jpg");
+  border-radius: 0.75rem;
+}
+
+.showcase-border-top {
+  border-top: 0.0625rem solid #c6c0c4;
+}
+
+.showcased-work-link {
+  font-size: clamp(1.875rem, 1.7523rem + 0.6135vw, 2.5rem);
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  rotate: 45deg;
+  transition: 0.5s;
+}
+
+.showcased-work-link:hover {
+  rotate: 90deg;
+  transition: 0.5s;
+}
+
+.text-right {
+  text-align: right;
 }
 
 @media only screen and (max-width: 768px) {
