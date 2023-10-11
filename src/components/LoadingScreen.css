@@ -65,15 +65,14 @@
     overflow-x: hidden;
   }
 
-  .header-container {
+  /* .loading-header-container {
     position: relative;
-    
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     z-index: 10;
-  }
+  } */
 
   .loading-spacer {
     height: 100%;
@@ -89,7 +88,7 @@
     height: 10dvh;
   }
 
-  .spacer-small {
+  .loading-spacer-small {
     height: 2.5vh;
     height: 2.5dvh;
   }
@@ -135,20 +134,20 @@
     transition: background-color 2s;
   }
 
-  .header-container {
+  /* .loading-header-container {
     position: sticky;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     z-index: 10;
-  }
+  } */
 
   .loading-spacer {
     height: 100%;
   }
 
-  .spacer-small {
+  .loading-spacer-small {
     height: 7.5vh;
     height: 7.5dvh;
   }

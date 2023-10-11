@@ -26,9 +26,23 @@
 }
 
 .showcased-h2 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
   font-style: normal;
   text-transform: uppercase;
   font-family: lucitana;
   font-weight: 200;
+}
+
+.showcase-card-container {
+  height: 600px;
+  width: 100%;
+  background-color: aqua;
+  border-radius: 0.75rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .margin-top {
+    margin-top: 1.5rem;
+  }
 }

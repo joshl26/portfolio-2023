@@ -73,7 +73,7 @@ function App() {
       ) : (
         ""
       )}
-      <main>
+      <main className="main-container">
         {menuClicked ? (
           <ResponsiveMenu
             hamburgerMenuClicked={hamburgerMenuClicked}
@@ -146,6 +146,7 @@ function App() {
                 colorMode={colorMode}
               />
               <Canvas
+                style={{ height: "100vh" }}
                 shadows
                 camera={{ position: [8, 12, 8], rotation: [0, 0, 0], fov: 60 }}
               >

@@ -30,14 +30,16 @@ const ResponsiveFooter = () => {
               </Col>
               <Col></Col>
               <Col xxs={1} md={1}>
-                <FaGithub
-                  href="https://github.com/joshl26"
-                  className="social-icon"
-                />
+                <a href="https://github.com/joshl26">
+                  <FaGithub className="social-icon" />
+                </a>
               </Col>
               <Col></Col>
               <Col xxs={1} md={1}>
-                <FaYoutubeSquare className="social-icon" />
+                <FaYoutubeSquare
+                  href="https://www.youtube.com/channel/UCp73vCN8JROvOh-DrCczCew"
+                  className="social-icon"
+                />
               </Col>
               <Col></Col>
             </Row>
