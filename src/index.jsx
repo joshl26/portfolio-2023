@@ -5,11 +5,16 @@ import App from "./App";
 import WebGL from "three/addons/capabilities/WebGL.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Pomofocus from "./components/Pomofocus";
+import Portfolio from "./components/Portfolio";
 
 const router = createBrowserRouter([
   {
-    path: "/portfolio",
+    path: "/",
     element: <App />,
+  },
+  {
+    path: "/portfolio",
+    element: <Portfolio />,
   },
   {
     path: "/portfolio/pomofocus",

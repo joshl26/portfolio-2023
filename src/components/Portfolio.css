@@ -1,0 +1,18 @@
+.portfolio-h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: lucitana;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--bg-color-light);
+  justify-content: center;
+}
+
+.portfolio-section {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 5.75rem);
+}
