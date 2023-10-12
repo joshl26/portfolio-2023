@@ -41,7 +41,7 @@
   font-weight: 300;
 }
 
-.showcase-card-container-1 {
+.showcase-card-container-el {
   height: 600px;
   width: 100%;
   background-size: cover;
@@ -49,23 +49,23 @@
   border-radius: 0.75rem;
 }
 
-.showcase-card-container-2 {
+.showcase-card-container-po {
   height: 600px;
   width: 100%;
   background-size: cover;
-  background-image: url("../data/images/mockups/pexels-karina-zhukovskaya-6446709.jpg");
+  background-image: url("../data/images/renderings/Iphone_vertical_pomo_vases.png");
   border-radius: 0.75rem;
 }
 
-.showcase-card-container-3 {
+.showcase-card-container-3d {
   height: 600px;
   width: 100%;
   background-size: cover;
-  background-image: url("../data/images/mockups/pexels-stefan-coders-2070069.jpg");
+  background-image: url("../data/images/renderings/Iphone_vertical_pomo_vases.png");
   border-radius: 0.75rem;
 }
 
-.showcase-card-container-4 {
+.showcase-card-container-out {
   height: 600px;
   width: 100%;
   background-size: cover;

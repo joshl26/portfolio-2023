@@ -21,10 +21,7 @@ const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
         className="responsive-menu-section"
       >
         <div className="responsive-menu-container">
-          <div className="spacer"></div>
-          <div className="spacer"></div>
-          <div className="spacer"></div>
-
+          <div className="menu-spacer"></div>
           <a href="/">
             <h3 className="responsive-menu-header">Home</h3>
           </a>

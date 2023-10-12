@@ -25,30 +25,10 @@ const TextBasedHome = ({ hamburgerMenuClicked }) => {
             </a>
           </Col>
         </Row>
-
         <Row>
           <Col xs={6} md={6}>
-            <a href="/portfolio/pomofocus">
-              <div className="showcase-card-container-1" />
-              <div className="spacer-small"></div>
-              <div className="showcase-border-top" />
-              <div className="spacer-small"></div>
-              <Row>
-                <Col xxs={10} md={11}>
-                  <h3 className="showcased-h3">POMOFOCUS</h3>
-                </Col>
-                <Col xxs={1} md={1}>
-                  <a href="/portfolio/pomofocus">
-                    <FaArrowCircleUp className="showcased-work-link" />
-                  </a>
-                </Col>
-                <div className="spacer-small"></div>
-              </Row>
-            </a>
-          </Col>
-          <Col xs={6} md={6}>
             <a href="/portfolio/el-in">
-              <div className="showcase-card-container-1" />
+              <div className="showcase-card-container-el" />
               <div className="spacer-small"></div>
               <div className="showcase-border-top" />
               <div className="spacer-small"></div>
@@ -65,12 +45,31 @@ const TextBasedHome = ({ hamburgerMenuClicked }) => {
               </Row>
             </a>
           </Col>
+          <Col xs={6} md={6}>
+            <a href="/portfolio/pomofocus">
+              <div className="showcase-card-container-po" />
+              <div className="spacer-small"></div>
+              <div className="showcase-border-top" />
+              <div className="spacer-small"></div>
+              <Row>
+                <Col xxs={10} md={11}>
+                  <h3 className="showcased-h3">POMOFOCUS</h3>
+                </Col>
+                <Col xxs={1} md={1}>
+                  <a href="/portfolio/pomofocus">
+                    <FaArrowCircleUp className="showcased-work-link" />
+                  </a>
+                </Col>
+                <div className="spacer-small"></div>
+              </Row>
+            </a>
+          </Col>
         </Row>
         <div className="spacer-small"></div>
         <Row>
           <Col xs={12} md={6}>
             <a href="/portfolio/3D Portfolio">
-              <div className="showcase-card-container-1" />
+              <div className="showcase-card-container-3d" />
               <div className="spacer-small"></div>
               <div className="showcase-border-top" />
               <div className="spacer-small"></div>
@@ -89,7 +88,7 @@ const TextBasedHome = ({ hamburgerMenuClicked }) => {
           </Col>
           <Col xs={12} md={6}>
             <a href="/portfolio/outdoorsy">
-              <div className="showcase-card-container-1" />
+              <div className="showcase-card-container-out" />
               <div className="spacer-small"></div>
               <div className="showcase-border-top" />
               <div className="spacer-small"></div>

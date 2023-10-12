@@ -25,3 +25,7 @@
   transition: 2s;
   color: gray;
 }
+
+.menu-spacer {
+  height: 1rem;
+}

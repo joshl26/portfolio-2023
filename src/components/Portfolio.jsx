@@ -6,6 +6,7 @@ import ResponsiveFooter from "./ResponsiveFooter";
 import ResponsiveHeader from "./ResponsiveHeader";
 import ResponsiveMenu from "./ResponsiveMenu";
 import RoundButton from "./RoundButton";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -36,15 +37,36 @@ const Portfolio = () => {
         <section className="projects-section">
           <Row>
             <Col xs={12} md={6}>
-              <a href="/portfolio/el-in">
-                <div className="showcase-card-container-1" />
-                <div className="spacer-small"></div>
-                <div className="spacer-small"></div>
-              </a>
-              <div className="spacer"></div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+              >
+                <a href="/portfolio/el-in">
+                  <div className="showcase-card-container-el" />
+                  <div className="spacer-small"></div>
+                  <div className="spacer-small"></div>
+                </a>
+                <div className="spacer"></div>
+              </motion.div>
             </Col>
             <Col xs={12} md={6}>
-              <div className="showcase-border-top">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+                className="showcase-border-top"
+              >
                 <h3 className="showcased-h3">electronics inventory</h3>
                 <p className="showcased-p">
                   Electronics Inventory is a cutting-edge SAAS webapp that
@@ -95,74 +117,43 @@ const Portfolio = () => {
                     buttonText={"SEE MORE"}
                   />
                 </Row>
-              </div>
+              </motion.div>
             </Col>
           </Row>
           <div className="spacer-small"></div>
-          <Row>
-            <Col xs={12} md={6}>
-              <a href="/portfolio/3dportfolio">
-                <div className="showcase-card-container-2" />
-                <div className="spacer-small"></div>
-                <div className="spacer-small"></div>
-              </a>
-              <div className="spacer"></div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div className="showcase-border-top">
-                <h3 className="showcased-h3">3D Portfolio</h3>
-                <p className="showcased-p">
-                  An experiment with ThreeJS and Blender.
-                </p>
-                <Row>
-                  <Col>
-                    <ul className="showcased-list">
-                      <li>JAVASCRIPT</li>
-                      <li>CSS3</li>
-                      <li>HTML5</li>
-                      <li>REACT</li>
-                      <li>REDUX</li>
-                    </ul>
-                  </Col>
-                  <Col>
-                    <ul className="showcased-list">
-                      <li>FRONTEND DESIGN</li>
-                      <li>BABEL</li>
-                      <li>WEBPACK</li>
-                      <li>GIT</li>
-                    </ul>
-                  </Col>
-                </Row>
-                <Row>
-                  <RoundButton
-                    buttonClass={"round-button"}
-                    buttonText={"CODE"}
-                  />
-                  <RoundButton
-                    buttonClass={"round-button"}
-                    buttonText={"LIVE SITE"}
-                  />
-                  <RoundButton
-                    buttonClass={"round-button"}
-                    buttonText={"SEE MORE"}
-                  />
-                </Row>
-                <div className="spacer"></div>
-              </div>
-            </Col>
-          </Row>
 
           <Row>
             <Col xs={12} md={6}>
-              <a href="/portfolio/pomodor">
-                <div className="showcase-card-container-3" />
-                <div className="spacer-small"></div>
-                <div className="spacer-small"></div>
-              </a>
-              <div className="spacer"></div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+              >
+                <a href="/portfolio/pomodor">
+                  <div className="showcase-card-container-po" />
+                  <div className="spacer-small"></div>
+                  <div className="spacer-small"></div>
+                </a>
+                <div className="spacer"></div>
+              </motion.div>
             </Col>
             <Col xs={12} md={6}>
-              <div className="showcase-border-top">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+                className="showcase-border-top"
+              >
                 <h3 className="showcased-h3">Pomobreak</h3>
                 <p className="showcased-p">
                   A ReactJS and Redux Pomodoro timer based on the famous
@@ -203,21 +194,116 @@ const Portfolio = () => {
                   />
                 </Row>
                 <div className="spacer"></div>
-              </div>
+              </motion.div>
             </Col>
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <a href="/portfolio/el-in">
-                <div className="showcase-card-container-4" />
-                <div className="spacer-small"></div>
-                <div className="spacer-small"></div>
-              </a>
-              <div className="spacer"></div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+              >
+                <a href="/portfolio/3dportfolio">
+                  <div className="showcase-card-container-3d" />
+                  <div className="spacer-small"></div>
+                  <div className="spacer-small"></div>
+                </a>
+                <div className="spacer"></div>
+              </motion.div>
+            </Col>
+            <Col xs={12} md={6}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+                className="showcase-border-top"
+              >
+                <h3 className="showcased-h3">3D Portfolio</h3>
+                <p className="showcased-p">
+                  An experimental three dimensional portfolio site created with
+                  ThreeJS and Blender. Give it a try!
+                </p>
+                <Row>
+                  <Col>
+                    <ul className="showcased-list">
+                      <li>JAVASCRIPT</li>
+                      <li>CSS3</li>
+                      <li>HTML5</li>
+                      <li>REACT</li>
+                      <li>REDUX</li>
+                    </ul>
+                  </Col>
+                  <Col>
+                    <ul className="showcased-list">
+                      <li>FRONTEND DESIGN</li>
+                      <li>BABEL</li>
+                      <li>WEBPACK</li>
+                      <li>GIT</li>
+                    </ul>
+                  </Col>
+                </Row>
+                <Row>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"CODE"}
+                  />
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"LIVE SITE"}
+                  />
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                  />
+                </Row>
+                <div className="spacer"></div>
+              </motion.div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={6}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+              >
+                <a href="/portfolio/outdoorsy">
+                  <div className="showcase-card-container-out" />
+                  <div className="spacer-small"></div>
+                  <div className="spacer-small"></div>
+                </a>
+                <div className="spacer"></div>
+              </motion.div>
             </Col>
 
             <Col xs={12} md={6}>
-              <div className="showcase-border-top">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                  },
+                }}
+                className="showcase-border-top"
+              >
                 <h3 className="showcased-h3">outdoorsy</h3>
                 <p className="showcased-p">
                   Outdoorsy is a full-stack website project where users can
@@ -262,7 +348,7 @@ const Portfolio = () => {
                   />
                 </Row>
                 <div className="spacer"></div>
-              </div>
+              </motion.div>
             </Col>
           </Row>
           <div className="spacer-small"></div>
