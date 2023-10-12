@@ -6,7 +6,7 @@ import RoundButton from "./RoundButton";
 import ResponsiveFooter from "./ResponsiveFooter";
 import "./PortfolioPomodor.css";
 
-const PortfolioPomodor = () => {
+const PortfolioThreeJS = () => {
   const [menuClicked, setMenuClicked] = useState(false);
 
   const hamburgerMenuClicked = () => {
@@ -314,4 +314,4 @@ const PortfolioPomodor = () => {
   );
 };
 
-export default PortfolioPomodor;
+export default PortfolioThreeJS;

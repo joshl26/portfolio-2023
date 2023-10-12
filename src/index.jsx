@@ -6,6 +6,9 @@ import WebGL from "three/addons/capabilities/WebGL.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
 import PortfolioPomodor from "./components/PortfolioPomodor";
+import PortfolioElectronicInv from "./components/PortfolioElectronicInv";
+import PortfolioThreeJS from "./components/PortfolioThreeJS";
+import PortfolioOutdoorsy from "./components/PortfolioOutdoorsy";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +20,21 @@ const router = createBrowserRouter([
     element: <Portfolio />,
   },
   {
+    path: "/portfolio/el-in",
+    element: <PortfolioElectronicInv />,
+  },
+
+  {
     path: "/portfolio/pomodor",
     element: <PortfolioPomodor />,
+  },
+  {
+    path: "/portfolio/3dportfolio",
+    element: <PortfolioThreeJS />,
+  },
+  {
+    path: "/portfolio/outdoorsy",
+    element: <PortfolioOutdoorsy />,
   },
 ]);
 
