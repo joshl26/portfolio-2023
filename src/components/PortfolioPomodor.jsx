@@ -199,11 +199,15 @@ const PortfolioPomodor = () => {
         <section className="portfolio-pomodoro-section">
           <h2 className="portfolio-pomodoro-h2">SCREENS</h2>
           <div className="portfolio-pomodoro-screen-1" />
+          <div className="spacer"></div>
           <div className="portfolio-pomodoro-screen-2" />
+          <div className="spacer"></div>
           <div className="portfolio-pomodoro-screen-3" />
+          <div className="spacer"></div>
           <div className="portfolio-pomodoro-screen-4" />
-          <div className="portfolio-pomodoro-screen-5" />
+          <div className="spacer"></div>
         </section>
+        <div className="spacer"></div>
       </main>
       <ResponsiveFooter />
     </>

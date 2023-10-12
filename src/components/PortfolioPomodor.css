@@ -1,5 +1,5 @@
 .portfolio-pomodoro-hero {
-  height: 800px;
+  height: 1000px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,9 +42,25 @@
 }
 
 .portfolio-pomodoro-screen-1 {
-  height: 600px;
+  height: 1000px;
   width: 100%;
   background-size: cover;
-  background-image: url("../data/images/renderings/Iphone_vertical_pomo_vases.png");
+  background-image: url("../data/images/renderings/Iphone_horizontal_and_vertical_pomo_vases.png");
+  border-radius: 0.75rem;
+}
+
+.portfolio-pomodoro-screen-2 {
+  height: 1800px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../data/images/renderings/Iphone_leaves_shade_pomo.png");
+  border-radius: 0.75rem;
+}
+
+.portfolio-pomodoro-screen-3 {
+  height: 1800px;
+  width: auto;
+  background-size: cover;
+  background-image: url("../data/images/renderings/Iphone_vertical_modern_office_pomo.png");
   border-radius: 0.75rem;
 }
