@@ -9,16 +9,29 @@ import PortfolioPomodor from "./components/PortfolioPomodor";
 import PortfolioElectronicInv from "./components/PortfolioElectronicInv";
 import PortfolioThreeJS from "./components/PortfolioThreeJS";
 import PortfolioOutdoorsy from "./components/PortfolioOutdoorsy";
+import PortfolioContact from "./components/PortfolioContact";
+import PortfolioAbout from "./components/PortfolioAbout";
+import PortfolioServices from "./components/PortfolioServices";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
+
+  {
+    path: "/about",
+    element: <PortfolioAbout />,
+  },
+  {
+    path: "/contact",
+    element: <PortfolioContact />,
+  },
   {
     path: "/portfolio",
     element: <Portfolio />,
   },
+
   {
     path: "/portfolio/el-in",
     element: <PortfolioElectronicInv />,
@@ -35,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/portfolio/outdoorsy",
     element: <PortfolioOutdoorsy />,
+  },
+  {
+    path: "/services",
+    element: <PortfolioServices />,
   },
 ]);
 

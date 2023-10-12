@@ -34,6 +34,9 @@ const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
           <a href="/manifesto">
             <h3 className="responsive-menu-header">Manifesto</h3>
           </a>
+          <a href="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing">
+            <h3 className="responsive-menu-header">Resume</h3>
+          </a>
           <a href="/services">
             <h3 className="responsive-menu-header">Services</h3>
           </a>
