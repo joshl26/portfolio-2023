@@ -1,0 +1,8 @@
+.portfolio-pomodoro-hero {
+  height: 800px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../data/images/renderings/Iphone_vertical_pomo_vases.png");
+  border-radius: 0.75rem;
+}

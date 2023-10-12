@@ -34,7 +34,7 @@ const TextBasedHome = ({ hamburgerMenuClicked }) => {
               <div className="spacer-small"></div>
               <Row>
                 <Col xxs={10} md={11}>
-                  <h3 className="showcased-h3">ELECTRONICS INV</h3>
+                  <h3 className="showcased-h3">ELECTRONICS INVENTORY</h3>
                 </Col>
                 <Col xxs={1} md={1}>
                   <a href="/portfolio/el-in">
@@ -46,17 +46,17 @@ const TextBasedHome = ({ hamburgerMenuClicked }) => {
             </a>
           </Col>
           <Col xs={6} md={6}>
-            <a href="/portfolio/pomofocus">
+            <a href="/portfolio/pomodor">
               <div className="showcase-card-container-po" />
               <div className="spacer-small"></div>
               <div className="showcase-border-top" />
               <div className="spacer-small"></div>
               <Row>
                 <Col xxs={10} md={11}>
-                  <h3 className="showcased-h3">POMOFOCUS</h3>
+                  <h3 className="showcased-h3">POMODOR TIMER</h3>
                 </Col>
                 <Col xxs={1} md={1}>
-                  <a href="/portfolio/pomofocus">
+                  <a href="/portfolio/pomodor">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </a>
                 </Col>

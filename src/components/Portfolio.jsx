@@ -134,7 +134,7 @@ const Portfolio = () => {
                   },
                 }}
               >
-                <a href="/portfolio/pomodor">
+                <a href="/portfolio/el-in">
                   <div className="showcase-card-container-po" />
                   <div className="spacer-small"></div>
                   <div className="spacer-small"></div>
