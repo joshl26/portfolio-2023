@@ -16,3 +16,25 @@
   justify-content: center;
   height: calc(100vh - 5.75rem);
 }
+
+.portolio-details {
+  border-top: 0.0625rem solid #c6c0c4;
+  width: 100%;
+}
+
+.showcased-p {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: raleway;
+  padding-top: 1rem;
+}
+
+.showcased-h3 {
+  padding-top: 1rem;
+}
+
+.showcased-list {
+  font-size: 1.25rem;
+  font-family: raleway;
+  font-weight: 300;
+}
