@@ -106,7 +106,7 @@ function App() {
                 ...framerMotionConfig,
               }}
             >
-              <TextBasedHome />
+              <TextBasedHome hamburgerMenuClicked={hamburgerMenuClicked} />
             </MotionConfig>
           </Suspense>
         ) : (
