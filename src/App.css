@@ -53,3 +53,11 @@
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}

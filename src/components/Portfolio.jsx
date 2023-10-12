@@ -134,7 +134,7 @@ const Portfolio = () => {
                   },
                 }}
               >
-                <a href="/portfolio/el-in">
+                <a href="/portfolio/pomodor">
                   <div className="showcase-card-container-po" />
                   <div className="spacer-small"></div>
                   <div className="spacer-small"></div>
@@ -154,7 +154,7 @@ const Portfolio = () => {
                 }}
                 className="showcase-border-top"
               >
-                <h3 className="showcased-h3">Pomobreak</h3>
+                <h3 className="showcased-h3">Pomodor Timer</h3>
                 <p className="showcased-p">
                   A ReactJS and Redux Pomodoro timer based on the famous
                   Pomofocus app.
