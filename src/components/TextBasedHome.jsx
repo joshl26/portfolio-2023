@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import { FaArrowCircleUp } from "react-icons/fa";
 import "./TextBasedHome.css";
 
-const TextBasedHome = ({ hamburgerMenuClicked }) => {
+const TextBasedHome = () => {
   return (
     <>
       <section className="title-container">

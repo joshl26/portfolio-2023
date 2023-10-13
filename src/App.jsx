@@ -19,6 +19,7 @@ import ResponsiveHeader from "./components/ResponsiveHeader";
 import ResponsiveMenu from "./components/ResponsiveMenu";
 import TextBasedHome from "./components/TextBasedHome";
 import ResponsiveFooter from "./components/ResponsiveFooter";
+import { Outlet } from "react-router-dom";
 // const ColorMode = React.lazy(() => import("./components/ColorMode"));
 // const Menu = React.lazy(() => import("./components/Menu"));
 // const ThemeProvider = React.lazy(() => import("react-bootstrap/ThemeProvider"));
@@ -63,7 +64,7 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      {experience !== "interactive" ? (
+      {/* {experience !== "interactive" ? (
         <ResponsiveHeader
           hamburgerMenuClicked={hamburgerMenuClicked}
           menuClicked={menuClicked}
@@ -99,17 +100,30 @@ function App() {
           ""
         )}
 
-        {experience === "text" ? (
-          <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
-            <MotionConfig
-              transition={{
-                ...framerMotionConfig,
-              }}
-            >
-              <TextBasedHome hamburgerMenuClicked={hamburgerMenuClicked} />
-            </MotionConfig>
-          </Suspense>
-        ) : (
+        {experience === "text" ? ( */}
+      {/* <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
+        <MotionConfig
+          transition={{
+            ...framerMotionConfig,
+          }}
+        > */}
+      <ResponsiveHeader
+        menuClicked={menuClicked}
+        hamburgerMenuClicked={hamburgerMenuClicked}
+      />
+      <ResponsiveMenu
+        menuClicked={menuClicked}
+        hamburgerMenuClicked={hamburgerMenuClicked}
+      />
+      <Outlet
+        menuClicked={menuClicked}
+        hamburgerMenuClicked={hamburgerMenuClicked}
+      />
+      <ResponsiveFooter />
+      {/* <TextBasedHome /> */}
+      {/* </MotionConfig>
+      </Suspense> */}
+      {/* ) : (
           ""
         )}
 
@@ -170,14 +184,14 @@ function App() {
           </Suspense>
         ) : (
           ""
-        )}
-      </main>
+        )} 
+      </main>*/}
 
-      {experience !== "" && experience !== "interactive" ? (
-        <ResponsiveFooter />
-      ) : (
-        ""
-      )}
+      {/* {experience !== "" && experience !== "interactive" ? (
+      //   <ResponsiveFooter />
+      // ) : (
+      //   ""
+      // )} */}
     </ThemeProvider>
   );
 }

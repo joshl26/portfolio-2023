@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import "./ResponsiveMenu.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   const variants = {
-    open: { position: "absolute", zIndex: 10, opacity: 1, x: 0 },
-    closed: { position: "absolute", zIndex: 0, opacity: 0, x: "-25%" },
+    open: { position: "absolute", zIndex: 10, opacity: 1 },
+    closed: {
+      position: "absolute",
+      zIndex: -10,
+      opacity: 0,
+      width: "0px",
+    },
   };
 
   return (
@@ -22,27 +28,27 @@ const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
       >
         <div className="responsive-menu-container">
           <div className="menu-spacer"></div>
-          <a href="/">
+          <Link to="/">
             <h3 className="responsive-menu-header">Home</h3>
-          </a>
-          <a href="/about">
+          </Link>
+          <Link to="/about">
             <h3 className="responsive-menu-header">About</h3>
-          </a>
-          <a href="/portfolio">
+          </Link>
+          <Link to="/portfolio">
             <h3 className="responsive-menu-header">Portfolio</h3>
-          </a>
-          <a href="/manifesto">
-            <h3 className="responsive-menu-header">Manifesto</h3>
-          </a>
-          <a href="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing">
+          </Link>
+          <Link to="/manifesto">
+            <h3 className="responsive-menu-header">Mission</h3>
+          </Link>
+          <Link to="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing">
             <h3 className="responsive-menu-header">Resume</h3>
-          </a>
-          <a href="/services">
+          </Link>
+          <Link to="/services">
             <h3 className="responsive-menu-header">Services</h3>
-          </a>
-          <a href="/contact">
+          </Link>
+          <Link to="/contact">
             <h3 className="responsive-menu-header">Contact</h3>
-          </a>
+          </Link>
         </div>
       </motion.section>
     </AnimatePresence>

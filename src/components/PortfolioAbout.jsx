@@ -14,25 +14,9 @@ const PortfolioAbout = () => {
   };
 
   return (
-    <>
-      <ResponsiveHeader
-        menuClicked={menuClicked}
-        hamburgerMenuClicked={hamburgerMenuClicked}
-        experience={"d"}
-      />
-      {menuClicked ? (
-        <ResponsiveMenu
-          hamburgerMenuClicked={hamburgerMenuClicked}
-          menuClicked={menuClicked}
-        />
-      ) : (
-        ""
-      )}
-      <main className="main-container">
-        <section></section>
-      </main>
-      <ResponsiveFooter />
-    </>
+    <main className="main-container">
+      <section></section>
+    </main>
   );
 };
 

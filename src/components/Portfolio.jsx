@@ -17,7 +17,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <ResponsiveHeader
+      {/* <ResponsiveHeader
         menuClicked={menuClicked}
         hamburgerMenuClicked={hamburgerMenuClicked}
         experience={"d"}
@@ -29,7 +29,7 @@ const Portfolio = () => {
         />
       ) : (
         ""
-      )}
+      )} */}
       <main className="main-container">
         <section className="portfolio-section">
           <h1 className="portfolio-h1">Portfolio</h1>
@@ -354,7 +354,7 @@ const Portfolio = () => {
           <div className="spacer-small"></div>
         </section>
       </main>
-      <ResponsiveFooter />
+      {/* <ResponsiveFooter /> */}
     </>
   );
 };

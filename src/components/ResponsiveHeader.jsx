@@ -29,29 +29,16 @@ const ResponsiveHeader = ({
           </Col>
           <Col></Col>
           <Col>
-            {experience && experience !== "interactive" ? (
-              <div className="hamburger-container">
-                <div
-                  onClick={hamburgerMenuClicked}
-                  className={`hamburger hamburger--spring + ${hamburgerMenuStyle}`}
-                >
-                  <div className="hamburger-box">
-                    <div className="hamburger-inner"></div>
-                  </div>
+            <div className="hamburger-container">
+              <div
+                onClick={hamburgerMenuClicked}
+                className={`hamburger hamburger--spring + ${hamburgerMenuStyle}`}
+              >
+                <div className="hamburger-box">
+                  <div className="hamburger-inner"></div>
                 </div>
               </div>
-            ) : !chooseYourExperience ? (
-              <div className="hamburger-container">
-                <RoundButton
-                  href={"/contact"}
-                  buttonClass="round-button"
-                  buttonText={"Contact"}
-                  clickHandler={() => {}}
-                />
-              </div>
-            ) : (
-              ""
-            )}
+            </div>
           </Col>
         </Row>
       </div>

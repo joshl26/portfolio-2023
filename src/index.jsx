@@ -12,46 +12,52 @@ import PortfolioOutdoorsy from "./components/PortfolioOutdoorsy";
 import PortfolioContact from "./components/PortfolioContact";
 import PortfolioAbout from "./components/PortfolioAbout";
 import PortfolioServices from "./components/PortfolioServices";
+import TextBasedHome from "./components/TextBasedHome";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
+    children: [
+      {
+        path: "",
+        element: <TextBasedHome />,
+      },
+      {
+        path: "about",
+        element: <PortfolioAbout />,
+      },
+      {
+        path: "contact",
+        element: <PortfolioContact />,
+      },
+      {
+        path: "portfolio",
+        element: <Portfolio />,
+      },
 
-  {
-    path: "/about",
-    element: <PortfolioAbout />,
-  },
-  {
-    path: "/contact",
-    element: <PortfolioContact />,
-  },
-  {
-    path: "/portfolio",
-    element: <Portfolio />,
-  },
+      {
+        path: "portfolio/el-in",
+        element: <PortfolioElectronicInv />,
+      },
 
-  {
-    path: "/portfolio/el-in",
-    element: <PortfolioElectronicInv />,
-  },
-
-  {
-    path: "/portfolio/pomodor",
-    element: <PortfolioPomodor />,
-  },
-  {
-    path: "/portfolio/3dportfolio",
-    element: <PortfolioThreeJS />,
-  },
-  {
-    path: "/portfolio/outdoorsy",
-    element: <PortfolioOutdoorsy />,
-  },
-  {
-    path: "/services",
-    element: <PortfolioServices />,
+      {
+        path: "portfolio/pomodor",
+        element: <PortfolioPomodor />,
+      },
+      {
+        path: "portfolio/3dportfolio",
+        element: <PortfolioThreeJS />,
+      },
+      {
+        path: "portfolio/outdoorsy",
+        element: <PortfolioOutdoorsy />,
+      },
+      {
+        path: "services",
+        element: <PortfolioServices />,
+      },
+    ],
   },
 ]);
 
@@ -60,7 +66,6 @@ if (WebGL.isWebGLAvailable()) {
   root.render(
     <React.StrictMode>
       <RouterProvider router={router} />
-      {/* <App /> */}
     </React.StrictMode>
   );
 } else {
