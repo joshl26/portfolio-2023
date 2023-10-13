@@ -43,15 +43,16 @@
 
 .showcase-card-container-el {
   height: 600px;
-  width: 100%;
+  background-position: 50% 50%;
   background-size: cover;
-  background-image: url("../data/images/mockups/pexels-adrienne-andersen-2282997.jpg");
+
+  background-image: url("../data/images/renderings/Laptop_apple_electronics_inventory_golden.png");
   border-radius: 0.75rem;
 }
 
 .showcase-card-container-po {
   height: 600px;
-  width: 100%;
+  background-position: 50% 50%;
   background-size: cover;
   background-image: url("../data/images/renderings/Iphone_horizontal_and_vertical_pomo_vases.png");
   border-radius: 0.75rem;
@@ -59,15 +60,15 @@
 
 .showcase-card-container-3d {
   height: 600px;
-  width: 100%;
+  background-position: 50% 50%;
   background-size: cover;
-  background-image: url("../data/images/renderings/Iphone_vertical_pomo_vases.png");
+  background-image: url("../data/images/renderings/Iphone_3dportfolio_modern_desktop_1.png");
   border-radius: 0.75rem;
 }
 
 .showcase-card-container-out {
   height: 600px;
-  width: 100%;
+  background-position: 50% 50%;
   background-size: cover;
   background-image: url("../data/images/mockups/pexels-tima-miroshnichenko-5703527.jpg");
   border-radius: 0.75rem;

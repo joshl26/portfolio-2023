@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import "./PortfolioPomodor.css";
+import "./PortfolioElectronicInv.css";
 
 const PortfolioElectronicInv = () => {
   return (
@@ -16,7 +16,7 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-hero"
+          className="portfolio-elin-hero"
         />
       </section>
       <div className="spacer-small"></div>
@@ -57,8 +57,8 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">DETAILS</h2>
+        <section className="portfolio-elin-section">
+          <h2 className="portfolio-elin-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>Winter 2022-Fall 2023</h4>
@@ -128,7 +128,7 @@ const PortfolioElectronicInv = () => {
               </span>
             </span>
           </div>
-          <p className="portfolio-pomodoro-p">
+          <p className="portfolio-elin-p">
             HTML5 - A markup language for creating web pages and web
             applications. CSS3 - used for describing the presentation of a
             document written in a markup language. Bootstrap - A free and
@@ -149,9 +149,9 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">DESIGN INTENT</h2>
-          <p className="portfolio-pomodoro-p">
+        <section className="portfolio-elin-section">
+          <h2 className="portfolio-elin-h2">DESIGN INTENT</h2>
+          <p className="portfolio-elin-p">
             HTML5 - A markup language for creating web pages and web
             applications. CSS3 - used for describing the presentation of a
             document written in a markup language. Bootstrap - A free and
@@ -172,8 +172,8 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">FONT TYPES</h2>
+        <section className="portfolio-elin-section">
+          <h2 className="portfolio-elin-h2">FONT TYPES</h2>
           <div
             style={{
               justifyContent: "space-between",
@@ -181,8 +181,8 @@ const PortfolioElectronicInv = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-pomodoro-font-rale">RALE</span>
-            <div className="portfolio-pomodoro-li">
+            <span className="portfolio-elin-font-rale">RALE</span>
+            <div className="portfolio-elin-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -205,8 +205,8 @@ const PortfolioElectronicInv = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-pomodoro-font-luci">LUCI</span>
-            <div className="portfolio-pomodoro-li">
+            <span className="portfolio-elin-font-luci">LUCI</span>
+            <div className="portfolio-elin-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -224,7 +224,7 @@ const PortfolioElectronicInv = () => {
           </div>
         </section>
       </motion.div>
-      <section className="portfolio-pomodoro-section">
+      <section className="portfolio-elin-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -235,7 +235,7 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          <h2 className="portfolio-pomodoro-h2">SCREENS</h2>
+          <h2 className="portfolio-elin-h2">SCREENS</h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -246,7 +246,7 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-1"
+          className="portfolio-elin-screen-1"
         />
         <div className="spacer"></div>
         <motion.div
@@ -258,7 +258,7 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-2"
+          className="portfolio-elin-screen-2"
         />
         <div className="spacer"></div>
         <motion.div
@@ -270,7 +270,7 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-3"
+          className="portfolio-elin-screen-3"
         />
         <div className="spacer"></div>
       </section>
