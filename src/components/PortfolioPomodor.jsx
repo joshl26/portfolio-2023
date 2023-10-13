@@ -1,18 +1,9 @@
-import React, { useState } from "react";
-import ResponsiveHeader from "./ResponsiveHeader";
-import ResponsiveMenu from "./ResponsiveMenu";
+import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import ResponsiveFooter from "./ResponsiveFooter";
 import "./PortfolioPomodor.css";
 
 const PortfolioPomodor = () => {
-  const [menuClicked, setMenuClicked] = useState(false);
-
-  const hamburgerMenuClicked = () => {
-    setMenuClicked(!menuClicked);
-  };
-
   return (
     <main className="main-container">
       <section>

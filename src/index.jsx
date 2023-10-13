@@ -13,6 +13,7 @@ import PortfolioContact from "./components/PortfolioContact";
 import PortfolioAbout from "./components/PortfolioAbout";
 import PortfolioServices from "./components/PortfolioServices";
 import TextBasedHome from "./components/TextBasedHome";
+import PortfolioExperimental from "./components/PortfolioExperimental";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "portfolio/3dportfolio",
         element: <PortfolioThreeJS />,
+      },
+      {
+        path: "portfolio/experimental",
+        element: <PortfolioExperimental />,
       },
       {
         path: "portfolio/outdoorsy",

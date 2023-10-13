@@ -118,6 +118,8 @@ function App() {
       <Outlet
         menuClicked={menuClicked}
         hamburgerMenuClicked={hamburgerMenuClicked}
+        onColorModeChangeHandler={onColorModeChangeHandler}
+        canvasBackGroundColor={canvasBackGroundColor}
       />
       <ResponsiveFooter />
       {/* <TextBasedHome /> */}
