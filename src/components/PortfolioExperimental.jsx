@@ -7,8 +7,19 @@ import CanvasContainer from "./CanvasContainer";
 import ColorMode from "./ColorMode";
 import LoadingScreen from "./LoadingScreen";
 import Menu from "./Menu";
+import { useOutletContext } from "react-router-dom";
 
-const PortfolioExperimental = ({ colorMode, onColorModeChangeHandler }) => {
+const PortfolioExperimental = () => {
+  const [
+    colorMode,
+    onColorModeChangeHandler,
+    section,
+    menuOpened,
+    setSection,
+    setMenuOpened,
+    canvasBackGroundColor,
+  ] = useOutletContext();
+
   return (
     <Suspense fallback={<LoadingScreen colorMode={colorMode} />}>
       <MotionConfig

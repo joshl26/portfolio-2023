@@ -48,16 +48,16 @@ function App() {
 
   // useEffect(() => {}, []);
 
-  const setExperienceChangeHandler = (e) => {
-    setExperience(e);
-    setLandingPage(false);
-    setChooseYourExperience(false);
-  };
+  // const setExperienceChangeHandler = (e) => {
+  //   setExperience(e);
+  //   setLandingPage(false);
+  //   setChooseYourExperience(false);
+  // };
 
-  const chooseExperienceChangeHandler = () => {
-    setChooseYourExperience(!chooseYourExperience);
-    setLandingPage(!landingPage);
-  };
+  // const chooseExperienceChangeHandler = () => {
+  //   setChooseYourExperience(!chooseYourExperience);
+  //   setLandingPage(!landingPage);
+  // };
 
   return (
     <ThemeProvider
@@ -116,10 +116,15 @@ function App() {
         hamburgerMenuClicked={hamburgerMenuClicked}
       />
       <Outlet
-        menuClicked={menuClicked}
-        hamburgerMenuClicked={hamburgerMenuClicked}
-        onColorModeChangeHandler={onColorModeChangeHandler}
-        canvasBackGroundColor={canvasBackGroundColor}
+        context={[
+          colorMode,
+          onColorModeChangeHandler,
+          section,
+          menuOpened,
+          setSection,
+          setMenuOpened,
+          canvasBackGroundColor,
+        ]}
       />
       <ResponsiveFooter />
       {/* <TextBasedHome /> */}

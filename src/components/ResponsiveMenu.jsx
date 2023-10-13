@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ResponsiveMenu.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
-  // const [isOpen, setIsOpen] = useState(false);
-
   const variants = {
     open: { position: "absolute", zIndex: 10, opacity: 1 },
     closed: {
@@ -28,25 +26,28 @@ const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
       >
         <div className="responsive-menu-container">
           <div className="menu-spacer"></div>
-          <Link to="/">
+          <Link onClick={() => hamburgerMenuClicked()} to="/">
             <h3 className="responsive-menu-header">Home</h3>
           </Link>
-          <Link to="/about">
+          <Link onClick={() => hamburgerMenuClicked()} to="/about">
             <h3 className="responsive-menu-header">About</h3>
           </Link>
-          <Link to="/portfolio">
+          <Link onClick={() => hamburgerMenuClicked()} to="/portfolio">
             <h3 className="responsive-menu-header">Portfolio</h3>
           </Link>
-          <Link to="/manifesto">
+          <Link onClick={() => hamburgerMenuClicked()} to="/manifesto">
             <h3 className="responsive-menu-header">Mission</h3>
           </Link>
-          <Link to="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing">
+          <Link
+            onClick={() => hamburgerMenuClicked()}
+            to="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing"
+          >
             <h3 className="responsive-menu-header">Resume</h3>
           </Link>
-          <Link to="/services">
+          <Link onClick={() => hamburgerMenuClicked()} to="/services">
             <h3 className="responsive-menu-header">Services</h3>
           </Link>
-          <Link to="/contact">
+          <Link onClick={() => hamburgerMenuClicked()} to="/contact">
             <h3 className="responsive-menu-header">Contact</h3>
           </Link>
         </div>
