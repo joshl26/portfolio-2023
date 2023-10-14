@@ -163,11 +163,15 @@ const Portfolio = () => {
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
+                  href={"https:/joshlehman.ca/pomodor"}
+                  
                 />
-                <RoundButton
-                  buttonClass={"round-button"}
-                  buttonText={"SEE MORE"}
-                />
+                <Link to={"/portfolio/pomodor"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                  />
+                </Link>
               </Row>
               <div className="spacer"></div>
             </motion.div>
