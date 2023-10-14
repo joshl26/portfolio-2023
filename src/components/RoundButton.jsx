@@ -1,10 +1,10 @@
 import React from "react";
 
-const RoundButton = ({ buttonText, href, buttonClass, clickHandler }) => {
+const RoundButton = ({ buttonText, href, buttonClass }) => {
   return (
-    <button onClick={() => clickHandler()} className={buttonClass} href={href}>
-      {buttonText}
-    </button>
+    <a href={href}>
+      <button className={buttonClass}>{buttonText}</button>
+    </a>
   );
 };
 

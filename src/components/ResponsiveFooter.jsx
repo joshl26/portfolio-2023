@@ -1,12 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./ResponsiveFooter.css";
-import {
-  FaBeer,
-  FaLinkedinIn,
-  FaGithub,
-  FaYoutubeSquare,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaYoutubeSquare } from "react-icons/fa";
 
 const ResponsiveFooter = () => {
   return (
@@ -15,31 +10,45 @@ const ResponsiveFooter = () => {
         <Row>
           <Col xs={4} sm={2} md={3}>
             <div className="copyright-container">
-              <p className="copyright-text">©Josh Lehman</p>
+              <a
+                href={
+                  "mailto:joshlehman.dev@gmail.com?subject=Portfolio%20Site%20Contact"
+                }
+              >
+                <p className="copyright-text">©Josh Lehman</p>
+              </a>
             </div>
           </Col>
           <Col xs={1} sm={2} md={7}></Col>
           <Col xs={6} sm={2} md={2}>
             <Row>
               <Col></Col>
-              <Col xs={1} md={1}>
-                <FaLinkedinIn
+              <Col xs={1} md={2}>
+                <a
+                  rel={"noreferrer"}
+                  target={"_blank"}
                   href="https://www.linkedin.com/in/joshrlehman/"
-                  className="social-icon"
-                />
+                >
+                  <FaLinkedinIn className="social-icon" />
+                </a>
               </Col>
-              <Col></Col>
-              <Col xs={1} md={1}>
-                <a href="https://github.com/joshl26">
+              <Col xs={1} md={2}>
+                <a
+                  rel={"noreferrer"}
+                  target={"_blank"}
+                  href="https://github.com/joshl26"
+                >
                   <FaGithub className="social-icon" />
                 </a>
               </Col>
-              <Col></Col>
-              <Col xs={1} md={1}>
-                <FaYoutubeSquare
+              <Col xs={1} md={2}>
+                <a
+                  rel={"noreferrer"}
+                  target={"_blank"}
                   href="https://www.youtube.com/channel/UCp73vCN8JROvOh-DrCczCew"
-                  className="social-icon"
-                />
+                >
+                  <FaYoutubeSquare className="social-icon" />
+                </a>
               </Col>
               <Col></Col>
             </Row>

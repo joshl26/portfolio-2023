@@ -33,12 +33,17 @@ const PortfolioElectronicInv = () => {
           style={{ justifyContent: "space-between", display: "flex" }}
         >
           <span>
-            <RoundButton buttonText={"GIT"} buttonClass={"round-button"} />
+            <RoundButton
+              href={"https://github.com/joshl26/electronics-inventory-frontend"}
+              buttonText={"GIT"}
+              buttonClass={"round-button"}
+            />
           </span>
           <span>
             <RoundButton
               buttonText={"LIVE SITE"}
               buttonClass={"round-button"}
+              href={"https://el-in.ca"}
             />
           </span>
           <span>

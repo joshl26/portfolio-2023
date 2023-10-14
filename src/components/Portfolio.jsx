@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import "./Portfolio.css";
 import RoundButton from "./RoundButton";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
@@ -76,22 +77,24 @@ const Portfolio = () => {
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"FRONTEND CODE"}
-                  href={
-                    "https://github.com/joshl26/electronics-inventory-frontend"
-                  }
+                  href="https://github.com/joshl26/electronics-inventory-frontend"
                 />
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"BACKEND CODE"}
+                  href="https://github.com/joshl26/electronics-inventory-backend"
                 />
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
+                  href="https://el-in.ca/"
                 />
-                <RoundButton
-                  buttonClass={"round-button"}
-                  buttonText={"SEE MORE"}
-                />
+                <Link to={"/portfolio/el-in/"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                  />
+                </Link>
               </Row>
             </motion.div>
           </Col>
