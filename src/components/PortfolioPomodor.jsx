@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import "./PortfolioPomodor.css";
+import "./Portfolio.css";
 
 const PortfolioPomodor = () => {
   return (

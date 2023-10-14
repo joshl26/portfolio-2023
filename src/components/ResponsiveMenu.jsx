@@ -35,18 +35,20 @@ const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
           <Link onClick={() => hamburgerMenuClicked()} to="/portfolio">
             <h3 className="responsive-menu-header">Portfolio</h3>
           </Link>
-          <Link onClick={() => hamburgerMenuClicked()} to="/manifesto">
+          {/* <Link onClick={() => hamburgerMenuClicked()} to="/manifesto">
             <h3 className="responsive-menu-header">Mission</h3>
-          </Link>
-          <Link
+          </Link> */}
+          <a
+            rel="noreferrer"
+            target="_blank"
             onClick={() => hamburgerMenuClicked()}
-            to="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing"
+            href="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing"
           >
             <h3 className="responsive-menu-header">Resume</h3>
-          </Link>
-          <Link onClick={() => hamburgerMenuClicked()} to="/services">
+          </a>
+          {/* <Link onClick={() => hamburgerMenuClicked()} to="/services">
             <h3 className="responsive-menu-header">Services</h3>
-          </Link>
+          </Link> */}
           <Link onClick={() => hamburgerMenuClicked()} to="/contact">
             <h3 className="responsive-menu-header">Contact</h3>
           </Link>
