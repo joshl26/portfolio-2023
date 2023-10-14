@@ -184,31 +184,7 @@ const PortfolioPomodor = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-pomodoro-font-rale">RALE</span>
-            <div className="portfolio-pomodoro-li">
-              <span>Weight</span>
-              <ul
-                style={{
-                  listStyleType: "none",
-                  display: "flex",
-                  gap: "0.625rem",
-                }}
-              >
-                <li>200</li>
-                <li>300</li>
-                <li>500</li>
-                <li>900</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            style={{
-              justifyContent: "space-between",
-              display: "flex",
-              alignItems: "flex-end",
-            }}
-          >
-            <span className="portfolio-pomodoro-font-luci">LUCI</span>
+            <span className="portfolio-pomodoro-font-noto">NOTO</span>
             <div className="portfolio-pomodoro-li">
               <span>Weight</span>
               <ul
@@ -227,7 +203,6 @@ const PortfolioPomodor = () => {
           </div>
         </section>
       </motion.div>
-
       <section className="portfolio-pomodoro-section">
         <motion.div
           initial={{ opacity: 0 }}

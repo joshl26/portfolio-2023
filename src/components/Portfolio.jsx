@@ -24,11 +24,11 @@ const Portfolio = () => {
                 },
               }}
             >
-              <a href="/portfolio/el-in">
+              <Link to={"/portfolio/el-in"}>
                 <div className="showcase-card-container-el" />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
-              </a>
+              </Link>
               <div className="spacer"></div>
             </motion.div>
           </Col>
@@ -74,7 +74,7 @@ const Portfolio = () => {
                   </ul>
                 </Col>
               </Row>
-              <Row>
+              <div>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"FRONTEND CODE"}
@@ -96,7 +96,7 @@ const Portfolio = () => {
                     buttonText={"SEE MORE"}
                   />
                 </Link>
-              </Row>
+              </div>
             </motion.div>
           </Col>
         </Row>
@@ -114,11 +114,11 @@ const Portfolio = () => {
                 },
               }}
             >
-              <a href="/portfolio/pomodor">
+              <Link to={"/portfolio/pomodor"}>
                 <div className="showcase-card-container-po" />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
-              </a>
+              </Link>
               <div className="spacer"></div>
             </motion.div>
           </Col>
@@ -159,7 +159,7 @@ const Portfolio = () => {
                   </ul>
                 </Col>
               </Row>
-              <Row>
+              <div>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"CODE"}
@@ -176,7 +176,7 @@ const Portfolio = () => {
                     buttonText={"SEE MORE"}
                   />
                 </Link>
-              </Row>
+              </div>
               <div className="spacer"></div>
             </motion.div>
           </Col>
@@ -193,11 +193,11 @@ const Portfolio = () => {
                 },
               }}
             >
-              <a href="/portfolio/3dportfolio">
+              <Link to={"/portfolio/3dportfolio"}>
                 <div className="showcase-card-container-3d" />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
-              </a>
+              </Link>
               <div className="spacer"></div>
             </motion.div>
           </Col>
@@ -244,7 +244,7 @@ const Portfolio = () => {
                   </ul>
                 </Col>
               </Row>
-              <Row>
+              <div>
                 <RoundButton
                   href={"https://github.com/joshl26/portfolio-2023"}
                   buttonClass={"round-button"}
@@ -261,7 +261,7 @@ const Portfolio = () => {
                     buttonText={"SEE MORE"}
                   />
                 </Link>
-              </Row>
+              </div>
               <div className="spacer"></div>
             </motion.div>
           </Col>
@@ -278,11 +278,11 @@ const Portfolio = () => {
                 },
               }}
             >
-              <a href="/portfolio/outdoorsy">
+              <Link to={"/portfolio/outdoorsy"}>
                 <div className="showcase-card-container-out" />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
-              </a>
+              </Link>
               <div className="spacer"></div>
             </motion.div>
           </Col>
@@ -328,7 +328,7 @@ const Portfolio = () => {
                   </ul>
                 </Col>
               </Row>
-              <Row>
+              <div>
                 <RoundButton buttonClass={"round-button"} buttonText={"CODE"} />
                 <RoundButton
                   buttonClass={"round-button"}
@@ -338,7 +338,7 @@ const Portfolio = () => {
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
                 />
-              </Row>
+              </div>
               <div className="spacer"></div>
             </motion.div>
           </Col>

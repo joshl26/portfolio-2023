@@ -25,8 +25,12 @@
   height: 2dvh;
 }
 
+.spacer-xsmall {
+  height: 1vh;
+  height: 1dvh;
+}
+
 .round-button {
-  width: fit-content !important;
   height: fit-content !important;
   border-radius: 25px;
   padding: 10px 20px 10px 20px;
@@ -34,7 +38,6 @@
 }
 
 .round-button:hover {
-  width: fit-content !important;
   height: fit-content !important;
   border-radius: 25px;
   background-color: var(--button-color-hover);

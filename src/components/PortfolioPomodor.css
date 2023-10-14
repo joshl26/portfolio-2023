@@ -23,14 +23,9 @@
   font-family: raleway;
   font-size: clamp(1rem, 0.9018rem + 0.4908vw, 1.5rem);
 }
-.portfolio-pomodoro-font-rale {
+.portfolio-pomodoro-font-noto {
   text-transform: uppercase;
-  font-family: raleway;
-  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
-}
-.portfolio-pomodoro-font-luci {
-  text-transform: uppercase;
-  font-family: lucitana;
+  font-family: "Noto Sans Display", sans-serif;
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 

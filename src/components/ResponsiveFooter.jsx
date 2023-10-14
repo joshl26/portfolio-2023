@@ -19,11 +19,11 @@ const ResponsiveFooter = () => {
               </a>
             </div>
           </Col>
-          <Col xs={1} sm={2} md={7}></Col>
-          <Col xs={6} sm={2} md={2}>
+          <Col></Col>
+          <Col xs={6} sm={6} md={3}>
             <Row>
               <Col></Col>
-              <Col xs={1} md={2}>
+              <Col>
                 <a
                   rel={"noreferrer"}
                   target={"_blank"}
@@ -32,7 +32,7 @@ const ResponsiveFooter = () => {
                   <FaLinkedinIn className="social-icon" />
                 </a>
               </Col>
-              <Col xs={1} md={2}>
+              <Col>
                 <a
                   rel={"noreferrer"}
                   target={"_blank"}
@@ -41,7 +41,7 @@ const ResponsiveFooter = () => {
                   <FaGithub className="social-icon" />
                 </a>
               </Col>
-              <Col xs={1} md={2}>
+              <Col>
                 <a
                   rel={"noreferrer"}
                   target={"_blank"}
