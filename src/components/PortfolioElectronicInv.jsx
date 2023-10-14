@@ -66,10 +66,10 @@ const PortfolioElectronicInv = () => {
           <h2 className="portfolio-elin-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
-              <h4>Winter 2022-Fall 2023</h4>
+              <h4>SPRING 2023-CURRENT</h4>
             </span>
             <span>
-              <h4>Personal Development Project</h4>
+              <h4>COMMMERCIAL PRODUCT</h4>
             </span>
           </div>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
@@ -134,13 +134,11 @@ const PortfolioElectronicInv = () => {
             </span>
           </div>
           <p className="portfolio-elin-p">
-            HTML5 - A markup language for creating web pages and web
-            applications. CSS3 - used for describing the presentation of a
-            document written in a markup language. Bootstrap - A free and
-            open-source front-end web framework for designing websites and web
-            applications quickly. Node.js - Open-source, cross-platform
-            JavaScript run-time environment for executing JavaScript code
-            server-side. Redux - For state management.
+            Electronics Inventory (Ei) is a Full featured inventory management
+            and control system designed for small and large businesses alike!
+            Easy to set up and get started, also has the flexibility to scale
+            for corporate environments. Cloud-based architecture under the hood
+            assures you can see your inventory levels from any device, anywhere!
           </p>
         </section>
       </motion.div>
@@ -157,13 +155,10 @@ const PortfolioElectronicInv = () => {
         <section className="portfolio-elin-section">
           <h2 className="portfolio-elin-h2">DESIGN INTENT</h2>
           <p className="portfolio-elin-p">
-            HTML5 - A markup language for creating web pages and web
-            applications. CSS3 - used for describing the presentation of a
-            document written in a markup language. Bootstrap - A free and
-            open-source front-end web framework for designing websites and web
-            applications quickly. Node.js - Open-source, cross-platform
-            JavaScript run-time environment for executing JavaScript code
-            server-side. Redux - For state management.
+            The intent with this application was to deliver key business metrics
+            regarding the lifecycle of electronics inventory in your business.
+            The organic layout allows the free flow of information to the
+            correct people within your organixation.
           </p>
         </section>
       </motion.div>
@@ -186,7 +181,9 @@ const PortfolioElectronicInv = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-elin-font-rale">RALE</span>
+            <span>
+              <h1 className="portfolio-elin-font-nunito">NUNITO</h1>
+            </span>
             <div className="portfolio-elin-li">
               <span>Weight</span>
               <ul
@@ -210,7 +207,7 @@ const PortfolioElectronicInv = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-elin-font-luci">LUCI</span>
+            <span className="portfolio-elin-font-cabin">CABIN</span>
             <div className="portfolio-elin-li">
               <span>Weight</span>
               <ul
@@ -220,9 +217,14 @@ const PortfolioElectronicInv = () => {
                   gap: "0.625rem",
                 }}
               >
+                <li>100</li>
                 <li>200</li>
                 <li>300</li>
+                <li>400</li>
                 <li>500</li>
+                <li>600</li>
+                <li>700</li>
+                <li>800</li>
                 <li>900</li>
               </ul>
             </div>

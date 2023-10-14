@@ -72,20 +72,7 @@ root.render(
   <React.StrictMode>
     <RouterProvider router={router}>
       <ScrollToTop />
+      <App />
     </RouterProvider>
   </React.StrictMode>
 );
-
-// if (WebGL.isWebGLAvailable()) {
-//   const root = ReactDOM.createRoot(document.getElementById("root"));
-//   root.render(
-//     <React.StrictMode>
-//       <RouterProvider router={router}>
-//         <ScrollToTop />
-//       </RouterProvider>
-//     </React.StrictMode>
-//   );
-// } else {
-//   const warning = WebGL.getWebGLErrorMessage();
-//   document.getElementById("root").appendChild(warning);
-// }

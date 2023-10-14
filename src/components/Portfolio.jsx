@@ -46,9 +46,10 @@ const Portfolio = () => {
             >
               <h3 className="showcased-h3">electronics inventory</h3>
               <p className="showcased-p">
-                Electronics Inventory is a cutting-edge SAAS webapp that
+                Electronics Inventory is a cutting-edge web based app that
                 efficiently organizes electronic lab inventory for both small
-                businesses and individuals with ease.
+                businesses and individuals with ease. The organic layout design
+                of the UI/UX was the impotese for this project.
               </p>
               <Row>
                 <Col>
@@ -159,12 +160,15 @@ const Portfolio = () => {
                 </Col>
               </Row>
               <Row>
-                <RoundButton buttonClass={"round-button"} buttonText={"CODE"} />
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"CODE"}
+                  href={"https://github.com/joshl26/pomodoro-app"}
+                />
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
                   href={"https:/joshlehman.ca/pomodor"}
-                  
                 />
                 <Link to={"/portfolio/pomodor"}>
                   <RoundButton
@@ -212,7 +216,14 @@ const Portfolio = () => {
               <h3 className="showcased-h3">3D Portfolio</h3>
               <p className="showcased-p">
                 An experimental three dimensional portfolio site created with
-                ThreeJS and Blender. Give it a try!
+                ThreeJS and Blender. Give it a try! I had alot of fun learning
+                new technologies to complete this. In the end the limitations of
+                responsive styling within this 3d environment meant I had to
+                switch back to a more traditional portfolio website layout to
+                offer improved user accessibility over different devices,
+                specifically older browsers. Still it was a FUN experiment and I
+                do see applications for this type of tech in the future (i.e.
+                Augmented Reality) Reality.
               </p>
               <Row>
                 <Col>
@@ -234,15 +245,22 @@ const Portfolio = () => {
                 </Col>
               </Row>
               <Row>
-                <RoundButton buttonClass={"round-button"} buttonText={"CODE"} />
+                <RoundButton
+                  href={"https://github.com/joshl26/portfolio-2023"}
+                  buttonClass={"round-button"}
+                  buttonText={"CODE"}
+                />
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
+                  href={"/portfolio/experimental"}
                 />
-                <RoundButton
-                  buttonClass={"round-button"}
-                  buttonText={"SEE MORE"}
-                />
+                <Link to={"/portfolio/3dportfolio"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                  />
+                </Link>
               </Row>
               <div className="spacer"></div>
             </motion.div>
