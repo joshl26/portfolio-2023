@@ -28,14 +28,14 @@ import { Outlet } from "react-router-dom";
 // );
 
 function App() {
-  const [colorMode, setColorMode] = useLocalStorage("colorMode", "");
+  const [colorMode, setColorMode] = useState("dark");
 
   // const [colorMode, setColorMode] = useLocalStorage("colorMode", "light");
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
   // const newColorMode = colorMode === "light" ? "dark" : "light";
   // const canvasBackGroundColor = colorMode === "light" ? "#ececec" : "#293241";
-  const canvasBackGroundColor = "#ececec";
+  const canvasBackGroundColor = "#293241";
 
   // const [landingPage, setLandingPage] = useState(true);
   // const [chooseYourExperience, setChooseYourExperience] = useState(false);
