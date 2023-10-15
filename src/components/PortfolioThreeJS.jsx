@@ -1,18 +1,9 @@
-import React, { useState } from "react";
-import ResponsiveHeader from "./ResponsiveHeader";
-import ResponsiveMenu from "./ResponsiveMenu";
+import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import ResponsiveFooter from "./ResponsiveFooter";
-import "./PortfolioPomodor.css";
+import "./PortfolioThreeJS.css";
 
 const PortfolioThreeJS = () => {
-  const [menuClicked, setMenuClicked] = useState(false);
-
-  const hamburgerMenuClicked = () => {
-    setMenuClicked(!menuClicked);
-  };
-
   return (
     <main className="main-container">
       <section>
@@ -25,7 +16,7 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-hero"
+          className="portfolio-threejs-hero"
         />
       </section>
       <div className="spacer-small"></div>
@@ -67,8 +58,8 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">DETAILS</h2>
+        <section className="portfolio-threejs-section">
+          <h2 className="portfolio-threejs-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>Winter 2022-Fall 2023</h4>
@@ -138,15 +129,7 @@ const PortfolioThreeJS = () => {
               </span>
             </span>
           </div>
-          <p className="portfolio-pomodoro-p">
-            HTML5 - A markup language for creating web pages and web
-            applications. CSS3 - used for describing the presentation of a
-            document written in a markup language. Bootstrap - A free and
-            open-source front-end web framework for designing websites and web
-            applications quickly. Node.js - Open-source, cross-platform
-            JavaScript run-time environment for executing JavaScript code
-            server-side. Redux - For state management.
-          </p>
+          <p className="portfolio-threejs-p"></p>
         </section>
       </motion.div>
 
@@ -160,16 +143,18 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">DESIGN INTENT</h2>
-          <p className="portfolio-pomodoro-p">
-            HTML5 - A markup language for creating web pages and web
-            applications. CSS3 - used for describing the presentation of a
-            document written in a markup language. Bootstrap - A free and
-            open-source front-end web framework for designing websites and web
-            applications quickly. Node.js - Open-source, cross-platform
-            JavaScript run-time environment for executing JavaScript code
-            server-side. Redux - For state management.
+        <section className="portfolio-threejs-section">
+          <h2 className="portfolio-threejs-h2">DESIGN INTENT</h2>
+          <p className="portfolio-threejs-p">
+            An experimental three dimensional portfolio site created with
+            ThreeJS and Blender. Give it a try! I had alot of fun learning new
+            technologies to complete this. In the end the limitations of
+            responsive styling within this 3d environment meant I had to switch
+            back to a more traditional portfolio website layout to offer
+            improved user accessibility over different devices, specifically
+            older browsers. Still it was a FUN experiment and I do see
+            applications for this type of tech in the future (i.e. Augmented
+            Reality) Reality.
           </p>
         </section>
       </motion.div>
@@ -184,8 +169,8 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">FONT TYPES</h2>
+        <section className="portfolio-threejs-section">
+          <h2 className="portfolio-threejs-h2">FONT TYPES</h2>
           <div
             style={{
               justifyContent: "space-between",
@@ -193,8 +178,8 @@ const PortfolioThreeJS = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-pomodoro-font-rale">RALE</span>
-            <div className="portfolio-pomodoro-li">
+            <span className="portfolio-threejs-font-rale">RALE</span>
+            <div className="portfolio-threejs-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -217,8 +202,8 @@ const PortfolioThreeJS = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-pomodoro-font-luci">LUCI</span>
-            <div className="portfolio-pomodoro-li">
+            <span className="portfolio-threejs-font-lusi">LUSI</span>
+            <div className="portfolio-threejs-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -237,7 +222,7 @@ const PortfolioThreeJS = () => {
         </section>
       </motion.div>
 
-      <section className="portfolio-pomodoro-section">
+      <section className="portfolio-threejs-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -248,7 +233,7 @@ const PortfolioThreeJS = () => {
             },
           }}
         >
-          <h2 className="portfolio-pomodoro-h2">SCREENS</h2>
+          <h2 className="portfolio-threejs-h2">SCREENS</h2>
         </motion.div>
 
         <motion.div
@@ -260,7 +245,7 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-1"
+          className="portfolio-threejs-screen-1"
         />
         <div className="spacer"></div>
         <motion.div
@@ -272,7 +257,7 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-2"
+          className="portfolio-threejs-screen-2"
         />
         <div className="spacer"></div>
         <motion.div
@@ -284,7 +269,7 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-3"
+          className="portfolio-threejs-screen-3"
         />
         <div className="spacer"></div>
       </section>

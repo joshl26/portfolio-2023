@@ -329,15 +329,22 @@ const Portfolio = () => {
                 </Col>
               </Row>
               <div>
-                <RoundButton buttonClass={"round-button"} buttonText={"CODE"} />
                 <RoundButton
+                  href={"https://github.com/joshl26/Outdoorsy"}
+                  buttonClass={"round-button"}
+                  buttonText={"CODE"}
+                />
+                <RoundButton
+                  href={"https://outdors.ca"}
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
                 />
-                <RoundButton
-                  buttonClass={"round-button"}
-                  buttonText={"SEE MORE"}
-                />
+                <Link to={"/portfolio/outdoorsy"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                  />
+                </Link>
               </div>
               <div className="spacer"></div>
             </motion.div>

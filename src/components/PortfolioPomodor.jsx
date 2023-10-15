@@ -33,10 +33,15 @@ const PortfolioPomodor = () => {
           style={{ justifyContent: "space-between", display: "flex" }}
         >
           <span>
-            <RoundButton buttonText={"GIT"} buttonClass={"round-button"} />
+            <RoundButton
+              href={"https://github.com/joshl26/pomodoro-app"}
+              buttonText={"GIT"}
+              buttonClass={"round-button"}
+            />
           </span>
           <span>
             <RoundButton
+              href={"https://joshlehman.ca/pomodor"}
               buttonText={"LIVE SITE"}
               buttonClass={"round-button"}
             />

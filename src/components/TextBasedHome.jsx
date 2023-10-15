@@ -66,7 +66,7 @@ const TextBasedHome = () => {
         <div className="spacer-small"></div>
         <Row>
           <Col xs={12} md={6}>
-            <Link to={"/portfolio/3D Portfolio"}>
+            <Link to={"/portfolio/3dportfolio"}>
               <div className="showcase-card-container-3d" />
               <div className="spacer-small"></div>
               <div className="showcase-border-top" />
