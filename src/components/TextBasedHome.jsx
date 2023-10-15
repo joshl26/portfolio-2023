@@ -73,7 +73,7 @@ const TextBasedHome = () => {
               <div className="spacer-small"></div>
               <Row>
                 <Col>
-                  <h3 className="showcased-h3">3d portfolio</h3>
+                  <h3 className="showcased-h3">3D PORTFOLIO</h3>
                 </Col>
                 <Col className="text-right">
                   <FaArrowCircleUp className="showcased-work-link" />
