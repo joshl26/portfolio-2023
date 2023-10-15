@@ -48,8 +48,11 @@ const Portfolio = () => {
               <p className="showcased-p">
                 Electronics Inventory is a cutting-edge web based app that
                 efficiently organizes electronic lab inventory for both small
-                businesses and individuals with ease. The organic layout design
-                of the UI/UX was the impotese for this project.
+                businesses and individuals alike. The backend API has been fully
+                documented and tested using OpenAPI and Swagger. Electronics
+                Inventory web-app is available on on any device from desktop pc
+                to the smallest handheld. Manage your electronics inventory from
+                anywhere!
               </p>
               <Row>
                 <Col>
@@ -65,6 +68,7 @@ const Portfolio = () => {
                 </Col>
                 <Col>
                   <ul className="showcased-list">
+                    <li>OPENAPI</li>
                     <li>BACKEND DESIGN</li>
                     <li>EXPRESS</li>
                     <li>REST API</li>
@@ -136,23 +140,25 @@ const Portfolio = () => {
             >
               <h3 className="showcased-h3">Pomodor Timer</h3>
               <p className="showcased-p">
-                A ReactJS and Redux Pomodoro timer based on the famous Pomofocus
-                app.
+                This project was started as my introduction to ReactJS in the
+                winter of 2023. The goal was to explore both basic and advanced
+                react topics such as: prop drilling, react router, responsive
+                UI/UX design and state management with redux.
               </p>
               <Row>
                 <Col>
                   <ul className="showcased-list">
                     <li>JAVASCRIPT</li>
-                    <li>CSS3</li>
+                    <li>BOOTSTRAP</li>
                     <li>HTML5</li>
-                    <li>WIREFRAMING</li>
-                    <li>UI/UX DESIGN</li>
                     <li>REACT</li>
                     <li>REDUX</li>
                   </ul>
                 </Col>
                 <Col>
                   <ul className="showcased-list">
+                    <li>UI/UX DESIGN</li>
+
                     <li>BABEL</li>
                     <li>WEBPACK</li>
                     <li>GIT</li>
@@ -216,14 +222,14 @@ const Portfolio = () => {
               <h3 className="showcased-h3">3D Portfolio</h3>
               <p className="showcased-p">
                 An experimental three dimensional portfolio site created with
-                ThreeJS and Blender. Give it a try! I had alot of fun learning
-                new technologies to complete this. In the end the limitations of
+                ThreeJS and Blender. I had alot of fun learning new technologies
+                to complete this project. In the end the limitations of
                 responsive styling within this 3d environment meant I had to
                 switch back to a more traditional portfolio website layout to
                 offer improved user accessibility over different devices,
                 specifically older browsers. Still it was a FUN experiment and I
-                do see applications for this type of tech in the future (i.e.
-                Augmented Reality) Reality.
+                do see applications for this type of tech in the future with AR
+                (i.e. Augmented Reality).
               </p>
               <Row>
                 <Col>
@@ -301,9 +307,10 @@ const Portfolio = () => {
             >
               <h3 className="showcased-h3">outdoorsy</h3>
               <p className="showcased-p">
-                Outdoorsy is a full-stack website project where users can create
-                and review campsites. To review or create a campsite, you must
-                have an account.
+                Outdoorsy is a full-stack website project where logged in users
+                can create and review campsites, canoe routes, hiking trails,
+                etc. Its a community for outdoor enthusiasts to connect, share
+                experiences and plan new ones!
               </p>
               <Row>
                 <Col>
@@ -313,8 +320,6 @@ const Portfolio = () => {
                     <li>HTML5</li>
                     <li>WIREFRAMING</li>
                     <li>UI/UX DESIGN</li>
-                    <li>REACT</li>
-                    <li>REDUX</li>
                   </ul>
                 </Col>
                 <Col>

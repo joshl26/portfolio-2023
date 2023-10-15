@@ -134,14 +134,13 @@ const PortfolioPomodor = () => {
               </span>
             </span>
           </div>
+          <div className="spacer-small"></div>
+
           <p className="portfolio-pomodoro-p">
-            HTML5 - A markup language for creating web pages and web
-            applications. CSS3 - used for describing the presentation of a
-            document written in a markup language. Bootstrap - A free and
-            open-source front-end web framework for designing websites and web
-            applications quickly. Node.js - Open-source, cross-platform
-            JavaScript run-time environment for executing JavaScript code
-            server-side. Redux - For state management.
+            This project was started as my introduction to ReactJS in the winter
+            of 2023. The goal was to explore both basic and advanced react
+            topics such as: prop drilling, react router, responsive UI/UX design
+            and state management with redux.
           </p>
         </section>
       </motion.div>
@@ -159,13 +158,9 @@ const PortfolioPomodor = () => {
         <section className="portfolio-pomodoro-section">
           <h2 className="portfolio-pomodoro-h2">DESIGN INTENT</h2>
           <p className="portfolio-pomodoro-p">
-            HTML5 - A markup language for creating web pages and web
-            applications. CSS3 - used for describing the presentation of a
-            document written in a markup language. Bootstrap - A free and
-            open-source front-end web framework for designing websites and web
-            applications quickly. Node.js - Open-source, cross-platform
-            JavaScript run-time environment for executing JavaScript code
-            server-side. Redux - For state management.
+            The idea with this project was to loosely replicate the UI/UX of the
+            famous pomofocus app and make several improvements over their
+            version.
           </p>
         </section>
       </motion.div>

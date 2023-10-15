@@ -115,7 +115,12 @@ const PortfolioElectronicInv = () => {
                   buttonClass={"round-button"}
                 />
               </span>
-
+              <span>
+                <RoundButton
+                  buttonText={"OPENAPI"}
+                  buttonClass={"round-button"}
+                />
+              </span>
               <span>
                 <RoundButton
                   buttonText={"BABEL"}
@@ -133,6 +138,7 @@ const PortfolioElectronicInv = () => {
               </span>
             </span>
           </div>
+          <div className="spacer-small"></div>
           <p className="portfolio-elin-p">
             Electronics Inventory (Ei) is a Full featured inventory management
             and control system designed for small and large businesses alike!
@@ -158,7 +164,7 @@ const PortfolioElectronicInv = () => {
             The intent with this application was to deliver key business metrics
             regarding the lifecycle of electronics inventory in your business.
             The organic layout allows the free flow of information to the
-            correct people within your organixation.
+            correct people within your business.
           </p>
         </section>
       </motion.div>

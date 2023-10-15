@@ -133,12 +133,12 @@ const PortfolioOutdoorsy = () => {
               </span>
             </span>
           </div>
+          <div className="spacer-small"></div>
           <p className="portfolio-outdoorsy-p">
-            Electronics Inventory (Ei) is a Full featured inventory management
-            and control system designed for small and large businesses alike!
-            Easy to set up and get started, also has the flexibility to scale
-            for corporate environments. Cloud-based architecture under the hood
-            assures you can see your inventory levels from any device, anywhere!
+            Outdoorsy is a full-stack website project where logged in users can
+            create and review campsites, canoe routes, hiking trails, etc. Its a
+            community for outdoor enthusiasts to connect, share experiences and
+            plan new ones!
           </p>
         </section>
       </motion.div>
@@ -155,10 +155,10 @@ const PortfolioOutdoorsy = () => {
         <section className="portfolio-outdoorsy-section">
           <h2 className="portfolio-outdoorsy-h2">DESIGN INTENT</h2>
           <p className="portfolio-outdoorsy-p">
-            The intent with this application was to deliver key business metrics
-            regarding the lifecycle of electronics inventory in your business.
-            The organic layout allows the free flow of information to the
-            correct people within your organixation.
+            The intent with this application is to allow outdoors enthusiasts to
+            have a place to share ideas, experiences and trip plans. I wanted
+            the user interface to feel very natural, like being in the woods..
+            Or on a lake for instance.
           </p>
         </section>
       </motion.div>
@@ -182,7 +182,7 @@ const PortfolioOutdoorsy = () => {
             }}
           >
             <span>
-              <h1 className="portfolio-outdoorsy-font-nunito">NUNITO</h1>
+              <h1 className="portfolio-outdoorsy-font-segoe">SEGOE</h1>
             </span>
             <div className="portfolio-outdoorsy-li">
               <span>Weight</span>
@@ -206,29 +206,7 @@ const PortfolioOutdoorsy = () => {
               display: "flex",
               alignItems: "flex-end",
             }}
-          >
-            <span className="portfolio-outdoorsy-font-cabin">CABIN</span>
-            <div className="portfolio-outdoorsy-li">
-              <span>Weight</span>
-              <ul
-                style={{
-                  listStyleType: "none",
-                  display: "flex",
-                  gap: "0.625rem",
-                }}
-              >
-                <li>100</li>
-                <li>200</li>
-                <li>300</li>
-                <li>400</li>
-                <li>500</li>
-                <li>600</li>
-                <li>700</li>
-                <li>800</li>
-                <li>900</li>
-              </ul>
-            </div>
-          </div>
+          ></div>
         </section>
       </motion.div>
       <section className="portfolio-outdoorsy-section">
