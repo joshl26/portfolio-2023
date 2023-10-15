@@ -246,7 +246,7 @@ const PortfolioOutdoorsy = () => {
           className="portfolio-outdoorsy-screen-2"
         />
         <div className="spacer"></div>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
@@ -257,7 +257,7 @@ const PortfolioOutdoorsy = () => {
           }}
           className="portfolio-outdoorsy-screen-3"
         />
-        <div className="spacer"></div>
+        <div className="spacer"></div> */}
       </section>
     </main>
   );
