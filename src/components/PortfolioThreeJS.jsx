@@ -33,10 +33,15 @@ const PortfolioThreeJS = () => {
           style={{ justifyContent: "space-between", display: "flex" }}
         >
           <span>
-            <RoundButton buttonText={"GIT"} buttonClass={"round-button"} />
+            <RoundButton
+              href={"https://github.com/joshl26/portfolio-2023"}
+              buttonText={"GIT"}
+              buttonClass={"round-button"}
+            />
           </span>
           <span>
             <RoundButton
+              href={"/portfolio/experimental"}
               buttonText={"LIVE SITE"}
               buttonClass={"round-button"}
             />

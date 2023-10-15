@@ -34,7 +34,7 @@ const PortfolioOutdoorsy = () => {
         >
           <span>
             <RoundButton
-              href={"https://github.com/joshl26/electronics-inventory-frontend"}
+              href={"https://github.com/joshl26/Outdoorsy"}
               buttonText={"GIT"}
               buttonClass={"round-button"}
             />
@@ -43,7 +43,7 @@ const PortfolioOutdoorsy = () => {
             <RoundButton
               buttonText={"LIVE SITE"}
               buttonClass={"round-button"}
-              href={"https://el-in.ca"}
+              href={"https://outdors.ca"}
             />
           </span>
           <span>
