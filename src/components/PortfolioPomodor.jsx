@@ -137,10 +137,10 @@ const PortfolioPomodor = () => {
           <div className="spacer-small"></div>
 
           <p className="portfolio-pomodoro-p">
-            This project was started as my introduction to ReactJS in the winter
-            of 2023. The goal was to explore both basic and advanced react
-            topics such as: prop drilling, react router, responsive UI/UX design
-            and state management with redux.
+            This project was started in winter 2023 as an introduction to
+            ReactJS. The goal was to explore basic and advanced topics such as
+            prop drilling, React Router, responsive UI/UX design, and state
+            management with Redux.
           </p>
         </section>
       </motion.div>
