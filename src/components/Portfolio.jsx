@@ -174,7 +174,7 @@ const Portfolio = () => {
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
-                  href={"https:/joshlehman.ca/pomodor"}
+                  href={"https://joshlehman.ca/pomodor"}
                 />
                 <Link to={"/portfolio/pomodor"}>
                   <RoundButton
