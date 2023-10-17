@@ -18,7 +18,7 @@ const PortfolioPomodor = () => {
           }}
         >
           <img
-            className="portfolio-pomodoro-hero"
+            className="portfolio-hero"
             alt="pomodoro timer hero"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
@@ -68,8 +68,8 @@ const PortfolioPomodor = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">DETAILS</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>Winter 2022-Fall 2023</h4>
@@ -141,7 +141,7 @@ const PortfolioPomodor = () => {
           </div>
           <div className="spacer-small"></div>
 
-          <p className="portfolio-pomodoro-p">
+          <p className="portfolio-p">
             This project was started in winter 2023 as an introduction to
             ReactJS. The goal was to explore basic and advanced topics such as
             prop drilling, React Router, responsive UI/UX design, and state
@@ -160,9 +160,9 @@ const PortfolioPomodor = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">DESIGN INTENT</h2>
-          <p className="portfolio-pomodoro-p">
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DESIGN INTENT</h2>
+          <p className="portfolio-p">
             The idea with this project was to loosely replicate the UI/UX of the
             famous pomofocus app and make several improvements over their
             version.
@@ -180,8 +180,8 @@ const PortfolioPomodor = () => {
           },
         }}
       >
-        <section className="portfolio-pomodoro-section">
-          <h2 className="portfolio-pomodoro-h2">FONT TYPES</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
               justifyContent: "space-between",
@@ -189,8 +189,8 @@ const PortfolioPomodor = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-pomodoro-font-noto">NOTO</span>
-            <div className="portfolio-pomodoro-li">
+            <span className="portfolio-font-noto">NOTO</span>
+            <div className="portfolio-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -208,7 +208,7 @@ const PortfolioPomodor = () => {
           </div>
         </section>
       </motion.div>
-      <section className="portfolio-pomodoro-section">
+      <section className="portfolio-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -219,7 +219,7 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          <h2 className="portfolio-pomodoro-h2">SCREENS</h2>
+          <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
 
         <motion.div
@@ -231,8 +231,14 @@ const PortfolioPomodor = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-1"
-        />
+        >
+          <img
+            className="portfolio-screen-1"
+            alt="pomodoro timer hero"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
+          />
+        </motion.div>
+
         <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -243,8 +249,13 @@ const PortfolioPomodor = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-2"
-        />
+        >
+          <img
+            className="portfolio-screen-2"
+            alt="pomodoro timer hero"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
+          />
+        </motion.div>
         <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -255,8 +266,13 @@ const PortfolioPomodor = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-screen-3"
-        />
+        >
+          <img
+            className="portfolio-screen-3"
+            alt="pomodoro timer hero"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+          />
+        </motion.div>
         <div className="spacer"></div>
       </section>
     </main>

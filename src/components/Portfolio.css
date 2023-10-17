@@ -47,70 +47,43 @@
   font-weight: 300;
 }
 
-.portfolio-pomodoro-hero,
-.portfolio-pomodoro-screen-1,
-.portfolio-pomodoro-screen-2,
-.portfolio-pomodoro-screen-3 {
+.portfolio-hero,
+.portfolio-screen-1,
+.portfolio-screen-2,
+.portfolio-screen-3 {
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
   border-radius: 0.75rem;
 }
 
-.portfolio-pomodoro-section {
+.portfolio-section {
   flex-direction: column;
   gap: 0.625rem;
   border-top: 0.0625rem solid #c6c0c4;
 }
 
-.portfolio-pomodoro-h2 {
+.portfolio-h2 {
   text-transform: uppercase;
   font-family: lucitana;
   font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
 }
 
-.portfolio-pomodoro-p {
+.portfolio-p {
   text-transform: uppercase;
   font-family: raleway;
   font-size: clamp(1rem, 0.9018rem + 0.4908vw, 1.5rem);
 }
-.portfolio-pomodoro-font-noto {
+.portfolio-font-noto {
   text-transform: uppercase;
   font-family: "Noto Sans Display", sans-serif;
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
-.portfolio-pomodoro-li {
+.portfolio-li {
   text-transform: uppercase;
   font-family: lucitana;
   font-size: clamp(1rem, 0.9018rem + 0.4908vw, 1.5rem);
-}
-
-.portfolio-pomodoro-screen-1 {
-  height: 100vh;
-  height: 100dvh;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png");
-  border-radius: 0.75rem;
-}
-
-.portfolio-pomodoro-screen-2 {
-  height: 100vh;
-  height: 100dvh;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png");
-  border-radius: 0.75rem;
-}
-
-.portfolio-pomodoro-screen-3 {
-  height: 100vh;
-  height: 100dvh;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384651/PortfolioSite/Iphone_vertical_modern_office_pomo_kex0v8.png");
-  border-radius: 0.75rem;
 }
 
 .experience-card {

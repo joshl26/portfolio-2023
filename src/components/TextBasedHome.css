@@ -41,36 +41,33 @@
   font-weight: 300;
 }
 
-.showcase-card-container-el {
+.showcase-card-container-el,
+.showcase-card-container-po,
+.showcase-card-container-3d,
+.showcase-card-container-out {
   height: 600px;
-  background-position: 50% 50%;
-  background-size: cover;
-
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png");
+  width: 100%;
   border-radius: 0.75rem;
+  background-size: cover;
 }
 
 .showcase-card-container-po {
+  background-image: url("");
+}
+
+ {
   height: 600px;
   background-position: 50% 50%;
   background-size: cover;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png");
+  background-image: url("");
   border-radius: 0.75rem;
 }
 
-.showcase-card-container-3d {
+. {
   height: 600px;
   background-position: 50% 50%;
   background-size: cover;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png");
-  border-radius: 0.75rem;
-}
-
-.showcase-card-container-out {
-  height: 600px;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png");
+  background-image: url("");
   border-radius: 0.75rem;
 }
 
