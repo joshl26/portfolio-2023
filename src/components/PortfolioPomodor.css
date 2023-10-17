@@ -1,8 +1,10 @@
-.portfolio-pomodoro-hero {
-  height: 1000px;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png");
+.portfolio-pomodoro-hero,
+.portfolio-pomodoro-screen-1,
+.portfolio-pomodoro-screen-2,
+.portfolio-pomodoro-screen-3 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
   border-radius: 0.75rem;
 }
 
@@ -36,25 +38,28 @@
 }
 
 .portfolio-pomodoro-screen-1 {
-  height: 1000px;
-  background-position: 50% 50%;
-  background-size: cover;
+  height: 100vh;
+  height: 100dvh;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png");
   border-radius: 0.75rem;
 }
 
 .portfolio-pomodoro-screen-2 {
-  height: 1000px;
-  background-position: 50% 50%;
-  background-size: cover;
+  height: 100vh;
+  height: 100dvh;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png");
   border-radius: 0.75rem;
 }
 
 .portfolio-pomodoro-screen-3 {
-  height: 1000px;
-  background-position: 50% 50%;
-  background-size: cover;
+  height: 100vh;
+  height: 100dvh;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-image: url("https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384651/PortfolioSite/Iphone_vertical_modern_office_pomo_kex0v8.png");
   border-radius: 0.75rem;
 }

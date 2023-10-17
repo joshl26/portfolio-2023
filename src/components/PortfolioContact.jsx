@@ -1,14 +1,9 @@
 import React, { useRef, useState } from "react";
-import "./PortfolioPomodor.css";
 import emailjs from "@emailjs/browser";
-import linkedInIcon from "../data/images/LinkedIn_Icon.svg";
-import webIcon from "../data/images/Web_Icon.svg";
-import gitHubIcon from "../data/images/GitHub_Icon.svg";
-import wordPressIcon from "../data/images/wordpress_Icon.svg";
-import "./Interface.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { PopupButton } from "react-calendly";
 import TopicRadio from "./TopicRadio";
+import "./Portfolio.css";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
@@ -17,7 +12,6 @@ const EMAIL_JS_PUBLIC_KEY = "87SpQ-1mR0MN2Rug9";
 const ContactSection = (props) => {
   const { fontColormode, colorMode } = props;
 
-  // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
@@ -62,7 +56,7 @@ const ContactSection = (props) => {
   return (
     <section>
       <div className="interface-spacer-small"></div>
-      <Container className="contact-container">
+      <Container className="portfolio-contact-container">
         <Row>
           <Col>
             <Row>
@@ -143,12 +137,9 @@ const ContactSection = (props) => {
                   </Row>
                   <div className="interface-spacer-xsmall"></div>
                   <Row>
-                    <label
-                      htmlFor="topic"
-                      className={fontColormode("interface-label")}
-                    >
+                    <h4 className={fontColormode("interface-label")}>
                       Choose a Topic
-                    </label>
+                    </h4>
                   </Row>
                   <Row>
                     <TopicRadio
@@ -264,57 +255,7 @@ const ContactSection = (props) => {
               </Row>
             </form>
           </Col>
-          <div className="spacer-small"></div>
-          <Row>
-            <Col className="social-col" xs={3} md={3}>
-              <Container className="text-center">
-                <div className="spacer"></div>
-                <a href="https://www.linkedin.com/in/joshrlehman/">
-                  <img
-                    className="socialmedia-icon"
-                    src={linkedInIcon}
-                    alt="Linked In Icon"
-                  />
-                </a>
-              </Container>
-              <div className="spacer"></div>
-            </Col>
-            <Col className="social-col" xs={3} md={3}>
-              <Container>
-                <div className="spacer"></div>
-                <a href="https://github.com/joshl26/">
-                  <img className="socialmedia-icon" src={gitHubIcon} alt="" />
-                </a>
-              </Container>
-              <div className="spacer"></div>
-            </Col>
-            <Col className="social-col" xs={3} md={3}>
-              <Container className="text-center">
-                <div className="spacer"></div>
-                <a href="http://www.blackrock3d.ca/">
-                  <img
-                    className="socialmedia-icon"
-                    src={wordPressIcon}
-                    alt="Web Icon"
-                  />
-                </a>
-              </Container>
-              <div className="spacer"></div>
-            </Col>
-            <Col className="social-col" xs={3} md={3}>
-              <Container className="text-center">
-                <div className="spacer"></div>
-                <a href="mailto:joshlehman.dev@gmail.com">
-                  <img
-                    className="socialmedia-icon"
-                    src={webIcon}
-                    alt="Mail Icon"
-                  />
-                </a>
-              </Container>
-              <div className="spacer"></div>
-            </Col>
-          </Row>
+          <div className="spacer"></div>
         </Row>
       </Container>
     </section>

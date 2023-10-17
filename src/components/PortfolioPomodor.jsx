@@ -16,8 +16,13 @@ const PortfolioPomodor = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-pomodoro-hero"
-        />
+        >
+          <img
+            className="portfolio-pomodoro-hero"
+            alt="pomodoro timer hero"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
+          />
+        </motion.div>
       </section>
       <div className="spacer-small"></div>
       <section>

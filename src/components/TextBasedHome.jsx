@@ -16,17 +16,17 @@ const TextBasedHome = () => {
         </h1>
       </section>
       <section className="showcased-work">
-        <Row>
-          <Col>
-            <h2 className="showcased-h2">SHOWCASED WORK</h2>
-          </Col>
-          <Col className="text-right">
-            <Link to={"/portfolio"}>
+        <Link to={"/portfolio"}>
+          <Row>
+            <Col>
+              <h2 className="showcased-h2">SHOWCASED WORK</h2>
+            </Col>
+            <Col className="text-right">
               <div className="spacer-xsmall"></div>
               <FaArrowCircleUp className="showcased-work-link" />
-            </Link>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+        </Link>
         <Row>
           <Col xs={6} md={6}>
             <Link to={"/portfolio/el-in"}>

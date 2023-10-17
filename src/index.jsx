@@ -65,14 +65,19 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/portfolio/experimental",
+    element: <PortfolioExperimental />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router}>
-      <ScrollToTop />
-      <App />
+      <ScrollToTop>
+        <App />
+      </ScrollToTop>
     </RouterProvider>
   </React.StrictMode>
 );
