@@ -41,10 +41,7 @@
   font-weight: 300;
 }
 
-.showcase-card-container-el,
-.showcase-card-container-po,
-.showcase-card-container-3d,
-.showcase-card-container-out {
+.showcase-card-container {
   height: 600px;
   width: 100%;
   border-radius: 0.75rem;
@@ -53,22 +50,6 @@
 
 .showcase-card-container-po {
   background-image: url("");
-}
-
- {
-  height: 600px;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-image: url("");
-  border-radius: 0.75rem;
-}
-
-. {
-  height: 600px;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-image: url("");
-  border-radius: 0.75rem;
 }
 
 .showcase-border-top {

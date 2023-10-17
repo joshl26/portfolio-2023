@@ -80,6 +80,18 @@
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
+.portfolio-font-rale {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
+}
+
+.portfolio-font-lusi {
+  text-transform: uppercase;
+  font-family: "Lusitana", sans-serif;
+  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
+}
+
 .portfolio-li {
   text-transform: uppercase;
   font-family: lucitana;

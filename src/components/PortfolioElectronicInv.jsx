@@ -16,8 +16,13 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-elin-hero"
-        />
+        >
+          <img
+            alt="laptop on a gold platform"
+            className="portfolio-hero"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+          />
+        </motion.div>
       </section>
       <div className="spacer-small"></div>
       <section>
@@ -62,8 +67,8 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-elin-section">
-          <h2 className="portfolio-elin-h2">DETAILS</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>SPRING 2023-CURRENT</h4>
@@ -139,7 +144,7 @@ const PortfolioElectronicInv = () => {
             </span>
           </div>
           <div className="spacer-small"></div>
-          <p className="portfolio-elin-p">
+          <p className="portfolio-p">
             Electronics Inventory (Ei) is a Full featured inventory management
             and control system designed for small and large businesses alike!
             Easy to set up and get started, also has the flexibility to scale
@@ -158,9 +163,9 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-elin-section">
-          <h2 className="portfolio-elin-h2">DESIGN INTENT</h2>
-          <p className="portfolio-elin-p">
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DESIGN INTENT</h2>
+          <p className="portfolio-p">
             The intent with this application was to deliver key business metrics
             regarding the lifecycle of electronics inventory in your business.
             The organic layout allows the free flow of information to the
@@ -178,8 +183,8 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-elin-section">
-          <h2 className="portfolio-elin-h2">FONT TYPES</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
               justifyContent: "space-between",
@@ -188,9 +193,9 @@ const PortfolioElectronicInv = () => {
             }}
           >
             <span>
-              <h1 className="portfolio-elin-font-nunito">NUNITO</h1>
+              <h1 className="portfolio-font-nunito">NUNITO</h1>
             </span>
-            <div className="portfolio-elin-li">
+            <div className="portfolio-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -213,8 +218,8 @@ const PortfolioElectronicInv = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-elin-font-cabin">CABIN</span>
-            <div className="portfolio-elin-li">
+            <span className="portfolio-font-cabin">CABIN</span>
+            <div className="portfolio-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -237,7 +242,7 @@ const PortfolioElectronicInv = () => {
           </div>
         </section>
       </motion.div>
-      <section className="portfolio-elin-section">
+      <section className="portfolio-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -248,7 +253,7 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          <h2 className="portfolio-elin-h2">SCREENS</h2>
+          <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -259,8 +264,13 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-elin-screen-1"
-        />
+        >
+          <img
+            alt="laptop in a modern office"
+            className="portfolio-screen-1"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
+          />
+        </motion.div>
         <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -271,10 +281,16 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-elin-screen-2"
-        />
+        >
+          <img
+            alt="laptop on a gold platform"
+            className="portfolio-screen-2"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+          />
+        </motion.div>
+
         <div className="spacer"></div>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
@@ -283,9 +299,15 @@ const PortfolioElectronicInv = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-elin-screen-3"
-        />
-        <div className="spacer"></div>
+        >
+          <img
+            alt="laptop on a gold platform"
+            className="portfolio-screen-3"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
+          />
+        </motion.div>
+
+        <div className="spacer"></div> */}
       </section>
     </main>
   );

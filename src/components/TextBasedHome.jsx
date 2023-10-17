@@ -31,7 +31,7 @@ const TextBasedHome = () => {
           <Col xs={6} md={6}>
             <Link to={"/portfolio/el-in"}>
               <img
-                className="showcase-card-container-el"
+                className="showcase-card-container"
                 alt="electronics inventory hero"
                 src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
               />
@@ -52,7 +52,7 @@ const TextBasedHome = () => {
           <Col xs={6} md={6}>
             <Link to={"/portfolio/pomodor"}>
               <img
-                className="showcase-card-container-po"
+                className="showcase-card-container"
                 alt="pomodoro timer hero"
                 src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
               />
@@ -76,7 +76,7 @@ const TextBasedHome = () => {
           <Col xs={12} md={6}>
             <Link to={"/portfolio/3dportfolio"}>
               <img
-                className="showcase-card-container-3d"
+                className="showcase-card-container"
                 alt="3d portfolio hero"
                 src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
               />
@@ -97,7 +97,7 @@ const TextBasedHome = () => {
           <Col xs={12} md={6}>
             <Link to={"/portfolio/outdoorsy"}>
               <img
-                className="showcase-card-container-out"
+                className="showcase-card-container"
                 alt="outdoorsy app hero"
                 src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
               />

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import "./PortfolioOutdoorsy.css";
+import "./Portfolio.css";
 
 const PortfolioOutdoorsy = () => {
   return (
@@ -16,8 +16,13 @@ const PortfolioOutdoorsy = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-outdoorsy-hero"
-        />
+        >
+          <img
+            className="portfolio-hero"
+            alt="tablet among rocks"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+          />
+        </motion.div>
       </section>
       <div className="spacer-small"></div>
       <section>
@@ -62,8 +67,8 @@ const PortfolioOutdoorsy = () => {
           },
         }}
       >
-        <section className="portfolio-outdoorsy-section">
-          <h2 className="portfolio-outdoorsy-h2">DETAILS</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>SPRING 2023-CURRENT</h4>
@@ -134,7 +139,7 @@ const PortfolioOutdoorsy = () => {
             </span>
           </div>
           <div className="spacer-small"></div>
-          <p className="portfolio-outdoorsy-p">
+          <p className="portfolio-p">
             Outdoorsy is a full-stack website project where logged in users can
             create and review campsites, canoe routes, hiking trails, etc. Its a
             community for outdoor enthusiasts to connect, share experiences and
@@ -152,9 +157,9 @@ const PortfolioOutdoorsy = () => {
           },
         }}
       >
-        <section className="portfolio-outdoorsy-section">
-          <h2 className="portfolio-outdoorsy-h2">DESIGN INTENT</h2>
-          <p className="portfolio-outdoorsy-p">
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DESIGN INTENT</h2>
+          <p className="portfolio-p">
             The intent with this application is to allow outdoors enthusiasts to
             have a place to share ideas, experiences and trip plans. I wanted
             the user interface to feel very natural, like being in the woods..
@@ -172,8 +177,8 @@ const PortfolioOutdoorsy = () => {
           },
         }}
       >
-        <section className="portfolio-outdoorsy-section">
-          <h2 className="portfolio-outdoorsy-h2">FONT TYPES</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
               justifyContent: "space-between",
@@ -182,9 +187,9 @@ const PortfolioOutdoorsy = () => {
             }}
           >
             <span>
-              <h1 className="portfolio-outdoorsy-font-segoe">SEGOE</h1>
+              <h1 className="portfolio-font-segoe">SEGOE</h1>
             </span>
-            <div className="portfolio-outdoorsy-li">
+            <div className="portfolio-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -209,7 +214,7 @@ const PortfolioOutdoorsy = () => {
           ></div>
         </section>
       </motion.div>
-      <section className="portfolio-outdoorsy-section">
+      <section className="portfolio-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -220,7 +225,7 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          <h2 className="portfolio-outdoorsy-h2">SCREENS</h2>
+          <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -231,8 +236,14 @@ const PortfolioOutdoorsy = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-outdoorsy-screen-1"
-        />
+        >
+          <img
+            className="portfolio-screen-1"
+            alt="tablets among the rocks"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384654/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
+          />
+        </motion.div>
+
         <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -243,8 +254,14 @@ const PortfolioOutdoorsy = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-outdoorsy-screen-2"
-        />
+        >
+          <img
+            className="portfolio-screen-2"
+            alt="tablet among the rocks"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+          />
+        </motion.div>
+
         <div className="spacer"></div>
         {/* <motion.div
           initial={{ opacity: 0 }}
@@ -255,7 +272,7 @@ const PortfolioOutdoorsy = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-outdoorsy-screen-3"
+          className="portfolio-screen-3"
         />
         <div className="spacer"></div> */}
       </section>

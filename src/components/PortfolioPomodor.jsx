@@ -19,8 +19,8 @@ const PortfolioPomodor = () => {
         >
           <img
             className="portfolio-hero"
-            alt="pomodoro timer hero"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
+            alt="two iphones leaning against pottery"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
           />
         </motion.div>
       </section>
@@ -234,8 +234,8 @@ const PortfolioPomodor = () => {
         >
           <img
             className="portfolio-screen-1"
-            alt="pomodoro timer hero"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
+            alt="iphone in vertical position"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384651/PortfolioSite/Iphone_vertical_modern_office_pomo_kex0v8.png"
           />
         </motion.div>
 
@@ -252,7 +252,7 @@ const PortfolioPomodor = () => {
         >
           <img
             className="portfolio-screen-2"
-            alt="pomodoro timer hero"
+            alt="iphone in vertical position"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
         </motion.div>
@@ -269,7 +269,7 @@ const PortfolioPomodor = () => {
         >
           <img
             className="portfolio-screen-3"
-            alt="pomodoro timer hero"
+            alt="iphone laying on the ground"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
           />
         </motion.div>

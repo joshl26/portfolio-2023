@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import "./PortfolioThreeJS.css";
+import "./Portfolio.css";
 
 const PortfolioThreeJS = () => {
   return (
@@ -16,8 +16,14 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-threejs-hero"
-        />
+        >
+          <img
+            className="portfolio-hero"
+            alt="iphone laying on des"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png
+            "
+          />
+        </motion.div>
       </section>
       <div className="spacer-small"></div>
       <section>
@@ -63,8 +69,8 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-threejs-section">
-          <h2 className="portfolio-threejs-h2">DETAILS</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>Winter 2022-Fall 2023</h4>
@@ -134,7 +140,7 @@ const PortfolioThreeJS = () => {
               </span>
             </span>
           </div>
-          <p className="portfolio-threejs-p"></p>
+          <p className="portfolio-p"></p>
         </section>
       </motion.div>
 
@@ -148,9 +154,9 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-threejs-section">
-          <h2 className="portfolio-threejs-h2">DESIGN INTENT</h2>
-          <p className="portfolio-threejs-p">
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">DESIGN INTENT</h2>
+          <p className="portfolio-p">
             An experimental three dimensional portfolio site created with
             ThreeJS and Blender. Give it a try! I had alot of fun learning new
             technologies to complete this. In the end the limitations of
@@ -174,8 +180,8 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-threejs-section">
-          <h2 className="portfolio-threejs-h2">FONT TYPES</h2>
+        <section className="portfolio-section">
+          <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
               justifyContent: "space-between",
@@ -183,8 +189,8 @@ const PortfolioThreeJS = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-threejs-font-rale">RALE</span>
-            <div className="portfolio-threejs-li">
+            <span className="portfolio-font-rale">RALE</span>
+            <div className="portfolio-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -207,8 +213,8 @@ const PortfolioThreeJS = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-threejs-font-lusi">LUSI</span>
-            <div className="portfolio-threejs-li">
+            <span className="portfolio-font-lusi">LUSI</span>
+            <div className="portfolio-li">
               <span>Weight</span>
               <ul
                 style={{
@@ -227,7 +233,7 @@ const PortfolioThreeJS = () => {
         </section>
       </motion.div>
 
-      <section className="portfolio-threejs-section">
+      <section className="portfolio-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -238,7 +244,7 @@ const PortfolioThreeJS = () => {
             },
           }}
         >
-          <h2 className="portfolio-threejs-h2">SCREENS</h2>
+          <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
 
         <motion.div
@@ -250,8 +256,31 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-threejs-screen-1"
-        />
+        >
+          <img
+            className="portfolio-screen-1"
+            alt="iphone laying on desk"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+          />
+        </motion.div>
+
+        <div className="spacer"></div>
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 0.75,
+              delay: 0.5,
+            },
+          }}
+        >
+          <img
+            className="portfolio-screen-2"
+            alt="iphone laying on the ground"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+          />
+        </motion.div>
         <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -262,21 +291,14 @@ const PortfolioThreeJS = () => {
               delay: 0.5,
             },
           }}
-          className="portfolio-threejs-screen-2"
-        />
-        <div className="spacer"></div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-          className="portfolio-threejs-screen-3"
-        />
-        <div className="spacer"></div>
+        >
+          <img
+            className="portfolio-screen-3"
+            alt="iphone laying on the ground"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+          />
+        </motion.div>
+        <div className="spacer"></div> */}
       </section>
     </main>
   );

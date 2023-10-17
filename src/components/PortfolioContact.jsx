@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { PopupButton } from "react-calendly";
 import TopicRadio from "./TopicRadio";
 import "./Portfolio.css";
+import "./PortfolioContact.css";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";

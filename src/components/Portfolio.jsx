@@ -25,7 +25,11 @@ const Portfolio = () => {
               }}
             >
               <Link to={"/portfolio/el-in"}>
-                <div className="showcase-card-container-el" />
+                <img
+                  className="showcase-card-container"
+                  alt="3d portfolio hero"
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -119,7 +123,11 @@ const Portfolio = () => {
               }}
             >
               <Link to={"/portfolio/pomodor"}>
-                <div className="showcase-card-container-po" />
+                <img
+                  className="showcase-card-container"
+                  alt="pomodor timer hero"
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -200,7 +208,11 @@ const Portfolio = () => {
               }}
             >
               <Link to={"/portfolio/3dportfolio"}>
-                <div className="showcase-card-container-3d" />
+                <img
+                  className="showcase-card-container"
+                  alt="3d portfolio hero"
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -285,7 +297,11 @@ const Portfolio = () => {
               }}
             >
               <Link to={"/portfolio/outdoorsy"}>
-                <div className="showcase-card-container-out" />
+                <img
+                  className="showcase-card-container"
+                  alt="outdoorsy hero"
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
