@@ -67,7 +67,7 @@ const PortfolioOutdoorsy = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
@@ -157,7 +157,7 @@ const PortfolioOutdoorsy = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
             The intent with this application is to allow outdoors enthusiasts to
@@ -177,7 +177,7 @@ const PortfolioOutdoorsy = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -214,7 +214,7 @@ const PortfolioOutdoorsy = () => {
           ></div>
         </section>
       </motion.div>
-      <section className="portfolio-section">
+      <section className="portfolio-main-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -238,12 +238,11 @@ const PortfolioOutdoorsy = () => {
           }}
         >
           <img
-            className="portfolio-screen-1"
+            className="portfolio-screen"
             alt="tablets among the rocks"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384654/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
           />
         </motion.div>
-
         <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -256,25 +255,12 @@ const PortfolioOutdoorsy = () => {
           }}
         >
           <img
-            className="portfolio-screen-2"
+            className="portfolio-screen"
             alt="tablet among the rocks"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
           />
         </motion.div>
-
         <div className="spacer"></div>
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-          className="portfolio-screen-3"
-        />
-        <div className="spacer"></div> */}
       </section>
     </main>
   );

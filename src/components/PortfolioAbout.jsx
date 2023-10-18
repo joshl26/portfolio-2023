@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import "./PortfolioPomodor.css";
+import "./Portfolio.css";
 import RoundButton from "./RoundButton";
 
 const PortfolioAbout = () => {
@@ -12,7 +12,7 @@ const PortfolioAbout = () => {
       <div className="spacer-small"></div>
       <section>
         <div>
-          <p className="portfolio-pomodoro-p">
+          <p className="portfolio-p">
             With 17 years of combined experience in software engineering,
             full-stack programming, web development, mechanical engineering,
             robotics, and automation, I am a versatile and creative
@@ -23,7 +23,7 @@ const PortfolioAbout = () => {
           </p>
         </div>
         <div>
-          <p className="portfolio-pomodoro-p">
+          <p className="portfolio-p">
             Currently, I am a Software Engineer at Blackrock Design Haus, where
             I develop and maintain web applications using React, TypeScript,
             MySQL, MongoDB, AWS, and Google Cloud. I also develop cloud-based
@@ -39,9 +39,9 @@ const PortfolioAbout = () => {
           </p>
         </div>
       </section>
-      <section className="portfolio-pomodoro-section">
+      <section className="portfolio-main-section">
         <div>
-          <h2 className="portfolio-pomodoro-h2">ENGINEERING EXPERIENCE</h2>
+          <h2 className="portfolio-h2">ENGINEERING EXPERIENCE</h2>
         </div>
         <Row>
           <Col md={12} lg={4}>

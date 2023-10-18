@@ -48,16 +48,14 @@
 }
 
 .portfolio-hero,
-.portfolio-screen-1,
-.portfolio-screen-2,
-.portfolio-screen-3 {
+.portfolio-screen {
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
   border-radius: 0.75rem;
 }
 
-.portfolio-section {
+.portfolio-main-section {
   flex-direction: column;
   gap: 0.625rem;
   border-top: 0.0625rem solid #c6c0c4;
@@ -86,9 +84,21 @@
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
+.portfolio-font-nunito {
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
+}
+
 .portfolio-font-lusi {
   text-transform: uppercase;
   font-family: "Lusitana", sans-serif;
+  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
+}
+
+.portfolio-font-segoe {
+  text-transform: uppercase;
+  font-family: "Segoe", sans-serif;
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 

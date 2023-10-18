@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
-import "./PortfolioElectronicInv.css";
+import "./Portfolio.css";
 
 const PortfolioElectronicInv = () => {
   return (
@@ -67,7 +67,7 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
@@ -163,7 +163,7 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
             The intent with this application was to deliver key business metrics
@@ -183,7 +183,7 @@ const PortfolioElectronicInv = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -242,7 +242,7 @@ const PortfolioElectronicInv = () => {
           </div>
         </section>
       </motion.div>
-      <section className="portfolio-section">
+      <section className="portfolio-main-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -267,7 +267,7 @@ const PortfolioElectronicInv = () => {
         >
           <img
             alt="laptop in a modern office"
-            className="portfolio-screen-1"
+            className="portfolio-screen"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
           />
         </motion.div>
@@ -284,30 +284,11 @@ const PortfolioElectronicInv = () => {
         >
           <img
             alt="laptop on a gold platform"
-            className="portfolio-screen-2"
+            className="portfolio-screen"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
-
         <div className="spacer"></div>
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          <img
-            alt="laptop on a gold platform"
-            className="portfolio-screen-3"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
-          />
-        </motion.div>
-
-        <div className="spacer"></div> */}
       </section>
     </main>
   );

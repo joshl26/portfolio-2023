@@ -4,7 +4,7 @@ import ResponsiveMenu from "./ResponsiveMenu";
 import { motion } from "framer-motion";
 import RoundButton from "./RoundButton";
 import ResponsiveFooter from "./ResponsiveFooter";
-import "./PortfolioPomodor.css";
+import "./Portfolio.css";
 
 const PortfolioServices = () => {
   const [menuClicked, setMenuClicked] = useState(false);

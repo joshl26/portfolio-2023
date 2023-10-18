@@ -1,10 +1,14 @@
 import React, { useRef, useState } from "react";
+import "./PortfolioContact.css";
 import emailjs from "@emailjs/browser";
+import linkedInIcon from "../data/images/LinkedIn_Icon.svg";
+import webIcon from "../data/images/Web_Icon.svg";
+import gitHubIcon from "../data/images/GitHub_Icon.svg";
+import wordPressIcon from "../data/images/wordpress_Icon.svg";
+import "./Interface.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { PopupButton } from "react-calendly";
 import TopicRadio from "./TopicRadio";
-import "./Portfolio.css";
-import "./PortfolioContact.css";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
@@ -13,6 +17,7 @@ const EMAIL_JS_PUBLIC_KEY = "87SpQ-1mR0MN2Rug9";
 const ContactSection = (props) => {
   const { fontColormode, colorMode } = props;
 
+  // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
@@ -138,9 +143,12 @@ const ContactSection = (props) => {
                   </Row>
                   <div className="interface-spacer-xsmall"></div>
                   <Row>
-                    <h4 className={fontColormode("interface-label")}>
+                    <label
+                      htmlFor="topic"
+                      className={fontColormode("interface-label")}
+                    >
                       Choose a Topic
-                    </h4>
+                    </label>
                   </Row>
                   <Row>
                     <TopicRadio

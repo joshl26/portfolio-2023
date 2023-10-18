@@ -68,7 +68,7 @@ const PortfolioPomodor = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
@@ -160,7 +160,7 @@ const PortfolioPomodor = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
             The idea with this project was to loosely replicate the UI/UX of the
@@ -180,7 +180,7 @@ const PortfolioPomodor = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -208,7 +208,7 @@ const PortfolioPomodor = () => {
           </div>
         </section>
       </motion.div>
-      <section className="portfolio-section">
+      <section className="portfolio-main-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -233,7 +233,7 @@ const PortfolioPomodor = () => {
           }}
         >
           <img
-            className="portfolio-screen-1"
+            className="portfolio-screen"
             alt="iphone in vertical position"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384651/PortfolioSite/Iphone_vertical_modern_office_pomo_kex0v8.png"
           />
@@ -251,7 +251,7 @@ const PortfolioPomodor = () => {
           }}
         >
           <img
-            className="portfolio-screen-2"
+            className="portfolio-screen"
             alt="iphone in vertical position"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
@@ -268,7 +268,7 @@ const PortfolioPomodor = () => {
           }}
         >
           <img
-            className="portfolio-screen-3"
+            className="portfolio-screen"
             alt="iphone laying on the ground"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
           />

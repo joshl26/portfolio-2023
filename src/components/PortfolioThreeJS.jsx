@@ -58,7 +58,6 @@ const PortfolioThreeJS = () => {
         </motion.div>
       </section>
       <div className="spacer-small"></div>
-
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -69,7 +68,7 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
@@ -122,7 +121,6 @@ const PortfolioThreeJS = () => {
                   buttonClass={"round-button"}
                 />
               </span>
-
               <span>
                 <RoundButton
                   buttonText={"BABEL"}
@@ -143,7 +141,6 @@ const PortfolioThreeJS = () => {
           <p className="portfolio-p"></p>
         </section>
       </motion.div>
-
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -154,7 +151,7 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
             An experimental three dimensional portfolio site created with
@@ -169,7 +166,6 @@ const PortfolioThreeJS = () => {
           </p>
         </section>
       </motion.div>
-
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -180,7 +176,7 @@ const PortfolioThreeJS = () => {
           },
         }}
       >
-        <section className="portfolio-section">
+        <section className="portfolio-main-section">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -232,8 +228,7 @@ const PortfolioThreeJS = () => {
           </div>
         </section>
       </motion.div>
-
-      <section className="portfolio-section">
+      <section className="portfolio-main-section">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -246,7 +241,6 @@ const PortfolioThreeJS = () => {
         >
           <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -263,42 +257,7 @@ const PortfolioThreeJS = () => {
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />
         </motion.div>
-
         <div className="spacer"></div>
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          <img
-            className="portfolio-screen-2"
-            alt="iphone laying on the ground"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-          />
-        </motion.div>
-        <div className="spacer"></div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          <img
-            className="portfolio-screen-3"
-            alt="iphone laying on the ground"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-          />
-        </motion.div>
-        <div className="spacer"></div> */}
       </section>
     </main>
   );
