@@ -1,7 +1,6 @@
-import React from "react";
-import "./ResponsiveMenu.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "./ResponsiveMenu.css";
 
 const ResponsiveMenu = ({ menuClicked, hamburgerMenuClicked }) => {
   const variants = {

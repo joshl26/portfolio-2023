@@ -9,4 +9,5 @@
 .input,
 .contact-text-area {
   padding: 0.5rem !important;
+  border-radius: 0.5rem;
 }
