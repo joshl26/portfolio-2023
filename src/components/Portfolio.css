@@ -96,6 +96,12 @@
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
+.portfolio-font-cabin {
+  text-transform: uppercase;
+  font-family: "Cabin", sans-serif;
+  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
+}
+
 .portfolio-font-segoe {
   text-transform: uppercase;
   font-family: "Segoe", sans-serif;

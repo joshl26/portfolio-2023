@@ -1,14 +1,10 @@
 import React, { useRef, useState } from "react";
-import "./PortfolioContact.css";
 import emailjs from "@emailjs/browser";
-import linkedInIcon from "../data/images/LinkedIn_Icon.svg";
-import webIcon from "../data/images/Web_Icon.svg";
-import gitHubIcon from "../data/images/GitHub_Icon.svg";
-import wordPressIcon from "../data/images/wordpress_Icon.svg";
-import "./Interface.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { PopupButton } from "react-calendly";
 import TopicRadio from "./TopicRadio";
+import "./Interface.css";
+import "./PortfolioContact.css";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
@@ -60,7 +56,7 @@ const ContactSection = (props) => {
   };
 
   return (
-    <section>
+    <section className="portfolio-main-section">
       <div className="interface-spacer-small"></div>
       <Container className="portfolio-contact-container">
         <Row>
@@ -79,7 +75,7 @@ const ContactSection = (props) => {
                       url="https://calendly.com/joshlehman-dev"
                       rootElement={document.getElementById("root")}
                       text="Click here to schedule!"
-                      className="schedule-button"
+                      className="round-button"
                     />
                   </Col>
                   <Col md={1}></Col>
@@ -89,9 +85,7 @@ const ContactSection = (props) => {
             <div className="interface-spacer-small"></div>
             <Row>
               <div className="interface-spacer-small"></div>
-              <h3 className={fontColormode("contact-h3")}>
-                OR Send a message with Email:
-              </h3>
+              <h3>Send a message via Email:</h3>
             </Row>
             <form ref={form} id="contact-form" onSubmit={sendEmail}>
               {emailSent === false ? (
@@ -239,7 +233,7 @@ const ContactSection = (props) => {
                 <Col className="submit-btn-col">
                   {emailSent === false && confirmReceipt === false ? (
                     <button
-                      className="submit-button"
+                      className="round-button"
                       type="submit"
                       data-sitekey="reCAPTCHA_site_key"
                       data-callback="onSubmit"

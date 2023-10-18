@@ -197,7 +197,6 @@ const PortfolioThreeJS = () => {
               >
                 <li>200</li>
                 <li>300</li>
-                <li>500</li>
                 <li>900</li>
               </ul>
             </div>
@@ -219,10 +218,8 @@ const PortfolioThreeJS = () => {
                   gap: "0.625rem",
                 }}
               >
-                <li>200</li>
                 <li>300</li>
                 <li>500</li>
-                <li>900</li>
               </ul>
             </div>
           </div>

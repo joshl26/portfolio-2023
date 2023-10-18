@@ -39,7 +39,7 @@
 .round-button:hover {
   height: fit-content !important;
   border-radius: 25px;
-  background-color: var(--button-color-hover);
+  background-color: var(--bg-color-dark);
   border-color: beige;
   color: beige;
   padding: 10px 20px 10px 20px;

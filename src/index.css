@@ -1,5 +1,5 @@
 :root {
-  --bg-color-dark: #293241;
+  --bg-color-dark: color(display-p3 0.13 0.13 0.13 / 1);
   --bg-color-light: #ececec;
   --color-one: #3d5a80;
   --color-two: #98c1d9;
@@ -10,7 +10,7 @@
   --button-color-dark: #ececec;
   --button-color-hover: #293241;
 }
-
+/* --bg-color-dark: color(display-p3 1 0 0.331); */
 #root {
   display: flex;
   flex-direction: column;

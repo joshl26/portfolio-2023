@@ -5,3 +5,8 @@
 .contact-h3 {
   text-align: center;
 }
+
+.input,
+.contact-text-area {
+  padding: 0.5rem !important;
+}

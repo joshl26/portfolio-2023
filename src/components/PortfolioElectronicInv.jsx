@@ -207,7 +207,6 @@ const PortfolioElectronicInv = () => {
                 <li>200</li>
                 <li>300</li>
                 <li>500</li>
-                <li>900</li>
               </ul>
             </div>
           </div>
@@ -228,15 +227,10 @@ const PortfolioElectronicInv = () => {
                   gap: "0.625rem",
                 }}
               >
-                <li>100</li>
-                <li>200</li>
-                <li>300</li>
                 <li>400</li>
                 <li>500</li>
                 <li>600</li>
                 <li>700</li>
-                <li>800</li>
-                <li>900</li>
               </ul>
             </div>
           </div>
