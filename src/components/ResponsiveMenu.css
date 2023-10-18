@@ -3,7 +3,6 @@
   background-color: var(--bg-color-dark);
   z-index: 1000;
   height: 100%;
-  animation: 2s;
 }
 
 .responsive-menu-container {
@@ -17,12 +16,11 @@
   font-size: clamp(3rem, 2.2147rem + 3.9264vw, 7rem);
   width: fit-content;
   margin-left: 4rem;
-  transition: 2s;
+  transition: 1s;
 }
 
 .responsive-menu-header:hover {
-  transform: translateX(30px);
-  transition: 2s;
+  transition: 1s;
   color: gray;
 }
 

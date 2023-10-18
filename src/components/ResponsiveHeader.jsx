@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import "./ResponsiveHeader.css";
 import JLIconSmall from "../data/images/JL_Icon_Small.png";
-import RoundButton from "./RoundButton";
 
 const ResponsiveHeader = ({
   menuClicked,

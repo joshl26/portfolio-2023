@@ -9,8 +9,9 @@ const PortfolioAbout = () => {
       <section className="portfolio-section">
         <h1 className="portfolio-h1">ABOUT</h1>
       </section>
-      <div className="spacer-small"></div>
-      <section>
+
+      <section className="portfolio-main-section">
+        <div className="spacer-small"></div>
         <div>
           <p className="portfolio-p">
             With 17 years of combined experience in software engineering,
