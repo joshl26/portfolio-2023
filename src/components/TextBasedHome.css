@@ -42,10 +42,8 @@
 }
 
 .showcase-card-container {
-  height: 600px;
   width: 100%;
   border-radius: 0.75rem;
-  background-size: cover;
 }
 
 .showcase-card-container-po {
