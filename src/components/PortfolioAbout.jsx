@@ -14,29 +14,40 @@ const PortfolioAbout = () => {
         <div className="spacer-small"></div>
         <div>
           <p className="portfolio-p">
-            With 17 years of combined experience in software engineering,
-            full-stack programming, web development, mechanical engineering,
-            robotics, and automation, I am a versatile and creative
-            problem-solver who can deliver innovative digital solutions for
-            various industries and domains. I have multiple certifications in
-            SolidWorks, web development, and React, as well as strong
-            programming skills in C#, Linux, SQL, and C++.
+            With 15+ years of experience in mechanical engineering, robotics,
+            software engineering and full stack web development. I have a proven
+            track record of success as a versatile and creative problem-solver
+            who can deliver innovative digital solutions for various industries
+            and domains. I have multiple certifications in mechanical
+            engineering, software development, robotics engineering and embedded
+            electronics.
           </p>
         </div>
         <div>
           <p className="portfolio-p">
-            Currently, I am a Software Engineer at Blackrock Design Haus, where
-            I develop and maintain web applications using React, TypeScript,
-            MySQL, MongoDB, AWS, and Google Cloud. I also develop cloud-based
-            industrial WiFi IOT sensors using ESP8266 and ESP32
-            microcontrollers, and machine learning and machine vision algorithms
-            for robotics and self-driving vehicles projects. I enjoy
-            collaborating with all parties to design and implement user-friendly
-            and functional interfaces, systems, and devices that meet the needs
-            and expectations of the clients and users. My goal is to continue
-            learning and growing as a web developer, full-stack programmer, and
-            software engineer, and to contribute to the advancement and
-            innovation of the digital world.
+            Currently, I am a Freelance Software Engineer at my company
+            Blackrock Design Haus, where I design, develop and maintain web
+            applications using some of the latest technologies including:
+            NextJS, React, CSSModules OR Tailwind, TypeScript, PostgresSQL,
+            MongoDB and AWS to name a few.
+          </p>
+
+          <p className="portfolio-p">
+            I enjoy meeting and collaborating with new people who also love to
+            design and implement user-friendly and functional interfaces,
+            systems and devices that meet or exceed the needs and expectations
+            of my client.
+          </p>
+
+          <p className="portfolio-p">
+            My goal is to continue learning and pushing the boundaries of
+            software engineering and development.Whether it be on the world wide
+            web, in a financial institution, blockchain research or Ai.
+          </p>
+          <p className="portfolio-p">
+            Software engineering is a passion of mine, and I look forward to
+            contributing to the advancement, innovation and accessibility of the
+            modern digital world.
           </p>
         </div>
       </section>

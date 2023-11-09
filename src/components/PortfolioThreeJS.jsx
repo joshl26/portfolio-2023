@@ -249,7 +249,7 @@ const PortfolioThreeJS = () => {
           }}
         >
           <img
-            className="portfolio-screen-1"
+            className="portfolio-screen"
             alt="iphone laying on desk"
             src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />

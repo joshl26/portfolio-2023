@@ -149,7 +149,8 @@ const PortfolioElectronicInv = () => {
             and control system designed for small and large businesses alike!
             Easy to set up and get started, also has the flexibility to scale
             for corporate environments. Cloud-based architecture under the hood
-            assures you can see your inventory levels from any device, anywhere!
+            assures you can see your inventory levels from any device, anywhere
+            in the world!
           </p>
         </section>
       </motion.div>
@@ -167,9 +168,10 @@ const PortfolioElectronicInv = () => {
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
             The intent with this application was to deliver key business metrics
-            regarding the lifecycle of electronics inventory in your business.
-            The organic layout allows the free flow of information to the
-            correct people within your business.
+            regarding the lifecycle of electronics inventory within your
+            organization. The organic layout of the app allows the free flow of
+            information, which improves overall efiicinecy of your business. Try
+            a demo to see!
           </p>
         </section>
       </motion.div>
