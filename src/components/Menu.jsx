@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import HamburgerMenuDark from "../data/lottie/menuAnimationDark.json";
 import HamburgerMenuLight from "../data/lottie/menuAnimationLight.json";
-import { motion } from "framer-motion";
+
 import { Col, Row } from "react-bootstrap";
 import "./Menu.css";
 
@@ -61,75 +61,7 @@ const Menu = (props) => {
         Menu
       </button> */}
       {menuOpened ? (
-        <motion.div
-          initial={false}
-          animate={{
-            x: 0,
-            y: 0,
-            boxShadow: "10px 10px 5px rgba(0, 0, 0, 0.2)",
-          }}
-          transition={{ duration: 0.25 }}
-          className={styleColormode("menu-container")}
-        >
-          <Row>
-            <Col xs={2}></Col>
-            <Col>
-              <div className="menu-spacer"></div>
-              <Row className="menu-row">
-                <MenuButton
-                  lable="Home"
-                  // disabled={section === 0 ? true : false}
-                  onClick={() => {
-                    onSectionChange(0);
-                    menuButtonClickHandler();
-                  }}
-                />
-              </Row>
-              <div className="menu-sspacer"></div>
-              <Row className="menu-row">
-                <MenuButton
-                  lable="About"
-                  // disabled={section === 1 ? true : false}
-                  onClick={() => {
-                    onSectionChange(1);
-                    menuButtonClickHandler();
-                  }}
-                />
-              </Row>
-              <div className="menu-sspacer"></div>
-              <Row className="menu-row">
-                <MenuButton
-                  lable="Projects"
-                  onClick={() => {
-                    onSectionChange(2);
-                    menuButtonClickHandler();
-                  }}
-                />
-              </Row>
-              <div className="menu-sspacer"></div>
-              <Row className="menu-row">
-                <MenuButton
-                  lable="Contact"
-                  onClick={() => {
-                    onSectionChange(3);
-                    menuButtonClickHandler();
-                  }}
-                />
-              </Row>
-            </Col>
-            <Col xs={2}></Col>
-          </Row>
-        </motion.div>
-      ) : (
-        <motion.div
-          initial={false}
-          animate={{
-            x: -400,
-            y: 0,
-          }}
-          transition={{ duration: 0.375 }}
-          className={styleColormode("menu-container")}
-        >
+        <div className={styleColormode("menu-container")}>
           <Row>
             <Col xs={2}></Col>
             <Col>
@@ -180,7 +112,9 @@ const Menu = (props) => {
             </Col>
             <Col xs={2}></Col>
           </Row>
-        </motion.div>
+        </div>
+      ) : (
+        ""
       )}
     </>
   );

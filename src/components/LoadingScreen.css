@@ -1,4 +1,4 @@
-.loading-spacer-small {
+.loading_spacer_small {
   height: 5vh;
   height: 5dvh;
 }
@@ -8,30 +8,30 @@
   height: 10dvh;
 }
 
-.loading-header {
+.loading_header {
   font-size: clamp(2rem, 1.5rem + 2.5vw, 4rem);
   font-size: clamp(2rem, 1.5rem + 2.5dvw, 4rem);
 }
 
-.loading-header-2 {
+.loading_header_2 {
   font-size: clamp(1.5rem, 0.875rem + 3.125vw, 4rem);
   font-size: clamp(1.5rem, 0.875rem + 3.125dvw, 4rem);
 }
-.loading-header-3 {
+.loading_header_3 {
   font-size: clamp(1.5rem, 1.125rem + 1.875vw, 3rem);
   font-size: clamp(1.5rem, 1.125rem + 1.875dvw, 3rem);
 }
 
-.loading-header,
-.loading-header-2,
-.loading-header-3 {
+.loading_header,
+.loading_header_2,
+.loading_header_3 {
   text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
-  .canvas-container {
+  .canvas_container {
     position: fixed;
     left: 0;
     right: 0;
@@ -41,7 +41,7 @@
     z-index: -1;
   }
 
-  .loading-screen-light {
+  .loading_screen_light {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -53,7 +53,7 @@
     overflow-x: hidden;
   }
 
-  .loading-screen-dark {
+  .loading_screen_dark {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -65,30 +65,30 @@
     overflow-x: hidden;
   }
 
-  /* .loading-header-container {
-    position: relative;
+  .header_container {
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     z-index: 10;
-  } */
+  }
 
-  .loading-spacer {
+  .spacer {
     height: 100%;
   }
 
-  .svg-animate {
+  .svg_animate {
     height: 65vh;
     height: 65dvh;
   }
 
-  .column-spacer {
+  .column_spacer {
     height: 10vh;
     height: 10dvh;
   }
 
-  .loading-spacer-small {
+  .spacer_small {
     height: 2.5vh;
     height: 2.5dvh;
   }
@@ -97,7 +97,7 @@
 @media only screen and (min-width: 769px) {
   /* For desktop: */
 
-  .canvas-container {
+  .canvas_container {
     position: fixed;
     left: 0;
     right: 0;
@@ -108,7 +108,7 @@
     z-index: -1;
   }
 
-  .loading-screen-light {
+  .loading_screen_light {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -121,7 +121,7 @@
     transition: background-color 2s;
   }
 
-  .loading-screen-dark {
+  .loading_screen_dark {
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -134,29 +134,29 @@
     transition: background-color 2s;
   }
 
-  /* .loading-header-container {
-    position: sticky;
+  .header_container {
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     z-index: 10;
-  } */
+  }
 
-  .loading-spacer {
+  .spacer {
     height: 100%;
   }
 
-  .loading-spacer-small {
+  .spacer_small {
     height: 7.5vh;
     height: 7.5dvh;
   }
-  .svg-animate {
+  .svg_animate {
     height: 65vh;
     height: 65dvh;
   }
 
-  .column-spacer {
+  .column_spacer {
     height: 10vh;
     height: 10dvh;
   }

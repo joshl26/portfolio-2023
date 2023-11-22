@@ -9,13 +9,11 @@ const ColorMode = (props) => {
   const lottieRef = useRef();
 
   const onLottieClickHandler = () => {
-    if (colorMode === "dark") {
-      // lottieRef.current.playSegments([0, 22], true);
-      onColorModeChangeHandler();
-    }
-
     if (colorMode === "light") {
-      // lottieRef.current.playSegments([22, 0], true);
+      lottieRef.current.playSegments([0, 22], true);
+      onColorModeChangeHandler();
+    } else {
+      lottieRef.current.playSegments([22, 0], true);
       onColorModeChangeHandler();
     }
 
@@ -23,17 +21,16 @@ const ColorMode = (props) => {
   };
 
   useEffect(() => {
-    if (colorMode === "dark") {
-      lottieRef.current.goToAndStop(0, true);
-    }
     if (colorMode === "light") {
+      lottieRef.current.goToAndStop(0, true);
+    } else {
       lottieRef.current.goToAndStop(23, true);
     }
   }, [colorMode]);
 
   return (
     <Lottie
-      className="lottie-container"
+      className="lottie_container"
       lottieRef={lottieRef}
       animationData={ToggleButton}
       onClick={() => onLottieClickHandler()}

@@ -144,10 +144,10 @@ const Experience = (props) => {
             rotateZ: 0.5,
           },
           3: {
-            scaleX: 9,
-            scaleY: 9,
-            scaleZ: 9,
-            y: -viewport.height * 3.25,
+            scaleX: 7,
+            scaleY: 7,
+            scaleZ: 7,
+            y: -viewport.height * 2.95,
             x: 5,
             z: 0,
             rotateX: -0.5,
@@ -156,7 +156,7 @@ const Experience = (props) => {
           },
         }}
       >
-        {/* <ambientLight intensity={1} /> */}
+        <ambientLight intensity={1} />
         <Avatar animation={characterAnimation} />
       </motion.group>
       <motion.group

@@ -1,8 +1,3 @@
-.input {
-  width: 100%;
-  border-radius: 3px;
-}
-
 .section-container {
   height: 100vh;
   height: 100dvh;
@@ -11,22 +6,17 @@
   vertical-align: middle;
 }
 
-.interface-spacer-medium {
-  height: 6vh;
-  height: 6dvh;
-}
-
-.interface-spacer-small {
+.interface_spacer_small {
   height: 3vh;
   height: 3dvh;
 }
 
-.interface-spacer-xsmall {
+.interface_spacer_xsmall {
   height: 2vh;
   height: 2dvh;
 }
 
-.captcha-container {
+.captcha_container {
   margin: 0 auto;
   padding: 2em 0 0 0;
   width: fit-content;
@@ -42,54 +32,27 @@
 }
 
 .contact-text-area {
-  height: 15vh;
-  height: 15dvh;
-  width: 100%;
-  border-radius: 3px;
+  height: 25vh;
+  height: 25dvh;
 }
 
-.learn-more-button:hover,
-.submit-button:hover,
-.schedule-button:hover {
+.learn-more-button:hover {
   background-color: var(--bg-color-dark);
   color: var(--bg-color-light);
   border-radius: 0.35rem;
 }
 
-.scroll-p {
+.scroll_p {
   text-align: center;
-}
-
-.schedule-button {
-  padding: 0.5rem;
-}
-
-.submit-button {
-  padding: 0.5rem;
 }
 
 .submit-btn-col {
   text-align: center;
 }
 
-.topic {
-  width: 70%;
-}
-
-.topic-button:hover {
-  background-color: white !important;
-  color: black !important;
-}
-
-.type-btn {
-  height: 100%;
-  width: 30%;
-  font-size: 1.75rem;
-  text-align: left;
-}
-
 @media only screen and (max-width: 768px) {
-  .interface-label {
+  .interface_label {
+    padding-left: 0px !important;
     padding-bottom: 0.25rem;
   }
 
@@ -103,13 +66,10 @@
     font-size: 1.375rem;
   }
   .learn-more-button,
-  .submit-button,
-  .schedule-button {
+  .submit-button {
     background-color: var(--bg-color-light);
-    border: 1px solid transparent;
-
     border-radius: 0.35rem;
-    /* padding: 0.25rem; */
+    padding: 0.25rem;
     font-size: 1rem;
   }
 
@@ -118,51 +78,40 @@
   }
 
   .submit-button {
-    /* width: 75px; */
-    padding: 0.25rem;
+    width: 100px;
   }
 
-  .email-confirmation {
+  .email_confirmation {
     font-size: 0.75rem;
     font-weight: bold;
     color: green;
   }
 
-  .email-sent {
+  .email_sent {
     font-size: 0.75rem;
     font-weight: bold;
     color: rgb(244, 189, 7);
   }
 
-  .socialmedia-icon {
+  .socialmedia_icon {
     width: 50px;
     padding-bottom: 1em;
   }
 
-  .interface-spacer {
+  .interface_spacer {
     height: 55vh;
     height: 55dvh;
   }
 
-  .interface-about-p {
+  .interface_about_p {
     font-size: 1em;
     font-family: "Raleway";
     -webkit-text-stroke: 0.5px black;
   }
 
-  .interface-about-h1 {
+  .interface_about_h1 {
     font-size: 1.5em;
     -webkit-text-stroke: 0.5px black;
-  }
-
-  .dropdown-toggle {
-    font-size: 1rem !important;
-    margin: 0;
-    padding: 0.25rem;
-  }
-
-  .dropdown-item {
-    font-size: 1rem !important;
   }
 }
 
@@ -170,87 +119,69 @@
   .submit-button {
     width: 200px;
   }
-  .interface-label,
+  .interface_label,
   #name,
   #email,
-  #message,
-  #topic {
+  #message {
+    padding-left: 0px !important;
     padding-bottom: 0.25rem;
     font-size: 2rem;
   }
 
   .scroll-button {
     background-color: var(--bg-color-light);
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 0.35rem;
-    padding: 0.125rem;
-    width: 130px;
+    padding: 0.25rem;
+    width: 100%;
   }
-  .contact-h1 {
+  .contact_h1 {
     font-size: 3rem;
   }
   .learn-more-button,
-  .submit-button,
-  .schedule-button {
+  .submit-button {
     background-color: var(--bg-color-light);
     border-radius: 0.35rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    width: fit-content;
+    padding: 0.25rem;
+    width: 250px;
     font-size: 1.5rem;
   }
 
-  .learn-more-button {
-    width: 225px;
-    padding-bottom: 0.25rem;
-  }
-
-  .email-confirmation {
+  .email_confirmation {
     font-size: 2rem;
     font-weight: bold;
     color: green;
   }
 
-  .email-sent {
+  .email_sent {
     font-size: 2rem;
     font-weight: bold;
     color: rgb(244, 189, 7);
   }
 
-  .interface-spacer {
+  .interface_spacer {
     height: 60vh;
     height: 60dvh;
   }
 
-  .interface-about-p {
+  .interface_about_p {
     font-size: 2rem;
   }
 
-  .interface-about-h1 {
+  .interface_about_h1 {
     font-size: 2.5rem;
   }
 
-  .interface-about-h2 {
+  .interface_about_h2 {
     font-size: 4rem;
     font-family: "Lusitana";
     -webkit-text-stroke: 0.25px white;
+
     /* font-family: "Raleway"; */
   }
 
-  .socialmedia-icon {
+  .socialmedia_icon {
     width: 150px;
     padding-bottom: 1em;
-  }
-
-  .dropdown-toggle {
-    font-size: 2rem !important;
-  }
-
-  .dropdown-item {
-    font-size: 2rem !important;
-  }
-
-  .dropdown {
-    color: black;
   }
 }

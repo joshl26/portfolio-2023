@@ -1,29 +1,19 @@
 @media only screen and (max-width: 768px) {
-  .lottie-container {
+  .lottie_container {
     height: 40px;
     width: 50px;
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 1000;
-  }
-
-  .lottie-container:hover {
-    cursor: pointer;
   }
 }
 
 @media only screen and (min-width: 769px) {
-  .lottie-container {
+  .lottie_container {
     height: 40px;
     width: 60px;
-    position: absolute;
+    position: relative;
     top: 20px;
-    right: 50px;
-    z-index: 1000;
-  }
-
-  .lottie-container:hover {
-    cursor: pointer;
+    float: right;
   }
 }
