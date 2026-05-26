@@ -50,9 +50,9 @@ This portfolio site was created to showcase the programming abilities of Josh Le
 
 ## Demo
 
-### ✨ [Live Site](https://joshlehman.ca/experimental)
+### ✨ [Live Site](https://portfolio-2023.joshlehman.ca)
 
-> <p>Hosted with GoDaddy</p>
+> <p>Hosted with Render</p>
 
 ## Prerequisites
 
